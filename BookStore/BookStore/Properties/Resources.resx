@@ -117,4 +117,35 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="59167_billing_invoice_icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\59167_billing_invoice_icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="172480_home_icon1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\172480_home_icon1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="4850470_card_employee_id_identification_identity_icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\4850470_card_employee_id_identification_identity_icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="7853741_logout_kashifarif_exit_out_close_icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\7853741_logout_kashifarif_exit_out_close_icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="172480_home_icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\172480_home_icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="103408_text_book_icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\103408_text_book_icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="1564534_customer_man_user_account_profile_icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\1564534_customer_man_user_account_profile_icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="211650_close_circled_icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\211650_close_circled_icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="8140873_pos_billing_retrieve_download_revoke_icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\8140873_pos_billing_retrieve_download_revoke_icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="403022_business man_male_user_avatar_profile_icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\403022_business man_male_user_avatar_profile_icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
 </root>
