@@ -1,4 +1,5 @@
 ﻿using BookShopManagement.Forms;
+using BookShopManagement.Forms_User;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -31,6 +32,14 @@ namespace BookShopManagement
         private void button1_Click(object sender, EventArgs e)
         {
             using (Form_Dashboard fd = new Form_Dashboard())
+            {
+                fd.ShowDialog();
+            }
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            using (Form_DashBoard_User fd = new Form_DashBoard_User())
             {
                 fd.ShowDialog();
             }

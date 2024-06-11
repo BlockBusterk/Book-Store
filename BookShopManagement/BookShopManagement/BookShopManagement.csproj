@@ -99,6 +99,12 @@
     <Compile Include="Forms\Form_FinishOrder.Designer.cs">
       <DependentUpon>Form_FinishOrder.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms_User\Form_DashBoard_User.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms_User\Form_DashBoard_User.Designer.cs">
+      <DependentUpon>Form_DashBoard_User.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="UserControls\UC_Home.cs">
@@ -158,6 +164,9 @@
     <EmbeddedResource Include="Forms\Form_FinishOrder.resx">
       <DependentUpon>Form_FinishOrder.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Forms_User\Form_DashBoard_User.resx">
+      <DependentUpon>Form_DashBoard_User.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -198,6 +207,21 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\2205208_cart_purchase_shopping_trolley_icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\2205208_cart_purchase_shopping_trolley_icon %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\2205208_cart_purchase_shopping_trolley_icon %282%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\8111410_history_time_clock_watch_timer_icon %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\4092564_profile_about_mobile ui_user_icon.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

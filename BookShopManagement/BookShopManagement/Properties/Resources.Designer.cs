@@ -59,5 +59,55 @@ namespace BookShopManagement.Properties {
                 resourceCulture = value;
             }
         }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap _2205208_cart_purchase_shopping_trolley_icon {
+            get {
+                object obj = ResourceManager.GetObject("2205208_cart_purchase_shopping_trolley_icon", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap _2205208_cart_purchase_shopping_trolley_icon__1_ {
+            get {
+                object obj = ResourceManager.GetObject("2205208_cart_purchase_shopping_trolley_icon (1)", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap _2205208_cart_purchase_shopping_trolley_icon__2_ {
+            get {
+                object obj = ResourceManager.GetObject("2205208_cart_purchase_shopping_trolley_icon (2)", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap _4092564_profile_about_mobile_ui_user_icon {
+            get {
+                object obj = ResourceManager.GetObject("4092564_profile_about_mobile ui_user_icon", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap _8111410_history_time_clock_watch_timer_icon__1_ {
+            get {
+                object obj = ResourceManager.GetObject("8111410_history_time_clock_watch_timer_icon (1)", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
     }
 }

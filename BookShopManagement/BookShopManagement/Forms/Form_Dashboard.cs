@@ -40,7 +40,7 @@ namespace BookShopManagement.Forms
         {
             if (isCollapsed)
             {
-                panelLeft.Width = panelLeft.Width + 10;
+                panelLeft.Width = panelLeft.Width + 20;
                 if (panelLeft.Width >= PanelWidth)
                 {
                     timer1.Stop();
@@ -50,7 +50,7 @@ namespace BookShopManagement.Forms
             }
             else
             {
-                panelLeft.Width = panelLeft.Width - 10;
+                panelLeft.Width = panelLeft.Width - 20;
                 if (panelLeft.Width <= 59)
                 {
                     timer1.Stop();
@@ -127,6 +127,16 @@ namespace BookShopManagement.Forms
         {
             DateTime dt = DateTime.Now;
             labelTime.Text = dt.ToString("HH:MM:ss");
+        }
+
+        private void label5_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void labelTime_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
