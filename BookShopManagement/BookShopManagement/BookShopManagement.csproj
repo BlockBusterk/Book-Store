@@ -143,6 +143,30 @@
     <Compile Include="UserControls\UC_ViewSales.Designer.cs">
       <DependentUpon>UC_ViewSales.cs</DependentUpon>
     </Compile>
+    <Compile Include="UserControls_User\UC_Books.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls_User\UC_Books.Designer.cs">
+      <DependentUpon>UC_Books.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls_User\UC_Cart.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls_User\UC_Cart.Designer.cs">
+      <DependentUpon>UC_Cart.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls_User\UC_History.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls_User\UC_History.Designer.cs">
+      <DependentUpon>UC_History.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls_User\UC_User.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls_User\UC_User.Designer.cs">
+      <DependentUpon>UC_User.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="Forms\Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
@@ -194,6 +218,18 @@
     </EmbeddedResource>
     <EmbeddedResource Include="UserControls\UC_ViewSales.resx">
       <DependentUpon>UC_ViewSales.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls_User\UC_Books.resx">
+      <DependentUpon>UC_Books.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls_User\UC_Cart.resx">
+      <DependentUpon>UC_Cart.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls_User\UC_History.resx">
+      <DependentUpon>UC_History.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls_User\UC_User.resx">
+      <DependentUpon>UC_User.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

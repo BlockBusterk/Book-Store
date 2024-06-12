@@ -114,3 +114,7 @@ E:\Year4HK2\C#\Doan\BookShopManagement\BookShopManagement\obj\Debug\BookShopMana
 E:\Year4HK2\C#\Doan\BookShopManagement\BookShopManagement\obj\Debug\BookShopManagement.exe
 E:\Year4HK2\C#\Doan\BookShopManagement\BookShopManagement\obj\Debug\BookShopManagement.pdb
 E:\Year4HK2\C#\Doan\BookShopManagement\BookShopManagement\obj\Debug\BookShopManagement.Forms_User.Form_DashBoard_User.resources
+E:\Year4HK2\C#\Doan\BookShopManagement\BookShopManagement\obj\Debug\BookShopManagement.UserControls_User.UC_Books.resources
+E:\Year4HK2\C#\Doan\BookShopManagement\BookShopManagement\obj\Debug\BookShopManagement.UserControls_User.UC_Cart.resources
+E:\Year4HK2\C#\Doan\BookShopManagement\BookShopManagement\obj\Debug\BookShopManagement.UserControls_User.UC_User.resources
+E:\Year4HK2\C#\Doan\BookShopManagement\BookShopManagement\obj\Debug\BookShopManagement.UserControls_User.UC_History.resources
