@@ -61,6 +61,7 @@
             // 
             // dataGridView1
             // 
+            this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Column_Title,
@@ -92,28 +93,24 @@
             this.Column_Title.HeaderText = "Title";
             this.Column_Title.MinimumWidth = 6;
             this.Column_Title.Name = "Column_Title";
-            this.Column_Title.Width = 125;
             // 
             // Column_Quantity
             // 
             this.Column_Quantity.HeaderText = "Quantity";
             this.Column_Quantity.MinimumWidth = 6;
             this.Column_Quantity.Name = "Column_Quantity";
-            this.Column_Quantity.Width = 125;
             // 
             // Column_TotalPrice
             // 
             this.Column_TotalPrice.HeaderText = "Total Price";
             this.Column_TotalPrice.MinimumWidth = 6;
             this.Column_TotalPrice.Name = "Column_TotalPrice";
-            this.Column_TotalPrice.Width = 125;
             // 
             // Column_Date
             // 
             this.Column_Date.HeaderText = "Date";
             this.Column_Date.MinimumWidth = 6;
             this.Column_Date.Name = "Column_Date";
-            this.Column_Date.Width = 125;
             // 
             // UC_History
             // 

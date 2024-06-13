@@ -99,6 +99,12 @@
     <Compile Include="Forms\Form_FinishOrder.Designer.cs">
       <DependentUpon>Form_FinishOrder.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms_User\Form_Comment_User.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms_User\Form_Comment_User.Designer.cs">
+      <DependentUpon>Form_Comment_User.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms_User\Form_DashBoard_User.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -137,6 +143,12 @@
     <Compile Include="UserControls\UC_Sales.Designer.cs">
       <DependentUpon>UC_Sales.cs</DependentUpon>
     </Compile>
+    <Compile Include="UserControls\UC_UserComment.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\UC_UserComment.Designer.cs">
+      <DependentUpon>UC_UserComment.cs</DependentUpon>
+    </Compile>
     <Compile Include="UserControls\UC_ViewSales.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -154,6 +166,12 @@
     </Compile>
     <Compile Include="UserControls_User\UC_Cart.Designer.cs">
       <DependentUpon>UC_Cart.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls_User\UC_Detail_User.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls_User\UC_Detail_User.Designer.cs">
+      <DependentUpon>UC_Detail_User.cs</DependentUpon>
     </Compile>
     <Compile Include="UserControls_User\UC_History.cs">
       <SubType>UserControl</SubType>
@@ -188,6 +206,9 @@
     <EmbeddedResource Include="Forms\Form_FinishOrder.resx">
       <DependentUpon>Form_FinishOrder.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Forms_User\Form_Comment_User.resx">
+      <DependentUpon>Form_Comment_User.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms_User\Form_DashBoard_User.resx">
       <DependentUpon>Form_DashBoard_User.cs</DependentUpon>
     </EmbeddedResource>
@@ -216,6 +237,9 @@
     <EmbeddedResource Include="UserControls\UC_Sales.resx">
       <DependentUpon>UC_Sales.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\UC_UserComment.resx">
+      <DependentUpon>UC_UserComment.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="UserControls\UC_ViewSales.resx">
       <DependentUpon>UC_ViewSales.cs</DependentUpon>
     </EmbeddedResource>
@@ -224,6 +248,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="UserControls_User\UC_Cart.resx">
       <DependentUpon>UC_Cart.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls_User\UC_Detail_User.resx">
+      <DependentUpon>UC_Detail_User.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UserControls_User\UC_History.resx">
       <DependentUpon>UC_History.cs</DependentUpon>
@@ -258,6 +285,12 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\4092564_profile_about_mobile ui_user_icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\285661_star_icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\2849817_favorite_star_favorites_favourite_multimedia_icon.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

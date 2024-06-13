@@ -118,3 +118,6 @@ E:\Year4HK2\C#\Doan\BookShopManagement\BookShopManagement\obj\Debug\BookShopMana
 E:\Year4HK2\C#\Doan\BookShopManagement\BookShopManagement\obj\Debug\BookShopManagement.UserControls_User.UC_Cart.resources
 E:\Year4HK2\C#\Doan\BookShopManagement\BookShopManagement\obj\Debug\BookShopManagement.UserControls_User.UC_User.resources
 E:\Year4HK2\C#\Doan\BookShopManagement\BookShopManagement\obj\Debug\BookShopManagement.UserControls_User.UC_History.resources
+E:\Year4HK2\C#\Doan\BookShopManagement\BookShopManagement\obj\Debug\BookShopManagement.Forms_User.Form_Comment_User.resources
+E:\Year4HK2\C#\Doan\BookShopManagement\BookShopManagement\obj\Debug\BookShopManagement.UserControls.UC_UserComment.resources
+E:\Year4HK2\C#\Doan\BookShopManagement\BookShopManagement\obj\Debug\BookShopManagement.UserControls_User.UC_Detail_User.resources
