@@ -1,12 +1,88 @@
 {
   "Version": 1,
   "WorkspaceRootPath": "D:\\repository\\Book-Store\\BookShopManagement\\",
-  "Documents": [],
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{D8F85CC1-9472-4794-8449-5D545C316A4E}|BookShopManagement\\BookShopManagement.csproj|d:\\repository\\book-store\\bookshopmanagement\\bookshopmanagement\\forms_auth\\form_login.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D8F85CC1-9472-4794-8449-5D545C316A4E}|BookShopManagement\\BookShopManagement.csproj|solutionrelative:bookshopmanagement\\forms_auth\\form_login.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D8F85CC1-9472-4794-8449-5D545C316A4E}|BookShopManagement\\BookShopManagement.csproj|d:\\repository\\book-store\\bookshopmanagement\\bookshopmanagement\\forms_auth\\form_sign_up.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D8F85CC1-9472-4794-8449-5D545C316A4E}|BookShopManagement\\BookShopManagement.csproj|solutionrelative:bookshopmanagement\\forms_auth\\form_sign_up.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D8F85CC1-9472-4794-8449-5D545C316A4E}|BookShopManagement\\BookShopManagement.csproj|d:\\repository\\book-store\\bookshopmanagement\\bookshopmanagement\\usercontrols\\uc_home.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D8F85CC1-9472-4794-8449-5D545C316A4E}|BookShopManagement\\BookShopManagement.csproj|solutionrelative:bookshopmanagement\\usercontrols\\uc_home.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D8F85CC1-9472-4794-8449-5D545C316A4E}|BookShopManagement\\BookShopManagement.csproj|d:\\repository\\book-store\\bookshopmanagement\\bookshopmanagement\\usercontrols\\uc_home.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D8F85CC1-9472-4794-8449-5D545C316A4E}|BookShopManagement\\BookShopManagement.csproj|solutionrelative:bookshopmanagement\\usercontrols\\uc_home.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
   "DocumentGroupContainers": [
     {
       "Orientation": 0,
       "VerticalTabListWidth": 256,
-      "DocumentGroups": []
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 1,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Form_Sign_Up.cs",
+              "DocumentMoniker": "D:\\repository\\Book-Store\\BookShopManagement\\BookShopManagement\\Forms_Auth\\Form_Sign_Up.cs",
+              "RelativeDocumentMoniker": "BookShopManagement\\Forms_Auth\\Form_Sign_Up.cs",
+              "ToolTip": "D:\\repository\\Book-Store\\BookShopManagement\\BookShopManagement\\Forms_Auth\\Form_Sign_Up.cs",
+              "RelativeToolTip": "BookShopManagement\\Forms_Auth\\Form_Sign_Up.cs",
+              "ViewState": "AQIAAC8AAAAAAAAAAAAAADwAAAAdAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-13T07:41:23.49Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Form_Login.cs",
+              "DocumentMoniker": "D:\\repository\\Book-Store\\BookShopManagement\\BookShopManagement\\Forms_Auth\\Form_Login.cs",
+              "RelativeDocumentMoniker": "BookShopManagement\\Forms_Auth\\Form_Login.cs",
+              "ToolTip": "D:\\repository\\Book-Store\\BookShopManagement\\BookShopManagement\\Forms_Auth\\Form_Login.cs",
+              "RelativeToolTip": "BookShopManagement\\Forms_Auth\\Form_Login.cs",
+              "ViewState": "AQIAACoAAAAAAAAAAAAAADgAAAAoAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-13T07:41:22.329Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "UC_Home.cs",
+              "DocumentMoniker": "D:\\repository\\Book-Store\\BookShopManagement\\BookShopManagement\\UserControls\\UC_Home.cs",
+              "RelativeDocumentMoniker": "BookShopManagement\\UserControls\\UC_Home.cs",
+              "ToolTip": "D:\\repository\\Book-Store\\BookShopManagement\\BookShopManagement\\UserControls\\UC_Home.cs",
+              "RelativeToolTip": "BookShopManagement\\UserControls\\UC_Home.cs",
+              "ViewState": "AQIAAA4AAAAAAAAAAAAAwBcAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-13T07:40:51.091Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "UC_Home.Designer.cs",
+              "DocumentMoniker": "D:\\repository\\Book-Store\\BookShopManagement\\BookShopManagement\\UserControls\\UC_Home.Designer.cs",
+              "RelativeDocumentMoniker": "BookShopManagement\\UserControls\\UC_Home.Designer.cs",
+              "ToolTip": "D:\\repository\\Book-Store\\BookShopManagement\\BookShopManagement\\UserControls\\UC_Home.Designer.cs",
+              "RelativeToolTip": "BookShopManagement\\UserControls\\UC_Home.Designer.cs",
+              "ViewState": "AQIAAC8BAAAAAAAAAAAAAD4BAAArAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-13T07:37:40.741Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
     }
   ]
 }

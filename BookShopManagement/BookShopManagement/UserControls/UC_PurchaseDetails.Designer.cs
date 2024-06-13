@@ -33,6 +33,7 @@
             this.panel3 = new System.Windows.Forms.Panel();
             this.panel4 = new System.Windows.Forms.Panel();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.label6 = new System.Windows.Forms.Label();
             this.panel5 = new System.Windows.Forms.Panel();
             this.textBox7 = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
@@ -49,7 +50,6 @@
             this.Column6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.label6 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.panel5.SuspendLayout();
             this.panel6.SuspendLayout();
@@ -93,6 +93,18 @@
             this.panel1.Size = new System.Drawing.Size(985, 22);
             this.panel1.TabIndex = 4;
             // 
+            // label6
+            // 
+            this.label6.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(71)))), ((int)(((byte)(160)))));
+            this.label6.Location = new System.Drawing.Point(9, 2);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(483, 21);
+            this.label6.TabIndex = 2;
+            this.label6.Text = "Copyrights © 2018. All rights Reserved By C# Ui Academy.";
+            // 
             // panel5
             // 
             this.panel5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(71)))), ((int)(((byte)(160)))));
@@ -112,7 +124,7 @@
             this.textBox7.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.textBox7.Location = new System.Drawing.Point(768, 23);
             this.textBox7.Name = "textBox7";
-            this.textBox7.Size = new System.Drawing.Size(179, 27);
+            this.textBox7.Size = new System.Drawing.Size(179, 32);
             this.textBox7.TabIndex = 5;
             // 
             // label5
@@ -123,7 +135,7 @@
             this.label5.ForeColor = System.Drawing.Color.White;
             this.label5.Location = new System.Drawing.Point(532, 27);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(89, 19);
+            this.label5.Size = new System.Drawing.Size(113, 23);
             this.label5.TabIndex = 4;
             this.label5.Text = "Search By:";
             // 
@@ -140,7 +152,7 @@
             "Publisher"});
             this.comboBox2.Location = new System.Drawing.Point(625, 23);
             this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(138, 29);
+            this.comboBox2.Size = new System.Drawing.Size(138, 31);
             this.comboBox2.TabIndex = 3;
             // 
             // button2
@@ -206,6 +218,7 @@
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.ReadOnly = true;
             this.dataGridView1.RowHeadersVisible = false;
+            this.dataGridView1.RowHeadersWidth = 51;
             this.dataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dataGridView1.Size = new System.Drawing.Size(965, 481);
             this.dataGridView1.TabIndex = 0;
@@ -213,6 +226,7 @@
             // Column1
             // 
             this.Column1.HeaderText = "Tracking ID";
+            this.Column1.MinimumWidth = 6;
             this.Column1.Name = "Column1";
             this.Column1.ReadOnly = true;
             this.Column1.Width = 120;
@@ -220,6 +234,7 @@
             // Column2
             // 
             this.Column2.HeaderText = "Book Title";
+            this.Column2.MinimumWidth = 6;
             this.Column2.Name = "Column2";
             this.Column2.ReadOnly = true;
             this.Column2.Width = 220;
@@ -227,6 +242,7 @@
             // Column3
             // 
             this.Column3.HeaderText = "Author";
+            this.Column3.MinimumWidth = 6;
             this.Column3.Name = "Column3";
             this.Column3.ReadOnly = true;
             this.Column3.Width = 150;
@@ -234,6 +250,7 @@
             // Column4
             // 
             this.Column4.HeaderText = "Publisher";
+            this.Column4.MinimumWidth = 6;
             this.Column4.Name = "Column4";
             this.Column4.ReadOnly = true;
             this.Column4.Width = 200;
@@ -241,12 +258,15 @@
             // Column5
             // 
             this.Column5.HeaderText = "Quantity";
+            this.Column5.MinimumWidth = 6;
             this.Column5.Name = "Column5";
             this.Column5.ReadOnly = true;
+            this.Column5.Width = 125;
             // 
             // Column6
             // 
             this.Column6.HeaderText = "Cost Price";
+            this.Column6.MinimumWidth = 6;
             this.Column6.Name = "Column6";
             this.Column6.ReadOnly = true;
             this.Column6.Width = 150;
@@ -254,6 +274,7 @@
             // Column7
             // 
             this.Column7.HeaderText = "Selling Price";
+            this.Column7.MinimumWidth = 6;
             this.Column7.Name = "Column7";
             this.Column7.ReadOnly = true;
             this.Column7.Width = 170;
@@ -261,21 +282,10 @@
             // Column8
             // 
             this.Column8.HeaderText = "Barcode";
+            this.Column8.MinimumWidth = 6;
             this.Column8.Name = "Column8";
             this.Column8.ReadOnly = true;
             this.Column8.Width = 200;
-            // 
-            // label6
-            // 
-            this.label6.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(71)))), ((int)(((byte)(160)))));
-            this.label6.Location = new System.Drawing.Point(9, 2);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(372, 17);
-            this.label6.TabIndex = 2;
-            this.label6.Text = "Copyrights © 2018. All rights Reserved By C# Ui Academy.";
             // 
             // UC_PurchaseDetails
             // 
