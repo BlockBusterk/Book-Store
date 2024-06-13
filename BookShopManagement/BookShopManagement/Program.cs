@@ -1,4 +1,5 @@
-﻿using System;
+﻿using BookShopManagement.Database;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
@@ -14,9 +15,10 @@ namespace BookShopManagement
         [STAThread]
         static void Main()
         {
+            FirebaseHelper.SetEnviromentVariable();
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Form1());
+            Application.Run(new Form_Login());
         }
     }
 }
