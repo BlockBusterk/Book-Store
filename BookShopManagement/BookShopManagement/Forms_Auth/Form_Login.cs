@@ -3,7 +3,6 @@ using BookShopManagement.Forms;
 using BookShopManagement.Forms_User;
 using BookShopManagement.Models;
 using Google.Cloud.Firestore;
-using Google.Type;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -38,11 +37,17 @@ namespace BookShopManagement
                 string email = txbEmail.Text.Trim();
                 string password = txbPassword.Text;
 
+                if (password == "" || email == "")
+                {
+                    MessageBox.Show("Field cannot be empty!");
+                    return;
+                }
+
                 var userCredentials = await FirebaseHelper.FirebaseAuth.SignInWithEmailAndPasswordAsync(email, password);
                 var Id = userCredentials is null ? null : userCredentials.User.Uid;
                 DocumentReference docRef = db.Collection("UserData").Document(Id);
                 currentUser = docRef.GetSnapshotAsync().Result.ConvertTo<UserData>();
-        
+
 
                 if (currentUser.Email == "admin@gmail.com")
                 {
@@ -50,14 +55,14 @@ namespace BookShopManagement
                     {
                         fd.ShowDialog();
                     }
-                } else
+                }
+                else
                 {
                     using (Form_DashBoard_User fd = new Form_DashBoard_User())
                     {
                         fd.ShowDialog();
                     }
                 }
-              
             }
             catch (Exception exception)
             {

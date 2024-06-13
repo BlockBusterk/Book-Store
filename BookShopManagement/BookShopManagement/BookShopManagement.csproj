@@ -252,6 +252,9 @@
     <Compile Include="Forms_User\Form_DashBoard_User.Designer.cs">
       <DependentUpon>Form_DashBoard_User.cs</DependentUpon>
     </Compile>
+    <Compile Include="Models\Book.cs" />
+    <Compile Include="Models\Cart.cs" />
+    <Compile Include="Models\Order.cs" />
     <Compile Include="Models\UserData.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

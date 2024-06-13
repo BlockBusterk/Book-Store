@@ -40,6 +40,12 @@ namespace BookShopManagement
                 string password = txbPassword.Text;
                 string rePassword = txbRePassword.Text;
 
+                if (password == "" || email == "" || rePassword == "")
+                {
+                    MessageBox.Show("Field cannot be empty!");
+                    return;
+                }
+
                 if (password != rePassword)
                 {
                     MessageBox.Show("Password and re enter password incorrect!");

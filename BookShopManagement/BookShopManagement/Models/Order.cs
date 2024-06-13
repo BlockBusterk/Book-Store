@@ -8,21 +8,22 @@ using System.Threading.Tasks;
 namespace BookShopManagement.Models
 {
     [FirestoreData]
-    public class UserData
+    public class Order
     {
         [FirestoreProperty]
-        public string Name { get; set; }
+        public string BookTitle { get; set; }
         [FirestoreProperty]
-        public string Email { get; set; }
+        public string CustomerName { get; set; }
         [FirestoreProperty]
-        public string Phone { get; set; }
+        public string ImageUrl { get; set; }
         [FirestoreProperty]
-        public string Address { get; set; }
+        public int Quantity { get; set; } = 1;
         [FirestoreProperty]
-        public int Turnover { get; set; } = 0;
+        public int TotalPrice { get; set; }
         [FirestoreProperty]
         public string CreatedDate { get; set; }
         [FirestoreProperty]
-        public string ImageUrl { get; set; }
+        public string Status { get; set; } // Pending, Delivered, Completed
+
     }
 }
