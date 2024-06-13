@@ -93,6 +93,26 @@ namespace BookShopManagement.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap _2849817_favorite_star_favorites_favourite_multimedia_icon {
+            get {
+                object obj = ResourceManager.GetObject("2849817_favorite_star_favorites_favourite_multimedia_icon", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap _285661_star_icon {
+            get {
+                object obj = ResourceManager.GetObject("285661_star_icon", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap _4092564_profile_about_mobile_ui_user_icon {
             get {
                 object obj = ResourceManager.GetObject("4092564_profile_about_mobile ui_user_icon", resourceCulture);
