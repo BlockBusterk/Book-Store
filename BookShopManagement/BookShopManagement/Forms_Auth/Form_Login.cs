@@ -1,5 +1,6 @@
 ﻿using BookShopManagement.Database;
 using BookShopManagement.Forms;
+using BookShopManagement.Forms_Auth;
 using BookShopManagement.Forms_User;
 using BookShopManagement.Models;
 using Google.Cloud.Firestore;
@@ -77,6 +78,14 @@ namespace BookShopManagement
             using (Form_Sign_Up fsu = new Form_Sign_Up())
             {
                 fsu.ShowDialog();
+            }
+        }
+
+        private void label5_Click(object sender, EventArgs e)
+        {
+            using (Form_Password_Recovery fpr = new Form_Password_Recovery())
+            {
+                fpr.ShowDialog();
             }
         }
     }

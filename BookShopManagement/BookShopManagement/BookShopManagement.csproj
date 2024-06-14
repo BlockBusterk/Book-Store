@@ -210,6 +210,12 @@
     <Compile Include="Forms_Admin\Form_EditDeleteBook.Designer.cs">
       <DependentUpon>Form_EditDeleteBook.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms_Auth\Form_Password_Recovery.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms_Auth\Form_Password_Recovery.Designer.cs">
+      <DependentUpon>Form_Password_Recovery.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms_Auth\Form_Sign_Up.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -340,6 +346,9 @@
     <Compile Include="Utils\HashKeys.cs" />
     <EmbeddedResource Include="Forms_Admin\Form_EditDeleteBook.resx">
       <DependentUpon>Form_EditDeleteBook.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms_Auth\Form_Password_Recovery.resx">
+      <DependentUpon>Form_Password_Recovery.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms_Auth\Form_Sign_Up.resx">
       <DependentUpon>Form_Sign_Up.cs</DependentUpon>
