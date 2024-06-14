@@ -103,5 +103,12 @@ namespace BookShopManagement.Forms
         {
             moveSidePanel(btnSettings);
         }
+
+        private void btnUser_Click(object sender, EventArgs e)
+        {
+            moveSidePanel(btnCustomer);
+            UC_Customer cus = new UC_Customer();
+            AddControlsToPanel(cus);
+        }
     }
 }

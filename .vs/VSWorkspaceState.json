@@ -1,7 +1,9 @@
 {
   "ExpandedNodes": [
     "",
-    "\\BookShopManagement"
+    "\\BookShopManagement",
+    "\\BookShopManagement\\BookShopManagement",
+    "\\BookShopManagement\\BookShopManagement\\Forms_Admin"
   ],
   "SelectedNode": "\\BookShopManagement\\BookShopManagement.sln",
   "PreviewInSolutionExplorer": false

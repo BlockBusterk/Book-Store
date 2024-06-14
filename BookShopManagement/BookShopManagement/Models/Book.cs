@@ -1,6 +1,7 @@
 ﻿using Google.Cloud.Firestore;
 using System;
 using System.Collections.Generic;
+using System.Globalization;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -12,24 +13,24 @@ namespace BookShopManagement.Models
     public class Book
     {
         [FirestoreProperty]
-        public string ImageUrl { get; set; }
+        public string ImageUrl { get; set; } = "";
         [FirestoreProperty]
-        public string BookTitle { get; set; }
+        public string BookTitle { get; set; } = "";
         [FirestoreProperty]
-        public string Author { get; set; }
+        public string Author { get; set; } = "";
         [FirestoreProperty]
-        public string Publisher { get; set; }
+        public string Publisher { get; set; } = "";
         [FirestoreProperty]
-        public int Quantity { get; set; }
+        public int Quantity { get; set; } = 0;
         [FirestoreProperty]
-        public int CostPrice { get; set; }
+        public int CostPrice { get; set; } = 0;
         [FirestoreProperty]
-        public int SellingPrice { get; set; }
+        public int SellingPrice { get; set; } = 0;
         [FirestoreProperty]
-        public string Category { get; set; }
+        public string Category { get; set; } = "";
         [FirestoreProperty]
-        public string Barcode { get; set; }
+        public string Barcode { get; set; } = "";
         [FirestoreProperty]
-        public string CreatedDate { get; set; }
+        public string CreatedDate { get; set; } = DateTime.UtcNow.ToString("s", CultureInfo.InvariantCulture);
     }
 }

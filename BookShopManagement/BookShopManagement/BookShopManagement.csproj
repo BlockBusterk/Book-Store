@@ -260,6 +260,7 @@
     </Compile>
     <Compile Include="Models\Book.cs" />
     <Compile Include="Models\Cart.cs" />
+    <Compile Include="Models\Category.cs" />
     <Compile Include="Models\Order.cs" />
     <Compile Include="Models\UserData.cs" />
     <Compile Include="Program.cs" />
@@ -269,6 +270,12 @@
     </Compile>
     <Compile Include="UserControls\UC_Home.Designer.cs">
       <DependentUpon>UC_Home.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\UC_Customer.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\UC_Customer.Designer.cs">
+      <DependentUpon>UC_Customer.cs</DependentUpon>
     </Compile>
     <Compile Include="UserControls\UC_PurchaseDetails.cs">
       <SubType>UserControl</SubType>
@@ -364,6 +371,9 @@
     </Compile>
     <EmbeddedResource Include="UserControls\UC_Home.resx">
       <DependentUpon>UC_Home.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\UC_Customer.resx">
+      <DependentUpon>UC_Customer.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UserControls\UC_PurchaseDetails.resx">
       <DependentUpon>UC_PurchaseDetails.cs</DependentUpon>
@@ -482,6 +492,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\2849817_favorite_star_favorites_favourite_multimedia_icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\OIP.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Import Project="..\packages\Google.Api.CommonProtos.2.15.0\build\Google.Api.CommonProtos.targets" Condition="Exists('..\packages\Google.Api.CommonProtos.2.15.0\build\Google.Api.CommonProtos.targets')" />

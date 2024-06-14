@@ -32,11 +32,9 @@
             this.panel2 = new System.Windows.Forms.Panel();
             this.panel4 = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.txbCategoryName = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
-            this.richTextBox1 = new System.Windows.Forms.RichTextBox();
-            this.label1 = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
             this.dragControl1 = new DragControlDemo.DragControl();
@@ -78,12 +76,12 @@
             this.panel3.Size = new System.Drawing.Size(439, 10);
             this.panel3.TabIndex = 7;
             // 
-            // textBox2
+            // txbCategoryName
             // 
-            this.textBox2.Location = new System.Drawing.Point(172, 95);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(207, 27);
-            this.textBox2.TabIndex = 17;
+            this.txbCategoryName.Location = new System.Drawing.Point(172, 95);
+            this.txbCategoryName.Name = "txbCategoryName";
+            this.txbCategoryName.Size = new System.Drawing.Size(207, 32);
+            this.txbCategoryName.TabIndex = 17;
             // 
             // label6
             // 
@@ -91,7 +89,7 @@
             this.label6.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.Location = new System.Drawing.Point(28, 99);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(138, 19);
+            this.label6.Size = new System.Drawing.Size(174, 23);
             this.label6.TabIndex = 15;
             this.label6.Text = "Category Name:";
             // 
@@ -102,27 +100,9 @@
             this.label4.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.Location = new System.Drawing.Point(146, 31);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(157, 25);
+            this.label4.Size = new System.Drawing.Size(202, 32);
             this.label4.TabIndex = 16;
             this.label4.Text = "Add Category";
-            // 
-            // richTextBox1
-            // 
-            this.richTextBox1.Location = new System.Drawing.Point(172, 139);
-            this.richTextBox1.Name = "richTextBox1";
-            this.richTextBox1.Size = new System.Drawing.Size(207, 96);
-            this.richTextBox1.TabIndex = 18;
-            this.richTextBox1.Text = "";
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(68, 143);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(98, 19);
-            this.label1.TabIndex = 15;
-            this.label1.Text = "Description:";
             // 
             // button1
             // 
@@ -138,6 +118,7 @@
             this.button1.TabIndex = 21;
             this.button1.Text = "Save";
             this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // button3
             // 
@@ -166,9 +147,7 @@
             this.ClientSize = new System.Drawing.Size(439, 313);
             this.Controls.Add(this.button3);
             this.Controls.Add(this.button1);
-            this.Controls.Add(this.richTextBox1);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.label1);
+            this.Controls.Add(this.txbCategoryName);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.panel2);
@@ -192,11 +171,9 @@
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Panel panel4;
         private System.Windows.Forms.Panel panel3;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox txbCategoryName;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.RichTextBox richTextBox1;
-        private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button button3;
         private DragControlDemo.DragControl dragControl1;

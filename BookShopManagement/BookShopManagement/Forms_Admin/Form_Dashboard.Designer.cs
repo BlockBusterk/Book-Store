@@ -31,6 +31,7 @@
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form_Dashboard));
             this.panelLeft = new System.Windows.Forms.Panel();
+            this.btnCustomer = new System.Windows.Forms.Button();
             this.panelSide = new System.Windows.Forms.Panel();
             this.btnSettings = new System.Windows.Forms.Button();
             this.btnViewSales = new System.Windows.Forms.Button();
@@ -62,6 +63,7 @@
             // panelLeft
             // 
             this.panelLeft.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(71)))), ((int)(((byte)(160)))));
+            this.panelLeft.Controls.Add(this.btnCustomer);
             this.panelLeft.Controls.Add(this.panelSide);
             this.panelLeft.Controls.Add(this.btnSettings);
             this.panelLeft.Controls.Add(this.btnViewSales);
@@ -74,6 +76,23 @@
             this.panelLeft.Name = "panelLeft";
             this.panelLeft.Size = new System.Drawing.Size(215, 720);
             this.panelLeft.TabIndex = 0;
+            // 
+            // btnCustomer
+            // 
+            this.btnCustomer.FlatAppearance.BorderSize = 0;
+            this.btnCustomer.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnCustomer.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCustomer.ForeColor = System.Drawing.Color.White;
+            this.btnCustomer.Image = global::BookShopManagement.Properties.Resources._4092564_profile_about_mobile_ui_user_icon;
+            this.btnCustomer.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnCustomer.Location = new System.Drawing.Point(10, 406);
+            this.btnCustomer.Name = "btnCustomer";
+            this.btnCustomer.Size = new System.Drawing.Size(190, 60);
+            this.btnCustomer.TabIndex = 10;
+            this.btnCustomer.Text = "     Customer";
+            this.btnCustomer.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnCustomer.UseVisualStyleBackColor = true;
+            this.btnCustomer.Click += new System.EventHandler(this.btnUser_Click);
             // 
             // panelSide
             // 
@@ -91,7 +110,7 @@
             this.btnSettings.ForeColor = System.Drawing.Color.White;
             this.btnSettings.Image = ((System.Drawing.Image)(resources.GetObject("btnSettings.Image")));
             this.btnSettings.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnSettings.Location = new System.Drawing.Point(12, 404);
+            this.btnSettings.Location = new System.Drawing.Point(9, 472);
             this.btnSettings.Name = "btnSettings";
             this.btnSettings.Size = new System.Drawing.Size(203, 60);
             this.btnSettings.TabIndex = 2;
@@ -112,7 +131,7 @@
             this.btnViewSales.Name = "btnViewSales";
             this.btnViewSales.Size = new System.Drawing.Size(203, 60);
             this.btnViewSales.TabIndex = 2;
-            this.btnViewSales.Text = "     View Sales";
+            this.btnViewSales.Text = "     History";
             this.btnViewSales.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnViewSales.UseVisualStyleBackColor = true;
             this.btnViewSales.Click += new System.EventHandler(this.btnViewSales_Click);
@@ -365,5 +384,6 @@
         private System.Windows.Forms.Timer timer1;
         private System.Windows.Forms.Timer timerTime;
         private System.Windows.Forms.Panel panelControls;
+        private System.Windows.Forms.Button btnCustomer;
     }
 }

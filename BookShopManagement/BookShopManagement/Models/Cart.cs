@@ -11,15 +11,15 @@ namespace BookShopManagement.Models
     public class Cart
     {
         [FirestoreProperty]
-        public string BookTitle { get; set; }
+        public string BookTitle { get; set; } = "";
         [FirestoreProperty]
-        public string CustomerName { get; set; }
+        public string CustomerName { get; set; } = "";
         [FirestoreProperty]
-        public string ImageUrl { get; set; }
+        public string ImageUrl { get; set; } = "";
         [FirestoreProperty]
-        public int Quantity { get; set; } = 1;
+        public int Quantity { get; set; } = 1; 
         [FirestoreProperty]
-        public int TotalPrice { get; set; }
+        public int TotalPrice { get; set; } = 0;
 
 
     }
