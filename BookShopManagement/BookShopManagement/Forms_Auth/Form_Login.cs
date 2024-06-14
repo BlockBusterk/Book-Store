@@ -18,6 +18,7 @@ namespace BookShopManagement
     public partial class Form_Login : Form
     {
         public static UserData currentUser { get; set; }
+        public static string currentUserId { get; set; }
         public Form_Login()
         {
             InitializeComponent();
@@ -47,7 +48,7 @@ namespace BookShopManagement
                 var Id = userCredentials is null ? null : userCredentials.User.Uid;
                 DocumentReference docRef = db.Collection("UserData").Document(Id);
                 currentUser = docRef.GetSnapshotAsync().Result.ConvertTo<UserData>();
-
+                currentUserId = Id;
 
                 if (currentUser.Email == "admin@gmail.com")
                 {

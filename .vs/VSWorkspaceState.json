@@ -4,8 +4,9 @@
     "\\BookShopManagement",
     "\\BookShopManagement\\BookShopManagement",
     "\\BookShopManagement\\BookShopManagement\\Forms_Admin",
+    "\\BookShopManagement\\BookShopManagement\\Models",
     "\\BookShopManagement\\BookShopManagement\\UserControls"
   ],
-  "SelectedNode": "\\BookShopManagement\\BookShopManagement\\Forms_Admin\\Form_EditDeleteBook.cs",
+  "SelectedNode": "\\BookShopManagement\\BookShopManagement\\Models\\Order.cs",
   "PreviewInSolutionExplorer": false
 }
