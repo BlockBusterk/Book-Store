@@ -204,6 +204,12 @@
     </Compile>
     <Compile Include="Database\FirebaseAuthService.cs" />
     <Compile Include="Database\FirebaseHelper.cs" />
+    <Compile Include="Forms_Admin\Form_EditDeleteBook.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms_Admin\Form_EditDeleteBook.Designer.cs">
+      <DependentUpon>Form_EditDeleteBook.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms_Auth\Form_Sign_Up.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -332,6 +338,9 @@
       <DependentUpon>UC_User.cs</DependentUpon>
     </Compile>
     <Compile Include="Utils\HashKeys.cs" />
+    <EmbeddedResource Include="Forms_Admin\Form_EditDeleteBook.resx">
+      <DependentUpon>Form_EditDeleteBook.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms_Auth\Form_Sign_Up.resx">
       <DependentUpon>Form_Sign_Up.cs</DependentUpon>
     </EmbeddedResource>

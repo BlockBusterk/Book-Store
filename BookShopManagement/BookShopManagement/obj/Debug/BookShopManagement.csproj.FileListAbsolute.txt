@@ -143,3 +143,4 @@ D:\repository\Book-Store\BookShopManagement\BookShopManagement\obj\Debug\BookSho
 D:\repository\Book-Store\BookShopManagement\BookShopManagement\obj\Debug\BookShopManagement.exe
 D:\repository\Book-Store\BookShopManagement\BookShopManagement\obj\Debug\BookShopManagement.pdb
 D:\repository\Book-Store\BookShopManagement\BookShopManagement\obj\Debug\BookShopManagement.UserControls.UC_Customer.resources
+D:\repository\Book-Store\BookShopManagement\BookShopManagement\obj\Debug\BookShopManagement.Forms.Form_EditDeleteBook.resources

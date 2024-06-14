@@ -1,6 +1,6 @@
 ﻿namespace BookShopManagement.Forms
 {
-    partial class Form_AddNewBook
+    partial class Form_EditDeleteBook
     {
         /// <summary>
         /// Required designer variable.
@@ -47,13 +47,14 @@
             this.label3 = new System.Windows.Forms.Label();
             this.cbCategory = new System.Windows.Forms.ComboBox();
             this.button2 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
+            this.btnClear = new System.Windows.Forms.Button();
             this.button4 = new System.Windows.Forms.Button();
             this.txbAuthor = new System.Windows.Forms.TextBox();
             this.txbPublisher = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
-            this.dragControl1 = new DragControlDemo.DragControl();
             this.picImage = new System.Windows.Forms.PictureBox();
+            this.dragControl1 = new DragControlDemo.DragControl();
+            this.btnDelete = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.picImage)).BeginInit();
             this.SuspendLayout();
             // 
@@ -187,9 +188,9 @@
             this.label4.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.Location = new System.Drawing.Point(319, 30);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(209, 32);
+            this.label4.Size = new System.Drawing.Size(136, 32);
             this.label4.TabIndex = 11;
-            this.label4.Text = "Add new book";
+            this.label4.Text = "Edit book";
             // 
             // label2
             // 
@@ -242,21 +243,21 @@
             this.button2.UseVisualStyleBackColor = false;
             this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
-            // button3
+            // btnClear
             // 
-            this.button3.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.button3.BackColor = System.Drawing.Color.Red;
-            this.button3.FlatAppearance.BorderSize = 0;
-            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button3.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button3.ForeColor = System.Drawing.Color.White;
-            this.button3.Location = new System.Drawing.Point(425, 440);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(138, 38);
-            this.button3.TabIndex = 20;
-            this.button3.Text = "Clear";
-            this.button3.UseVisualStyleBackColor = false;
-            this.button3.Click += new System.EventHandler(this.button3_Click);
+            this.btnClear.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.btnClear.BackColor = System.Drawing.Color.Red;
+            this.btnClear.FlatAppearance.BorderSize = 0;
+            this.btnClear.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnClear.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnClear.ForeColor = System.Drawing.Color.White;
+            this.btnClear.Location = new System.Drawing.Point(282, 440);
+            this.btnClear.Name = "btnClear";
+            this.btnClear.Size = new System.Drawing.Size(138, 38);
+            this.btnClear.TabIndex = 20;
+            this.btnClear.Text = "Clear";
+            this.btnClear.UseVisualStyleBackColor = false;
+            this.btnClear.Click += new System.EventHandler(this.button3_Click);
             // 
             // button4
             // 
@@ -297,10 +298,6 @@
             this.label5.TabIndex = 28;
             this.label5.Text = "Choose image:";
             // 
-            // dragControl1
-            // 
-            this.dragControl1.SelectControl = this;
-            // 
             // picImage
             // 
             this.picImage.Image = global::BookShopManagement.Properties.Resources.OIP;
@@ -313,18 +310,39 @@
             this.picImage.TabStop = false;
             this.picImage.Click += new System.EventHandler(this.picImage_Click);
             // 
-            // Form_AddNewBook
+            // dragControl1
+            // 
+            this.dragControl1.SelectControl = this;
+            // 
+            // btnDelete
+            // 
+            this.btnDelete.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.btnDelete.BackColor = System.Drawing.Color.Tomato;
+            this.btnDelete.FlatAppearance.BorderSize = 0;
+            this.btnDelete.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnDelete.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnDelete.ForeColor = System.Drawing.Color.White;
+            this.btnDelete.Location = new System.Drawing.Point(426, 440);
+            this.btnDelete.Name = "btnDelete";
+            this.btnDelete.Size = new System.Drawing.Size(138, 38);
+            this.btnDelete.TabIndex = 29;
+            this.btnDelete.Text = "Delete";
+            this.btnDelete.UseVisualStyleBackColor = false;
+            this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
+            // 
+            // Form_EditDeleteBook
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(814, 523);
+            this.Controls.Add(this.btnDelete);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.picImage);
             this.Controls.Add(this.txbPublisher);
             this.Controls.Add(this.txbAuthor);
             this.Controls.Add(this.cbCategory);
             this.Controls.Add(this.button2);
-            this.Controls.Add(this.button3);
+            this.Controls.Add(this.btnClear);
             this.Controls.Add(this.button4);
             this.Controls.Add(this.btnAddNewBook);
             this.Controls.Add(this.txbQuantity);
@@ -346,7 +364,7 @@
             this.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(71)))), ((int)(((byte)(160)))));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Name = "Form_AddNewBook";
+            this.Name = "Form_EditDeleteBook";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Form_AddNewBook";
             this.Load += new System.EventHandler(this.Form_AddNewBook_Load);
@@ -377,12 +395,13 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.ComboBox cbCategory;
         private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Button btnClear;
         private DragControlDemo.DragControl dragControl1;
         private System.Windows.Forms.Button button4;
         private System.Windows.Forms.TextBox txbAuthor;
         private System.Windows.Forms.TextBox txbPublisher;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.PictureBox picImage;
+        private System.Windows.Forms.Button btnDelete;
     }
 }

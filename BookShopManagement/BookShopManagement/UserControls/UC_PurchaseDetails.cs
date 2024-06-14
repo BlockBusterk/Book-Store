@@ -11,6 +11,7 @@ using BookShopManagement.Forms;
 using Google.Cloud.Firestore;
 using BookShopManagement.Database;
 using BookShopManagement.Models;
+using System.Web.UI.WebControls;
 
 namespace BookShopManagement.UserControls
 {
@@ -25,6 +26,7 @@ namespace BookShopManagement.UserControls
 
         private async void LoadBookList()
         {
+            dataGridView.Rows.Clear();
             var db = FirebaseHelper.Database;
             Query query = db.Collection("Book");
             QuerySnapshot snapshots = await query.GetSnapshotAsync();
@@ -42,7 +44,7 @@ namespace BookShopManagement.UserControls
                         book.CostPrice,
                         book.SellingPrice,
                         book.Barcode
-                        );
+                   );
                 }
             }
 
@@ -53,7 +55,22 @@ namespace BookShopManagement.UserControls
             {
                 abn.ShowDialog();
                 LoadBookList();
+            }
+        }
 
+        private void dataGridView_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (e.RowIndex >= 0) // Exclude header row
+            {
+                // Assuming the ID is in the first column (index 0)
+                String id = dataGridView.Rows[e.RowIndex].Cells[0].Value.ToString();
+                // Use the 'id' value as needed (e.g., display it, perform an action, etc.)
+                // ...
+                using (Form_EditDeleteBook form = new Form_EditDeleteBook(id))
+                {
+                    form.ShowDialog();
+                    LoadBookList();
+                }
             }
         }
     }

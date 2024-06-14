@@ -29,15 +29,16 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(UC_PurchaseDetails));
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panel4 = new System.Windows.Forms.Panel();
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel5 = new System.Windows.Forms.Panel();
             this.textBox7 = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.comboBox2 = new System.Windows.Forms.ComboBox();
+            this.btnAddNewBooks = new System.Windows.Forms.Button();
             this.panel6 = new System.Windows.Forms.Panel();
             this.dataGridView = new System.Windows.Forms.DataGridView();
-            this.btnAddNewBooks = new System.Windows.Forms.Button();
             this.Id = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -117,6 +118,23 @@
             this.comboBox2.Size = new System.Drawing.Size(138, 31);
             this.comboBox2.TabIndex = 3;
             // 
+            // btnAddNewBooks
+            // 
+            this.btnAddNewBooks.Dock = System.Windows.Forms.DockStyle.Left;
+            this.btnAddNewBooks.FlatAppearance.BorderSize = 0;
+            this.btnAddNewBooks.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAddNewBooks.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAddNewBooks.ForeColor = System.Drawing.Color.White;
+            this.btnAddNewBooks.Image = ((System.Drawing.Image)(resources.GetObject("btnAddNewBooks.Image")));
+            this.btnAddNewBooks.Location = new System.Drawing.Point(0, 0);
+            this.btnAddNewBooks.Name = "btnAddNewBooks";
+            this.btnAddNewBooks.Size = new System.Drawing.Size(193, 67);
+            this.btnAddNewBooks.TabIndex = 0;
+            this.btnAddNewBooks.Text = "   Add New Book";
+            this.btnAddNewBooks.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnAddNewBooks.UseVisualStyleBackColor = true;
+            this.btnAddNewBooks.Click += new System.EventHandler(this.btnAddNewBooks_Click);
+            // 
             // panel6
             // 
             this.panel6.Controls.Add(this.dataGridView);
@@ -144,6 +162,7 @@
             this.Column8});
             this.dataGridView.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dataGridView.Location = new System.Drawing.Point(0, 0);
+            this.dataGridView.MultiSelect = false;
             this.dataGridView.Name = "dataGridView";
             this.dataGridView.ReadOnly = true;
             this.dataGridView.RowHeadersVisible = false;
@@ -151,23 +170,7 @@
             this.dataGridView.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dataGridView.Size = new System.Drawing.Size(975, 503);
             this.dataGridView.TabIndex = 0;
-            // 
-            // btnAddNewBooks
-            // 
-            this.btnAddNewBooks.Dock = System.Windows.Forms.DockStyle.Left;
-            this.btnAddNewBooks.FlatAppearance.BorderSize = 0;
-            this.btnAddNewBooks.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnAddNewBooks.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAddNewBooks.ForeColor = System.Drawing.Color.White;
-            this.btnAddNewBooks.Image = ((System.Drawing.Image)(resources.GetObject("btnAddNewBooks.Image")));
-            this.btnAddNewBooks.Location = new System.Drawing.Point(0, 0);
-            this.btnAddNewBooks.Name = "btnAddNewBooks";
-            this.btnAddNewBooks.Size = new System.Drawing.Size(193, 67);
-            this.btnAddNewBooks.TabIndex = 0;
-            this.btnAddNewBooks.Text = "   Add New Book";
-            this.btnAddNewBooks.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnAddNewBooks.UseVisualStyleBackColor = true;
-            this.btnAddNewBooks.Click += new System.EventHandler(this.btnAddNewBooks_Click);
+            this.dataGridView.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView_CellClick);
             // 
             // Id
             // 
@@ -214,6 +217,8 @@
             // 
             // Column7
             // 
+            dataGridViewCellStyle7.NullValue = null;
+            this.Column7.DefaultCellStyle = dataGridViewCellStyle7;
             this.Column7.HeaderText = "Selling Price";
             this.Column7.MinimumWidth = 6;
             this.Column7.Name = "Column7";
