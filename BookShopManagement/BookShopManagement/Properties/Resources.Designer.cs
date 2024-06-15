@@ -133,6 +133,16 @@ namespace BookShopManagement.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap _8664831_user_icon {
+            get {
+                object obj = ResourceManager.GetObject("8664831_user_icon", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap OIP {
             get {
                 object obj = ResourceManager.GetObject("OIP", resourceCulture);

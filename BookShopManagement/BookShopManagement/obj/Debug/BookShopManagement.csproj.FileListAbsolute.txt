@@ -292,3 +292,6 @@ E:\Year4HK2\C#\Book-Store\BookShopManagement\BookShopManagement\obj\Debug\BookSh
 E:\Year4HK2\C#\Book-Store\BookShopManagement\BookShopManagement\obj\Debug\BookShopManagement.csproj.CopyComplete
 E:\Year4HK2\C#\Book-Store\BookShopManagement\BookShopManagement\obj\Debug\BookShopManagement.exe
 E:\Year4HK2\C#\Book-Store\BookShopManagement\BookShopManagement\obj\Debug\BookShopManagement.pdb
+E:\Year4HK2\C#\Book-Store\BookShopManagement\BookShopManagement\obj\Debug\BookShopManagement.Forms_Auth.Form_Change_Password.resources
+E:\Year4HK2\C#\Book-Store\BookShopManagement\BookShopManagement\bin\Debug\CloudinaryDotNet.dll
+E:\Year4HK2\C#\Book-Store\BookShopManagement\BookShopManagement\bin\Debug\CloudinaryDotNet.xml
