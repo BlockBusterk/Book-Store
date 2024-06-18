@@ -65,7 +65,7 @@
             this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(71)))), ((int)(((byte)(160)))));
             this.label2.Location = new System.Drawing.Point(324, 49);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(314, 25);
+            this.label2.Size = new System.Drawing.Size(401, 32);
             this.label2.TabIndex = 0;
             this.label2.Text = "Sales and Purchase Overview";
             // 
@@ -98,9 +98,10 @@
             this.label4.ForeColor = System.Drawing.Color.White;
             this.label4.Location = new System.Drawing.Point(40, 50);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(54, 23);
+            this.label4.Size = new System.Drawing.Size(64, 28);
             this.label4.TabIndex = 0;
             this.label4.Text = "1000";
+            this.label4.Click += new System.EventHandler(this.label4_Click);
             // 
             // label3
             // 
@@ -109,7 +110,7 @@
             this.label3.ForeColor = System.Drawing.Color.White;
             this.label3.Location = new System.Drawing.Point(15, 18);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(94, 19);
+            this.label3.Size = new System.Drawing.Size(122, 23);
             this.label3.TabIndex = 0;
             this.label3.Text = "Sold Books:";
             // 
@@ -142,7 +143,7 @@
             this.label5.ForeColor = System.Drawing.Color.White;
             this.label5.Location = new System.Drawing.Point(43, 50);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(54, 23);
+            this.label5.Size = new System.Drawing.Size(64, 28);
             this.label5.TabIndex = 0;
             this.label5.Text = "1234";
             // 
@@ -153,7 +154,7 @@
             this.label6.ForeColor = System.Drawing.Color.White;
             this.label6.Location = new System.Drawing.Point(15, 18);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(143, 19);
+            this.label6.Size = new System.Drawing.Size(183, 23);
             this.label6.TabIndex = 0;
             this.label6.Text = "Purchased Books:";
             // 
@@ -186,9 +187,10 @@
             this.label7.ForeColor = System.Drawing.Color.White;
             this.label7.Location = new System.Drawing.Point(41, 50);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(43, 23);
+            this.label7.Size = new System.Drawing.Size(51, 28);
             this.label7.TabIndex = 0;
             this.label7.Text = "512";
+            this.label7.Click += new System.EventHandler(this.label7_Click);
             // 
             // label8
             // 
@@ -197,7 +199,7 @@
             this.label8.ForeColor = System.Drawing.Color.White;
             this.label8.Location = new System.Drawing.Point(13, 17);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(92, 19);
+            this.label8.Size = new System.Drawing.Size(119, 23);
             this.label8.TabIndex = 0;
             this.label8.Text = "Customers:";
             // 
@@ -209,7 +211,7 @@
             this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(71)))), ((int)(((byte)(160)))));
             this.label1.Location = new System.Drawing.Point(55, 259);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(115, 19);
+            this.label1.Size = new System.Drawing.Size(146, 23);
             this.label1.TabIndex = 0;
             this.label1.Text = "Yearly Report:";
             // 
@@ -279,7 +281,7 @@
             this.label9.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(71)))), ((int)(((byte)(160)))));
             this.label9.Location = new System.Drawing.Point(589, 330);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(235, 19);
+            this.label9.Size = new System.Drawing.Size(294, 23);
             this.label9.TabIndex = 0;
             this.label9.Text = "% Amount Recived and Paid:";
             // 
@@ -291,7 +293,7 @@
             this.label10.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(71)))), ((int)(((byte)(160)))));
             this.label10.Location = new System.Drawing.Point(626, 526);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(72, 19);
+            this.label10.Size = new System.Drawing.Size(90, 23);
             this.label10.TabIndex = 0;
             this.label10.Text = "Recived";
             // 
@@ -303,7 +305,7 @@
             this.label11.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(71)))), ((int)(((byte)(160)))));
             this.label11.Location = new System.Drawing.Point(840, 525);
             this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(44, 19);
+            this.label11.Size = new System.Drawing.Size(52, 23);
             this.label11.TabIndex = 0;
             this.label11.Text = "Paid";
             // 
@@ -325,6 +327,7 @@
             this.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Name = "UC_Home";
             this.Size = new System.Drawing.Size(985, 580);
+            this.Load += new System.EventHandler(this.UC_Home_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();

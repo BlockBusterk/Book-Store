@@ -73,5 +73,10 @@ namespace BookShopManagement.UserControls
                 }
             }
         }
+
+        private void textBox7_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

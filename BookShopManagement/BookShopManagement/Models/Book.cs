@@ -12,6 +12,7 @@ namespace BookShopManagement.Models
     [FirestoreData]
     public class Book
     {
+        public string BookId { get; set; } = "";
         [FirestoreProperty]
         public string ImageUrl { get; set; } = "";
         [FirestoreProperty]

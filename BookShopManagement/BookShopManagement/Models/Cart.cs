@@ -13,6 +13,15 @@ namespace BookShopManagement.Models
         [FirestoreProperty]
         public string BookTitle { get; set; } = "";
         [FirestoreProperty]
+        public string BookPublisher { get; set; } = "";
+        [FirestoreProperty]
+        public string Author { get; set; } = "";
+
+        [FirestoreProperty]
+        public string BookId { get; set; } = "";
+        [FirestoreProperty]
+        public string CustomerEmail { get; set; } = "";
+        [FirestoreProperty]
         public string CustomerName { get; set; } = "";
         [FirestoreProperty]
         public string ImageUrl { get; set; } = "";
@@ -20,6 +29,8 @@ namespace BookShopManagement.Models
         public int Quantity { get; set; } = 1; 
         [FirestoreProperty]
         public int TotalPrice { get; set; } = 0;
+        [FirestoreProperty]
+        public int Price { get; set; } = 0;
 
 
     }

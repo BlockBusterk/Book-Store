@@ -38,13 +38,14 @@
             this.comboBox2 = new System.Windows.Forms.ComboBox();
             this.panel6 = new System.Windows.Forms.Panel();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.BookId = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Title = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Author = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Publisher = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.btnAdd = new System.Windows.Forms.DataGridViewButtonColumn();
+            this.Column_Barcode = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.AddToCart = new System.Windows.Forms.DataGridViewButtonColumn();
             this.panel5.SuspendLayout();
             this.panel6.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
@@ -97,6 +98,7 @@
             this.panel5.Name = "panel5";
             this.panel5.Size = new System.Drawing.Size(965, 67);
             this.panel5.TabIndex = 5;
+            this.panel5.Paint += new System.Windows.Forms.PaintEventHandler(this.panel5_Paint);
             // 
             // textBox7
             // 
@@ -105,6 +107,7 @@
             this.textBox7.Name = "textBox7";
             this.textBox7.Size = new System.Drawing.Size(179, 32);
             this.textBox7.TabIndex = 8;
+            this.textBox7.TextChanged += new System.EventHandler(this.textBox7_TextChanged);
             // 
             // label5
             // 
@@ -133,6 +136,7 @@
             this.comboBox2.Name = "comboBox2";
             this.comboBox2.Size = new System.Drawing.Size(138, 31);
             this.comboBox2.TabIndex = 6;
+            this.comboBox2.SelectedIndexChanged += new System.EventHandler(this.comboBox2_SelectedIndexChanged);
             // 
             // panel6
             // 
@@ -147,18 +151,21 @@
             // 
             this.dataGridView1.AllowUserToAddRows = false;
             this.dataGridView1.AllowUserToDeleteRows = false;
-            this.dataGridView1.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dataGridView1.BackgroundColor = System.Drawing.Color.White;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.Column2,
-            this.Column3,
-            this.Column4,
+            this.BookId,
+            this.Title,
+            this.Author,
+            this.Publisher,
             this.Column5,
             this.Column6,
-            this.Column8,
-            this.btnAdd});
+            this.Column_Barcode,
+            this.AddToCart});
             this.dataGridView1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dataGridView1.Location = new System.Drawing.Point(0, 0);
+            this.dataGridView1.MultiSelect = false;
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.ReadOnly = true;
             this.dataGridView1.RowHeadersVisible = false;
@@ -166,30 +173,36 @@
             this.dataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dataGridView1.Size = new System.Drawing.Size(965, 493);
             this.dataGridView1.TabIndex = 1;
+            this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
-            // Column2
+            // BookId
             // 
-            this.Column2.HeaderText = "Book Title";
-            this.Column2.MinimumWidth = 6;
-            this.Column2.Name = "Column2";
-            this.Column2.ReadOnly = true;
-            this.Column2.Width = 220;
+            this.BookId.HeaderText = "BookId";
+            this.BookId.MinimumWidth = 6;
+            this.BookId.Name = "BookId";
+            this.BookId.ReadOnly = true;
+            this.BookId.Visible = false;
             // 
-            // Column3
+            // Title
             // 
-            this.Column3.HeaderText = "Author";
-            this.Column3.MinimumWidth = 6;
-            this.Column3.Name = "Column3";
-            this.Column3.ReadOnly = true;
-            this.Column3.Width = 150;
+            this.Title.HeaderText = "Book Title";
+            this.Title.MinimumWidth = 6;
+            this.Title.Name = "Title";
+            this.Title.ReadOnly = true;
             // 
-            // Column4
+            // Author
             // 
-            this.Column4.HeaderText = "Publisher";
-            this.Column4.MinimumWidth = 6;
-            this.Column4.Name = "Column4";
-            this.Column4.ReadOnly = true;
-            this.Column4.Width = 200;
+            this.Author.HeaderText = "Author";
+            this.Author.MinimumWidth = 6;
+            this.Author.Name = "Author";
+            this.Author.ReadOnly = true;
+            // 
+            // Publisher
+            // 
+            this.Publisher.HeaderText = "Publisher";
+            this.Publisher.MinimumWidth = 6;
+            this.Publisher.Name = "Publisher";
+            this.Publisher.ReadOnly = true;
             // 
             // Column5
             // 
@@ -197,7 +210,6 @@
             this.Column5.MinimumWidth = 6;
             this.Column5.Name = "Column5";
             this.Column5.ReadOnly = true;
-            this.Column5.Width = 125;
             // 
             // Column6
             // 
@@ -205,23 +217,23 @@
             this.Column6.MinimumWidth = 6;
             this.Column6.Name = "Column6";
             this.Column6.ReadOnly = true;
-            this.Column6.Width = 150;
             // 
-            // Column8
+            // Column_Barcode
             // 
-            this.Column8.HeaderText = "Barcode";
-            this.Column8.MinimumWidth = 6;
-            this.Column8.Name = "Column8";
-            this.Column8.ReadOnly = true;
-            this.Column8.Width = 200;
+            this.Column_Barcode.HeaderText = "Barcode";
+            this.Column_Barcode.MinimumWidth = 6;
+            this.Column_Barcode.Name = "Column_Barcode";
+            this.Column_Barcode.ReadOnly = true;
+            this.Column_Barcode.Resizable = System.Windows.Forms.DataGridViewTriState.True;
             // 
-            // btnAdd
+            // AddToCart
             // 
-            this.btnAdd.HeaderText = "AddToCart";
-            this.btnAdd.MinimumWidth = 6;
-            this.btnAdd.Name = "btnAdd";
-            this.btnAdd.ReadOnly = true;
-            this.btnAdd.Width = 125;
+            this.AddToCart.HeaderText = "AddToCart";
+            this.AddToCart.MinimumWidth = 6;
+            this.AddToCart.Name = "AddToCart";
+            this.AddToCart.ReadOnly = true;
+            this.AddToCart.Text = "Add";
+            this.AddToCart.UseColumnTextForButtonValue = true;
             // 
             // UC_Books
             // 
@@ -236,6 +248,7 @@
             this.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Name = "UC_Books";
             this.Size = new System.Drawing.Size(985, 580);
+            this.Load += new System.EventHandler(this.UC_Books_Load);
             this.panel5.ResumeLayout(false);
             this.panel5.PerformLayout();
             this.panel6.ResumeLayout(false);
@@ -256,12 +269,13 @@
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.ComboBox comboBox2;
         private System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column4;
+        private System.Windows.Forms.DataGridViewTextBoxColumn BookId;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Title;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Author;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Publisher;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column5;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column6;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column8;
-        private System.Windows.Forms.DataGridViewButtonColumn btnAdd;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column_Barcode;
+        private System.Windows.Forms.DataGridViewButtonColumn AddToCart;
     }
 }

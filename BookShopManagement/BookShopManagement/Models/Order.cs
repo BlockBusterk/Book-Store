@@ -12,15 +12,17 @@ namespace BookShopManagement.Models
     public class Order
     {
         [FirestoreProperty]
-        public string BookTitle { get; set; } = "";
+        public List<Book> Books { get; set; } = new List<Book>();
+
+        [FirestoreProperty]
+        public int  Quantity { get; set; } = 0;
         [FirestoreProperty]
         public string CustomerName { get; set; } = "";
         [FirestoreProperty]
-        public string ImageUrl { get; set; } = "";
+        public string CustomerEmail { get; set; } = "";
+       
         [FirestoreProperty]
-        public int Quantity { get; set; } = 1;
-        [FirestoreProperty]
-        public int TotalPrice { get; set; } = 0;
+        public double TotalPrice { get; set; } = 0;
         [FirestoreProperty]
         public string CreatedDate { get; set; } = DateTime.UtcNow.ToString("s", CultureInfo.InvariantCulture);
         [FirestoreProperty]

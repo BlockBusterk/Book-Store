@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(UC_PurchaseDetails));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panel4 = new System.Windows.Forms.Panel();
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel5 = new System.Windows.Forms.Panel();
@@ -56,7 +56,7 @@
             // 
             this.panel4.BackColor = System.Drawing.Color.White;
             this.panel4.Dock = System.Windows.Forms.DockStyle.Right;
-            this.panel4.Location = new System.Drawing.Point(975, 0);
+            this.panel4.Location = new System.Drawing.Point(1013, 0);
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(10, 570);
             this.panel4.TabIndex = 3;
@@ -67,7 +67,7 @@
             this.panel1.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.panel1.Location = new System.Drawing.Point(0, 570);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(985, 10);
+            this.panel1.Size = new System.Drawing.Size(1023, 10);
             this.panel1.TabIndex = 4;
             // 
             // panel5
@@ -80,16 +80,17 @@
             this.panel5.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel5.Location = new System.Drawing.Point(0, 0);
             this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(975, 67);
+            this.panel5.Size = new System.Drawing.Size(1013, 67);
             this.panel5.TabIndex = 5;
             // 
             // textBox7
             // 
             this.textBox7.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBox7.Location = new System.Drawing.Point(778, 23);
+            this.textBox7.Location = new System.Drawing.Point(816, 23);
             this.textBox7.Name = "textBox7";
             this.textBox7.Size = new System.Drawing.Size(179, 32);
             this.textBox7.TabIndex = 5;
+            this.textBox7.TextChanged += new System.EventHandler(this.textBox7_TextChanged);
             // 
             // label5
             // 
@@ -97,7 +98,7 @@
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.ForeColor = System.Drawing.Color.White;
-            this.label5.Location = new System.Drawing.Point(542, 27);
+            this.label5.Location = new System.Drawing.Point(580, 27);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(113, 23);
             this.label5.TabIndex = 4;
@@ -113,7 +114,7 @@
             "Book Title",
             "Author",
             "Publisher"});
-            this.comboBox2.Location = new System.Drawing.Point(635, 23);
+            this.comboBox2.Location = new System.Drawing.Point(673, 23);
             this.comboBox2.Name = "comboBox2";
             this.comboBox2.Size = new System.Drawing.Size(138, 31);
             this.comboBox2.TabIndex = 3;
@@ -141,7 +142,7 @@
             this.panel6.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel6.Location = new System.Drawing.Point(0, 67);
             this.panel6.Name = "panel6";
-            this.panel6.Size = new System.Drawing.Size(975, 503);
+            this.panel6.Size = new System.Drawing.Size(1013, 503);
             this.panel6.TabIndex = 6;
             // 
             // dataGridView
@@ -168,7 +169,7 @@
             this.dataGridView.RowHeadersVisible = false;
             this.dataGridView.RowHeadersWidth = 51;
             this.dataGridView.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dataGridView.Size = new System.Drawing.Size(975, 503);
+            this.dataGridView.Size = new System.Drawing.Size(1013, 503);
             this.dataGridView.TabIndex = 0;
             this.dataGridView.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView_CellClick);
             // 
@@ -217,8 +218,8 @@
             // 
             // Column7
             // 
-            dataGridViewCellStyle7.NullValue = null;
-            this.Column7.DefaultCellStyle = dataGridViewCellStyle7;
+            dataGridViewCellStyle2.NullValue = null;
+            this.Column7.DefaultCellStyle = dataGridViewCellStyle2;
             this.Column7.HeaderText = "Selling Price";
             this.Column7.MinimumWidth = 6;
             this.Column7.Name = "Column7";
@@ -241,7 +242,7 @@
             this.Controls.Add(this.panel1);
             this.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Name = "UC_PurchaseDetails";
-            this.Size = new System.Drawing.Size(985, 580);
+            this.Size = new System.Drawing.Size(1023, 580);
             this.panel5.ResumeLayout(false);
             this.panel5.PerformLayout();
             this.panel6.ResumeLayout(false);

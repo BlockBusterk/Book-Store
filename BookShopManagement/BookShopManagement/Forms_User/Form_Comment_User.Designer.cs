@@ -188,6 +188,7 @@
             this.starBtn5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.starBtn5.TabIndex = 4;
             this.starBtn5.TabStop = false;
+            this.starBtn5.Click += new System.EventHandler(this.starBtn5_Click_1);
             // 
             // starBtn4
             // 
@@ -198,6 +199,7 @@
             this.starBtn4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.starBtn4.TabIndex = 3;
             this.starBtn4.TabStop = false;
+            this.starBtn4.Click += new System.EventHandler(this.starBtn4_Click_1);
             // 
             // starBtn3
             // 
@@ -208,6 +210,7 @@
             this.starBtn3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.starBtn3.TabIndex = 2;
             this.starBtn3.TabStop = false;
+            this.starBtn3.Click += new System.EventHandler(this.starBtn3_Click_1);
             // 
             // starBtn2
             // 
@@ -218,6 +221,7 @@
             this.starBtn2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.starBtn2.TabIndex = 1;
             this.starBtn2.TabStop = false;
+            this.starBtn2.Click += new System.EventHandler(this.starBtn2_Click_1);
             // 
             // starBtn1
             // 
@@ -228,6 +232,7 @@
             this.starBtn1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.starBtn1.TabIndex = 0;
             this.starBtn1.TabStop = false;
+            this.starBtn1.Click += new System.EventHandler(this.starBtn1_Click_1);
             // 
             // panel8
             // 
@@ -266,6 +271,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "Form_Comment_User";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "Form_Comment_User";
             this.panel5.ResumeLayout(false);
             this.panel5.PerformLayout();

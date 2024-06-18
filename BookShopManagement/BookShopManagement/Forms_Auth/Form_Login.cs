@@ -20,6 +20,8 @@ namespace BookShopManagement
     {
         public static UserData currentUser { get; set; }
         public static string currentUserId { get; set; }
+        public static string currentUserName { get; set; }
+        public static string currentUserEmail { get; set; }
         public Form_Login()
         {
             InitializeComponent();
@@ -50,7 +52,8 @@ namespace BookShopManagement
                 DocumentReference docRef = db.Collection("UserData").Document(Id);
                 currentUser = docRef.GetSnapshotAsync().Result.ConvertTo<UserData>();
                 currentUserId = Id;
-
+                currentUserEmail = currentUser.Email;
+                currentUserName = currentUser.Name;
                 if (currentUser.Email == "admin@gmail.com")
                 {
                     using (Form_Dashboard fd = new Form_Dashboard())

@@ -25,5 +25,15 @@ namespace BookShopManagement.UserControls
                 uf.ShowDialog();
             }
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
