@@ -29,6 +29,9 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(UC_Home));
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
             this.label2 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
@@ -44,17 +47,14 @@
             this.label8 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
-            this.bunifuCircleProgressbar1 = new Bunifu.Framework.UI.BunifuCircleProgressbar();
-            this.bunifuCircleProgressbar2 = new Bunifu.Framework.UI.BunifuCircleProgressbar();
-            this.label9 = new System.Windows.Forms.Label();
-            this.label10 = new System.Windows.Forms.Label();
-            this.label11 = new System.Windows.Forms.Label();
+            this.chart1 = new System.Windows.Forms.DataVisualization.Charting.Chart();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.chart1)).BeginInit();
             this.SuspendLayout();
             // 
             // label2
@@ -228,101 +228,31 @@
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
-            // bunifuCircleProgressbar1
+            // chart1
             // 
-            this.bunifuCircleProgressbar1.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.bunifuCircleProgressbar1.animated = false;
-            this.bunifuCircleProgressbar1.animationIterval = 5;
-            this.bunifuCircleProgressbar1.animationSpeed = 300;
-            this.bunifuCircleProgressbar1.BackColor = System.Drawing.Color.White;
-            this.bunifuCircleProgressbar1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("bunifuCircleProgressbar1.BackgroundImage")));
-            this.bunifuCircleProgressbar1.Font = new System.Drawing.Font("Microsoft Sans Serif", 26.25F);
-            this.bunifuCircleProgressbar1.ForeColor = System.Drawing.Color.SeaGreen;
-            this.bunifuCircleProgressbar1.LabelVisible = false;
-            this.bunifuCircleProgressbar1.LineProgressThickness = 8;
-            this.bunifuCircleProgressbar1.LineThickness = 5;
-            this.bunifuCircleProgressbar1.Location = new System.Drawing.Point(598, 384);
-            this.bunifuCircleProgressbar1.Margin = new System.Windows.Forms.Padding(10, 9, 10, 9);
-            this.bunifuCircleProgressbar1.MaxValue = 100;
-            this.bunifuCircleProgressbar1.Name = "bunifuCircleProgressbar1";
-            this.bunifuCircleProgressbar1.ProgressBackColor = System.Drawing.Color.Gainsboro;
-            this.bunifuCircleProgressbar1.ProgressColor = System.Drawing.Color.DarkViolet;
-            this.bunifuCircleProgressbar1.Size = new System.Drawing.Size(133, 133);
-            this.bunifuCircleProgressbar1.TabIndex = 4;
-            this.bunifuCircleProgressbar1.Value = 60;
-            // 
-            // bunifuCircleProgressbar2
-            // 
-            this.bunifuCircleProgressbar2.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.bunifuCircleProgressbar2.animated = false;
-            this.bunifuCircleProgressbar2.animationIterval = 5;
-            this.bunifuCircleProgressbar2.animationSpeed = 300;
-            this.bunifuCircleProgressbar2.BackColor = System.Drawing.Color.White;
-            this.bunifuCircleProgressbar2.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("bunifuCircleProgressbar2.BackgroundImage")));
-            this.bunifuCircleProgressbar2.Font = new System.Drawing.Font("Microsoft Sans Serif", 26.25F);
-            this.bunifuCircleProgressbar2.ForeColor = System.Drawing.Color.Crimson;
-            this.bunifuCircleProgressbar2.LabelVisible = false;
-            this.bunifuCircleProgressbar2.LineProgressThickness = 8;
-            this.bunifuCircleProgressbar2.LineThickness = 5;
-            this.bunifuCircleProgressbar2.Location = new System.Drawing.Point(795, 385);
-            this.bunifuCircleProgressbar2.Margin = new System.Windows.Forms.Padding(10, 9, 10, 9);
-            this.bunifuCircleProgressbar2.MaxValue = 100;
-            this.bunifuCircleProgressbar2.Name = "bunifuCircleProgressbar2";
-            this.bunifuCircleProgressbar2.ProgressBackColor = System.Drawing.Color.Gainsboro;
-            this.bunifuCircleProgressbar2.ProgressColor = System.Drawing.Color.Crimson;
-            this.bunifuCircleProgressbar2.Size = new System.Drawing.Size(133, 133);
-            this.bunifuCircleProgressbar2.TabIndex = 4;
-            this.bunifuCircleProgressbar2.Value = 92;
-            // 
-            // label9
-            // 
-            this.label9.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.label9.AutoSize = true;
-            this.label9.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(71)))), ((int)(((byte)(160)))));
-            this.label9.Location = new System.Drawing.Point(589, 330);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(294, 23);
-            this.label9.TabIndex = 0;
-            this.label9.Text = "% Amount Recived and Paid:";
-            // 
-            // label10
-            // 
-            this.label10.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.label10.AutoSize = true;
-            this.label10.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(71)))), ((int)(((byte)(160)))));
-            this.label10.Location = new System.Drawing.Point(626, 526);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(90, 23);
-            this.label10.TabIndex = 0;
-            this.label10.Text = "Recived";
-            // 
-            // label11
-            // 
-            this.label11.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.label11.AutoSize = true;
-            this.label11.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label11.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(71)))), ((int)(((byte)(160)))));
-            this.label11.Location = new System.Drawing.Point(840, 525);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(52, 23);
-            this.label11.TabIndex = 0;
-            this.label11.Text = "Paid";
+            chartArea1.Name = "ChartArea1";
+            this.chart1.ChartAreas.Add(chartArea1);
+            legend1.Name = "Legend1";
+            this.chart1.Legends.Add(legend1);
+            this.chart1.Location = new System.Drawing.Point(193, 360);
+            this.chart1.Name = "chart1";
+            series1.ChartArea = "ChartArea1";
+            series1.Legend = "Legend1";
+            series1.Name = "Series1";
+            this.chart1.Series.Add(series1);
+            this.chart1.Size = new System.Drawing.Size(789, 205);
+            this.chart1.TabIndex = 4;
+            this.chart1.Text = "chart1";
             // 
             // UC_Home
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.BackColor = System.Drawing.Color.White;
-            this.Controls.Add(this.bunifuCircleProgressbar2);
-            this.Controls.Add(this.bunifuCircleProgressbar1);
+            this.Controls.Add(this.chart1);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.panel1);
-            this.Controls.Add(this.label11);
-            this.Controls.Add(this.label10);
-            this.Controls.Add(this.label9);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.label2);
             this.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -338,6 +268,7 @@
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.chart1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -360,10 +291,6 @@
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button button1;
-        private Bunifu.Framework.UI.BunifuCircleProgressbar bunifuCircleProgressbar1;
-        private Bunifu.Framework.UI.BunifuCircleProgressbar bunifuCircleProgressbar2;
-        private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.Label label11;
+        private System.Windows.Forms.DataVisualization.Charting.Chart chart1;
     }
 }

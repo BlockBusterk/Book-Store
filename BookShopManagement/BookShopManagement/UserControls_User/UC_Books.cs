@@ -237,6 +237,11 @@ namespace BookShopManagement.UserControls_User
                     // Convert Firestore document to Book object
                     Book selectedBook = bookSnapshot.ConvertTo<Book>();
                     selectedBook.BookId = bookid;
+                    if(selectedBook.Quantity == 0)
+                    {
+                        MessageBox.Show($"'{selectedBook.BookTitle}' out of stock! We are sorry");
+                        return;
+                    }
                     // Add the book to the cart collection
                     await AddToCartF(selectedBook);
 
