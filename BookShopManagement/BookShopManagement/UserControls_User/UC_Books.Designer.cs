@@ -44,7 +44,7 @@
             this.Publisher = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column_Barcode = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column_Category = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.AddToCart = new System.Windows.Forms.DataGridViewButtonColumn();
             this.panel5.SuspendLayout();
             this.panel6.SuspendLayout();
@@ -161,7 +161,7 @@
             this.Publisher,
             this.Column5,
             this.Column6,
-            this.Column_Barcode,
+            this.Column_Category,
             this.AddToCart});
             this.dataGridView1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dataGridView1.Location = new System.Drawing.Point(0, 0);
@@ -173,6 +173,7 @@
             this.dataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dataGridView1.Size = new System.Drawing.Size(965, 493);
             this.dataGridView1.TabIndex = 1;
+            this.dataGridView1.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellClick);
             this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
             // BookId
@@ -218,13 +219,13 @@
             this.Column6.Name = "Column6";
             this.Column6.ReadOnly = true;
             // 
-            // Column_Barcode
+            // Column_Category
             // 
-            this.Column_Barcode.HeaderText = "Barcode";
-            this.Column_Barcode.MinimumWidth = 6;
-            this.Column_Barcode.Name = "Column_Barcode";
-            this.Column_Barcode.ReadOnly = true;
-            this.Column_Barcode.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.Column_Category.HeaderText = "Category";
+            this.Column_Category.MinimumWidth = 6;
+            this.Column_Category.Name = "Column_Category";
+            this.Column_Category.ReadOnly = true;
+            this.Column_Category.Resizable = System.Windows.Forms.DataGridViewTriState.True;
             // 
             // AddToCart
             // 
@@ -275,7 +276,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Publisher;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column5;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column6;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column_Barcode;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column_Category;
         private System.Windows.Forms.DataGridViewButtonColumn AddToCart;
     }
 }

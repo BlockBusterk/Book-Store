@@ -17,7 +17,7 @@ namespace BookShopManagement.UserControls_User
 {
     public partial class UC_Books : UserControl
     {
-        private string filter = string.Empty;
+        
         public UC_Books()
         {
             InitializeComponent();
@@ -36,7 +36,6 @@ namespace BookShopManagement.UserControls_User
             Query publisherQuery = booksRef.WhereLessThanOrEqualTo("Publisher", keyword + '\uf8ff');
             Query titleQuery = booksRef.WhereLessThanOrEqualTo("Title", keyword + '\uf8ff');
             Query authorQuery = booksRef.WhereLessThanOrEqualTo("Author", keyword + '\uf8ff');
-
             // Get results from all three queries
             QuerySnapshot publisherSnapshot = await publisherQuery.GetSnapshotAsync();
             QuerySnapshot titleSnapshot = await titleQuery.GetSnapshotAsync();
@@ -73,7 +72,14 @@ namespace BookShopManagement.UserControls_User
                                      b.Author.ToLower().Contains(keyword)).ToList();
             foreach (Book book in books)
             {
-                dataGridView1.Rows.Add(book.BookId,book.BookTitle, book.Author, book.Publisher, book.Quantity.ToString(), book.SellingPrice.ToString(), book.Barcode);
+                dataGridView1.Rows.Add(
+                    book.BookId,
+                    book.BookTitle, 
+                    book.Author, 
+                    book.Publisher, 
+                    book.Quantity.ToString(), 
+                    book.SellingPrice.ToString(), 
+                    book.Category);
             }
        
         }
@@ -83,9 +89,100 @@ namespace BookShopManagement.UserControls_User
 
         }
 
-        private void comboBox2_SelectedIndexChanged(object sender, EventArgs e)
+        private async void comboBox2_SelectedIndexChanged(object sender, EventArgs e)
         {
-            filter = comboBox2.Text;
+
+            string selectedGenre = comboBox2.SelectedItem.ToString();
+
+            List<Book> books;
+            if (selectedGenre == "All")
+            {
+                dataGridView1.Rows.Clear();
+                books = await GetAllBooksAsync();
+            }
+            else
+            {
+                dataGridView1.Rows.Clear();
+                books = await GetBooksByGenreAsync(selectedGenre);
+            }
+
+            foreach (Book book in books)
+            {
+                dataGridView1.Rows.Add(
+                    book.BookId, 
+                    book.BookTitle, 
+                    book.Author, 
+                    book.Publisher, 
+                    book.Quantity.ToString(), 
+                    book.SellingPrice.ToString(), 
+                    book.Category);
+            }
+        }
+
+        public async Task<List<string>> GetGenresFromFirestoreAsync()
+        {
+            var db = FirebaseHelper.Database;
+            CollectionReference booksRef = db.Collection("Category");
+            QuerySnapshot snapshot = await booksRef.GetSnapshotAsync();
+
+            HashSet<string> genres = new HashSet<string>(); // Sử dụng HashSet để loại bỏ thể loại trùng lặp
+
+            foreach (DocumentSnapshot document in snapshot.Documents)
+            {
+                if (document.Exists)
+                {
+                    string genre = document.GetValue<string>("Name");
+                    if (!string.IsNullOrEmpty(genre))
+                    {
+                        genres.Add(genre);
+                    }
+                }
+            }
+
+            List<string> genreList = new List<string>(genres);
+            genreList.Insert(0, "All"); // Thêm "All" vào đầu danh sách
+
+            return genreList;
+        }
+
+        public async Task<List<Book>> GetBooksByGenreAsync(string genre)
+        {
+            var db = FirebaseHelper.Database;
+            CollectionReference booksRef = db.Collection("Book");
+            QuerySnapshot snapshot = await booksRef.WhereEqualTo("Category", genre).GetSnapshotAsync();
+
+            List<Book> books = new List<Book>();
+
+            foreach (DocumentSnapshot document in snapshot.Documents)
+            {
+                if (document.Exists)
+                {
+                    Book book = document.ConvertTo<Book>();
+                    books.Add(book);
+                }
+            }
+
+            return books;
+        }
+
+        public async Task<List<Book>> GetAllBooksAsync()
+        {
+            var db = FirebaseHelper.Database;
+            CollectionReference booksRef = db.Collection("Book");
+            QuerySnapshot snapshot = await booksRef.GetSnapshotAsync();
+
+            List<Book> books = new List<Book>();
+
+            foreach (DocumentSnapshot document in snapshot.Documents)
+            {
+                if (document.Exists)
+                {
+                    Book book = document.ConvertTo<Book>();
+                    books.Add(book);
+                }
+            }
+
+            return books;
         }
 
         private async void LoadBooks()
@@ -96,20 +193,32 @@ namespace BookShopManagement.UserControls_User
             QuerySnapshot snap = await bookQue.GetSnapshotAsync();
             foreach(DocumentSnapshot doc in snap)
             {
-                
                 if(doc.Exists)
                 {
                     Book book = doc.ConvertTo<Book>();
-                    book.BookId = doc.Id;
-                    dataGridView1.Rows.Add(book.BookId,book.BookTitle, book.Author, book.Publisher, book.Quantity.ToString(),book.SellingPrice.ToString(),book.Barcode);
+                    dataGridView1.Rows.Add(
+                        book.BookId,
+                        book.BookTitle, 
+                        book.Author, 
+                        book.Publisher, 
+                        book.Quantity.ToString(),
+                        book.SellingPrice.ToString(),
+                        book.Category
+                    );
                 }
             }
 
         }
+        private async void LoadGenres()
+        {
+            List<string> genres = await GetGenresFromFirestoreAsync();
+            comboBox2.DataSource = genres;
+        }
 
         private void UC_Books_Load(object sender, EventArgs e)
         {
-            LoadBooks();
+            LoadGenres();
+            //LoadBooks();
         }
 
         private async void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
@@ -163,6 +272,11 @@ namespace BookShopManagement.UserControls_User
             };
            
                 await cartRef.SetAsync(dict, SetOptions.Overwrite);
+
+        }
+
+        private void dataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
 
         }
     }

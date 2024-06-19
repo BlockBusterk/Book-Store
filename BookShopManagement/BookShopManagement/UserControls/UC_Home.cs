@@ -77,11 +77,16 @@ namespace BookShopManagement.UserControls
                     totalRevenue += order.TotalPrice;
                 }
             }
-            label5.Text = totalSoldBook.ToString(); // Tong doanh thu
+            label5.Text = totalRevenue.ToString(); // Tong doanh thu
 
         }
 
         private void label7_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label5_Click(object sender, EventArgs e)
         {
 
         }

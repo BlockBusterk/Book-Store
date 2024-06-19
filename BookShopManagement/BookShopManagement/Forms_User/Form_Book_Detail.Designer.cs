@@ -47,6 +47,8 @@
             this.Comment = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
+            this.lblCategory = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
             this.dragControl1 = new DragControlDemo.DragControl();
             this.panel5.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
@@ -91,6 +93,8 @@
             // 
             // panel5
             // 
+            this.panel5.Controls.Add(this.lblCategory);
+            this.panel5.Controls.Add(this.label4);
             this.panel5.Controls.Add(this.button4);
             this.panel5.Controls.Add(this.lblBookQuantity);
             this.panel5.Controls.Add(this.btnPlus);
@@ -130,7 +134,7 @@
             // 
             this.lblBookQuantity.AutoSize = true;
             this.lblBookQuantity.ForeColor = System.Drawing.Color.Black;
-            this.lblBookQuantity.Location = new System.Drawing.Point(488, 73);
+            this.lblBookQuantity.Location = new System.Drawing.Point(468, 82);
             this.lblBookQuantity.Name = "lblBookQuantity";
             this.lblBookQuantity.Size = new System.Drawing.Size(32, 23);
             this.lblBookQuantity.TabIndex = 12;
@@ -138,7 +142,7 @@
             // 
             // btnPlus
             // 
-            this.btnPlus.Location = new System.Drawing.Point(535, 69);
+            this.btnPlus.Location = new System.Drawing.Point(515, 78);
             this.btnPlus.Name = "btnPlus";
             this.btnPlus.Size = new System.Drawing.Size(39, 30);
             this.btnPlus.TabIndex = 11;
@@ -148,7 +152,7 @@
             // 
             // btnMinus
             // 
-            this.btnMinus.Location = new System.Drawing.Point(434, 69);
+            this.btnMinus.Location = new System.Drawing.Point(414, 78);
             this.btnMinus.Name = "btnMinus";
             this.btnMinus.Size = new System.Drawing.Size(39, 30);
             this.btnMinus.TabIndex = 10;
@@ -159,7 +163,7 @@
             // pictureBox2
             // 
             this.pictureBox2.Image = global::BookShopManagement.Properties.Resources._285661_star_icon;
-            this.pictureBox2.Location = new System.Drawing.Point(295, 115);
+            this.pictureBox2.Location = new System.Drawing.Point(521, 16);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(32, 23);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -170,7 +174,7 @@
             // 
             this.lblScore.AutoSize = true;
             this.lblScore.ForeColor = System.Drawing.Color.Black;
-            this.lblScore.Location = new System.Drawing.Point(252, 115);
+            this.lblScore.Location = new System.Drawing.Point(478, 16);
             this.lblScore.Name = "lblScore";
             this.lblScore.Size = new System.Drawing.Size(37, 23);
             this.lblScore.TabIndex = 8;
@@ -181,7 +185,7 @@
             this.lblBookTitle.AutoSize = true;
             this.lblBookTitle.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblBookTitle.ForeColor = System.Drawing.Color.Black;
-            this.lblBookTitle.Location = new System.Drawing.Point(241, 16);
+            this.lblBookTitle.Location = new System.Drawing.Point(231, 16);
             this.lblBookTitle.Name = "lblBookTitle";
             this.lblBookTitle.Size = new System.Drawing.Size(86, 23);
             this.lblBookTitle.TabIndex = 7;
@@ -191,7 +195,7 @@
             // 
             this.lblBookAuthor.AutoSize = true;
             this.lblBookAuthor.ForeColor = System.Drawing.Color.Black;
-            this.lblBookAuthor.Location = new System.Drawing.Point(276, 69);
+            this.lblBookAuthor.Location = new System.Drawing.Point(261, 69);
             this.lblBookAuthor.Name = "lblBookAuthor";
             this.lblBookAuthor.Size = new System.Drawing.Size(86, 23);
             this.lblBookAuthor.TabIndex = 6;
@@ -202,7 +206,7 @@
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(71)))), ((int)(((byte)(160)))));
-            this.label3.Location = new System.Drawing.Point(184, 115);
+            this.label3.Location = new System.Drawing.Point(410, 16);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(71, 23);
             this.label3.TabIndex = 4;
@@ -259,6 +263,28 @@
             this.flowLayoutPanel1.Size = new System.Drawing.Size(830, 366);
             this.flowLayoutPanel1.TabIndex = 12;
             // 
+            // lblCategory
+            // 
+            this.lblCategory.AutoSize = true;
+            this.lblCategory.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCategory.ForeColor = System.Drawing.Color.Black;
+            this.lblCategory.Location = new System.Drawing.Point(288, 118);
+            this.lblCategory.Name = "lblCategory";
+            this.lblCategory.Size = new System.Drawing.Size(86, 23);
+            this.lblCategory.TabIndex = 24;
+            this.lblCategory.Text = "Author: ";
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(71)))), ((int)(((byte)(160)))));
+            this.label4.Location = new System.Drawing.Point(184, 118);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(108, 23);
+            this.label4.TabIndex = 23;
+            this.label4.Text = "Category:";
+            // 
             // dragControl1
             // 
             this.dragControl1.SelectControl = this;
@@ -313,5 +339,7 @@
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
         private System.Windows.Forms.Button button4;
         private DragControlDemo.DragControl dragControl1;
+        private System.Windows.Forms.Label lblCategory;
+        private System.Windows.Forms.Label label4;
     }
 }

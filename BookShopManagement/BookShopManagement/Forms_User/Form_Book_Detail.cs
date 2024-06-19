@@ -50,16 +50,19 @@ namespace BookShopManagement.Forms_User
         private async void Load_Book_Detail()
         {
             var db = FirebaseHelper.Database;
+            
             DocumentReference bookRef = db.Collection("Cart").Document(Form_Login.currentUserId).Collection("cart").Document(bookId);
             DocumentSnapshot doc = await bookRef.GetSnapshotAsync();
-            if (doc.Exists)
+            DocumentReference categoryRef = db.Collection("Book").Document(bookId);
+            DocumentSnapshot categorySnap = await categoryRef.GetSnapshotAsync();
+            if (doc.Exists && categorySnap.Exists)
             {
                 Cart cart = doc.ConvertTo<Cart>();
-
+                Book book = categorySnap.ConvertTo<Book>();
                 lblBookAuthor.Text = cart.Author;
                 lblBookQuantity.Text = cart.Quantity.ToString();
                 lblBookTitle.Text = cart.BookTitle;
-
+                lblCategory.Text = book.Category;
             }
         }
 
@@ -137,7 +140,7 @@ namespace BookShopManagement.Forms_User
             {
                 Cart cart = docCart.ConvertTo<Cart>();
                 
-                if (quantity - 1 >= 0)
+                if (quantity - 1 > 0)
                 {
                     quantity--;
                     cart.Quantity = quantity;
@@ -149,7 +152,7 @@ namespace BookShopManagement.Forms_User
                 }
                 else
                 {
-                    MessageBox.Show("The book amount can not be smaller than 0!");
+                    MessageBox.Show("The book amount can not be 0!");
                 }
             }
 

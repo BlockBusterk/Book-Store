@@ -146,6 +146,7 @@
             this.label5.Size = new System.Drawing.Size(64, 28);
             this.label5.TabIndex = 0;
             this.label5.Text = "1234";
+            this.label5.Click += new System.EventHandler(this.label5_Click);
             // 
             // label6
             // 

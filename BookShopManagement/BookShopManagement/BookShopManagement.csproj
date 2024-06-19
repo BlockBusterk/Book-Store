@@ -357,6 +357,7 @@
     </Compile>
     <Compile Include="Models\Bill.cs" />
     <Compile Include="Models\Book.cs" />
+    <Compile Include="Models\BookSalesSummary.cs" />
     <Compile Include="Models\Cart.cs" />
     <Compile Include="Models\Category.cs" />
     <Compile Include="Models\Comment.cs" />

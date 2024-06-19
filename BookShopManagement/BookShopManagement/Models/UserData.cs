@@ -11,6 +11,7 @@ namespace BookShopManagement.Models
     [FirestoreData]
     public class UserData
     {
+        public string UserId { get; set; } = "";
         [FirestoreProperty]
         public string Name { get; set; } = "";
         [FirestoreProperty]

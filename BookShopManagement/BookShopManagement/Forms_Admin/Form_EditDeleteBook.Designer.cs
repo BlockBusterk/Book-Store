@@ -53,8 +53,8 @@
             this.txbPublisher = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.picImage = new System.Windows.Forms.PictureBox();
-            this.dragControl1 = new DragControlDemo.DragControl();
             this.btnDelete = new System.Windows.Forms.Button();
+            this.dragControl1 = new DragControlDemo.DragControl();
             ((System.ComponentModel.ISupportInitialize)(this.picImage)).BeginInit();
             this.SuspendLayout();
             // 
@@ -186,7 +186,7 @@
             this.label4.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(319, 30);
+            this.label4.Location = new System.Drawing.Point(339, 31);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(136, 32);
             this.label4.TabIndex = 11;
@@ -227,6 +227,7 @@
             this.cbCategory.Name = "cbCategory";
             this.cbCategory.Size = new System.Drawing.Size(177, 31);
             this.cbCategory.TabIndex = 21;
+            this.cbCategory.SelectedIndexChanged += new System.EventHandler(this.cbCategory_SelectedIndexChanged);
             // 
             // button2
             // 
@@ -310,10 +311,6 @@
             this.picImage.TabStop = false;
             this.picImage.Click += new System.EventHandler(this.picImage_Click);
             // 
-            // dragControl1
-            // 
-            this.dragControl1.SelectControl = this;
-            // 
             // btnDelete
             // 
             this.btnDelete.Anchor = System.Windows.Forms.AnchorStyles.None;
@@ -329,6 +326,10 @@
             this.btnDelete.Text = "Delete";
             this.btnDelete.UseVisualStyleBackColor = false;
             this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
+            // 
+            // dragControl1
+            // 
+            this.dragControl1.SelectControl = this;
             // 
             // Form_EditDeleteBook
             // 

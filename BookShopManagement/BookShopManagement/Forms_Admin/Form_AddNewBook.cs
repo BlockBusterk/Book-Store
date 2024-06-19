@@ -86,7 +86,8 @@ namespace BookShopManagement.Forms
                 string bookTitle = txbBookTitle.Text.Trim();
                 string author = txbAuthor.Text.Trim();
                 string publisher = txbPublisher.Text.Trim();
-                string imageUrl = picImage.ImageLocation;
+              ;
+                string imageUrl = CloudinaryHelper.UploadImage(picImage.ImageLocation);
 
                 if (bookTitle == ""
                    || author == ""
@@ -110,9 +111,11 @@ namespace BookShopManagement.Forms
                     return;
                 }
 
-
+                DocumentReference docRef = db.Collection("Book").Document();
+                string randomBookId = docRef.Id;
                 var data = new Book()
                 {
+                    BookId = randomBookId,
                     Author = author,
                     BookTitle = bookTitle,
                     CostPrice = costPrice,
@@ -123,8 +126,9 @@ namespace BookShopManagement.Forms
                     ImageUrl = imageUrl,
                 };
 
-                CollectionReference colref = db.Collection("Book");
-                await colref.AddAsync(data);
+                //CollectionReference colref = db.Collection("Book");
+                //await colref.SetAsync(data);
+                await docRef.SetAsync(data);
                 MessageBox.Show("Book created success");
 
                 this.Dispose();

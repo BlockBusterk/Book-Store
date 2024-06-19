@@ -48,13 +48,14 @@ namespace BookShopManagement.Forms
                 txbBookTitle.Text = book.BookTitle;
                 txbAuthor.Text = book.Author;
                 txbPublisher.Text = book.Publisher;
-                picImage.ImageLocation = book.ImageUrl;
+                
 
                 txbQuantity.Text = book.Quantity.ToString();
                 txbCostPrice.Text = book.CostPrice.ToString();
                 txbSellingPrice.Text = book.SellingPrice.ToString();
 
                 cbCategory.SelectedValue = book.Category;
+                //picImage.Load(book.ImageUrl);
             }
             catch (Exception exception)
             {
@@ -116,7 +117,7 @@ namespace BookShopManagement.Forms
                 string bookTitle = txbBookTitle.Text.Trim();
                 string author = txbAuthor.Text.Trim();
                 string publisher = txbPublisher.Text.Trim();
-                string imageUrl = picImage.ImageLocation;
+                string imageUrl = CloudinaryHelper.UploadImage(picImage.ImageLocation) ;
 
                 if (bookTitle == ""
                    || author == ""
@@ -232,6 +233,11 @@ namespace BookShopManagement.Forms
             {
                 MessageBox.Show("Book deleted failed");
             }
+        }
+
+        private void cbCategory_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

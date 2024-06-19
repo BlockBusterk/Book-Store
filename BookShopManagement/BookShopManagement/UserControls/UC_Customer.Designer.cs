@@ -35,15 +35,14 @@
             this.panel5 = new System.Windows.Forms.Panel();
             this.textBox7 = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
-            this.comboBox2 = new System.Windows.Forms.ComboBox();
             this.btnAddNewBooks = new System.Windows.Forms.Button();
             this.panel6 = new System.Windows.Forms.Panel();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.Column_UserId = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.FullName = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Email = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Phone = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Address = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Sales = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.CreatedDate = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel5.SuspendLayout();
             this.panel6.SuspendLayout();
@@ -82,7 +81,6 @@
             this.panel5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(71)))), ((int)(((byte)(160)))));
             this.panel5.Controls.Add(this.textBox7);
             this.panel5.Controls.Add(this.label5);
-            this.panel5.Controls.Add(this.comboBox2);
             this.panel5.Controls.Add(this.btnAddNewBooks);
             this.panel5.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel5.Location = new System.Drawing.Point(0, 10);
@@ -93,10 +91,11 @@
             // textBox7
             // 
             this.textBox7.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBox7.Location = new System.Drawing.Point(778, 23);
+            this.textBox7.Location = new System.Drawing.Point(661, 24);
             this.textBox7.Name = "textBox7";
             this.textBox7.Size = new System.Drawing.Size(179, 32);
             this.textBox7.TabIndex = 5;
+            this.textBox7.TextChanged += new System.EventHandler(this.textBox7_TextChanged);
             // 
             // label5
             // 
@@ -104,27 +103,11 @@
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.ForeColor = System.Drawing.Color.White;
-            this.label5.Location = new System.Drawing.Point(542, 27);
+            this.label5.Location = new System.Drawing.Point(572, 27);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(113, 23);
+            this.label5.Size = new System.Drawing.Size(83, 23);
             this.label5.TabIndex = 4;
-            this.label5.Text = "Search By:";
-            // 
-            // comboBox2
-            // 
-            this.comboBox2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.comboBox2.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Items.AddRange(new object[] {
-            "Barcode",
-            "Tracking ID",
-            "Book Title",
-            "Author",
-            "Publisher"});
-            this.comboBox2.Location = new System.Drawing.Point(635, 23);
-            this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(138, 31);
-            this.comboBox2.TabIndex = 3;
+            this.label5.Text = "Search:";
             // 
             // btnAddNewBooks
             // 
@@ -160,11 +143,11 @@
             this.dataGridView1.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.Column_UserId,
             this.FullName,
             this.Email,
             this.Phone,
             this.Address,
-            this.Sales,
             this.CreatedDate});
             this.dataGridView1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dataGridView1.Location = new System.Drawing.Point(0, 0);
@@ -175,6 +158,14 @@
             this.dataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dataGridView1.Size = new System.Drawing.Size(975, 493);
             this.dataGridView1.TabIndex = 0;
+            // 
+            // Column_UserId
+            // 
+            this.Column_UserId.HeaderText = "UserId";
+            this.Column_UserId.MinimumWidth = 6;
+            this.Column_UserId.Name = "Column_UserId";
+            this.Column_UserId.ReadOnly = true;
+            this.Column_UserId.Visible = false;
             // 
             // FullName
             // 
@@ -204,13 +195,6 @@
             this.Address.Name = "Address";
             this.Address.ReadOnly = true;
             // 
-            // Sales
-            // 
-            this.Sales.HeaderText = "Sales";
-            this.Sales.MinimumWidth = 6;
-            this.Sales.Name = "Sales";
-            this.Sales.ReadOnly = true;
-            // 
             // CreatedDate
             // 
             this.CreatedDate.HeaderText = "Created Date";
@@ -230,6 +214,7 @@
             this.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Name = "UC_Customer";
             this.Size = new System.Drawing.Size(985, 580);
+            this.Load += new System.EventHandler(this.UC_Customer_Load);
             this.panel5.ResumeLayout(false);
             this.panel5.PerformLayout();
             this.panel6.ResumeLayout(false);
@@ -245,17 +230,16 @@
         private System.Windows.Forms.Panel panel4;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Panel panel5;
-        private System.Windows.Forms.ComboBox comboBox2;
         private System.Windows.Forms.Button btnAddNewBooks;
         private System.Windows.Forms.Panel panel6;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.TextBox textBox7;
         private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column_UserId;
         private System.Windows.Forms.DataGridViewTextBoxColumn FullName;
         private System.Windows.Forms.DataGridViewTextBoxColumn Email;
         private System.Windows.Forms.DataGridViewTextBoxColumn Phone;
         private System.Windows.Forms.DataGridViewTextBoxColumn Address;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Sales;
         private System.Windows.Forms.DataGridViewTextBoxColumn CreatedDate;
     }
 }

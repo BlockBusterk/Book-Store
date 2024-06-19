@@ -106,48 +106,74 @@ namespace BookShopManagement.UserControls_User
             DocumentReference userCartRef = db.Collection("Cart").Document(Form_Login.currentUserId);
             CollectionReference userCartCollection = userCartRef.Collection("cart");
             QuerySnapshot cartSnapshot = await userCartCollection.GetSnapshotAsync();
-            var books = new List<Book>();
-            foreach (DocumentSnapshot doc in cartSnapshot.Documents)
-            {
-
-                if (doc.Exists)
-                {
-                    Cart cart = doc.ConvertTo<Cart>();
-
-                    books.Add(new Book
-                    {
-                        BookId = cart.BookId,
-                        BookTitle = cart.BookTitle,
-                        Author = cart.Author,
-                        Publisher = cart.BookPublisher,
-                        Quantity = cart.Quantity,
-                        SellingPrice = cart.Price,
-                    });
-                }
-            }
-            var orderData = new Order()
-            {
-                Books = books,
-                CustomerEmail = Form_Login.currentUserEmail,
-                Quantity = books.Count,
-                TotalPrice = Double.Parse(label4.Text),
-                CustomerName= Form_Login.currentUser.Name,
-            };
-            CollectionReference orderCollectionRef = db.Collection("Order");
-            await orderCollectionRef.AddAsync(orderData);
-           
-
-            MessageBox.Show("Bill created successfully");
-
             // check out
              using (Form_Bill fb = new Form_Bill()) // In hóa đơn
              {
-                 fb.Total = label4.Text;
-                 fb.ShowDialog();
+                /* foreach (DocumentSnapshot doc in cartSnapshot.Documents)
+                 {
+                     await doc.Reference.DeleteAsync();
+                 }*/
                 foreach (DocumentSnapshot doc in cartSnapshot.Documents)
                 {
-                    await doc.Reference.DeleteAsync();
+                    if (doc.Exists)
+                    {
+                        Cart cart = doc.ConvertTo<Cart>();
+
+                        // Xóa tài liệu trong cart
+                        await doc.Reference.DeleteAsync();
+
+                        // Cập nhật số lượng sách trong Book
+                        DocumentReference bookRef = db.Collection("Book").Document(cart.BookId);
+                        DocumentSnapshot bookSnapshot = await bookRef.GetSnapshotAsync();
+                        if (bookSnapshot.Exists)
+                        {
+                            Book book = bookSnapshot.ConvertTo<Book>();
+                            int newQuantity = book.Quantity - cart.Quantity;
+                            if (newQuantity >= 0)
+                            {
+                                await bookRef.UpdateAsync("Quantity", newQuantity);
+                            }
+                            else
+                            {
+                                // Handle case where new quantity would be negative
+                                MessageBox.Show($"Not enough stock for book: {book.BookTitle}");
+                                return;
+                            }
+                        }
+                    }
+                    fb.Total = label4.Text;
+                    fb.ShowDialog();
                 }
+                var books = new List<Book>();
+                foreach (DocumentSnapshot doc in cartSnapshot.Documents)
+                {
+
+                    if (doc.Exists)
+                    {
+                        Cart cart = doc.ConvertTo<Cart>();
+
+                        books.Add(new Book
+                        {
+                            BookId = cart.BookId,
+                            BookTitle = cart.BookTitle,
+                            Author = cart.Author,
+                            Publisher = cart.BookPublisher,
+                            Quantity = cart.Quantity,
+                            SellingPrice = cart.Price,
+                        });
+                    }
+                }
+                //Thêm vào collection
+                var orderData = new Order()
+                {
+                    Books = books,
+                    CustomerEmail = Form_Login.currentUserEmail,
+                    Quantity = books.Count,
+                    TotalPrice = Double.Parse(label4.Text),
+                    CustomerName = Form_Login.currentUser.Name,
+                };
+                CollectionReference orderCollectionRef = db.Collection("Order");
+                await orderCollectionRef.AddAsync(orderData);
                 LoadCart();
              }
         }

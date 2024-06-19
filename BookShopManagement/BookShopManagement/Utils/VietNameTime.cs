@@ -10,6 +10,10 @@ namespace BookShopManagement.Utils
     {
         public static string ConvertToVietnamTime(string iso8601DateTime)
         {
+            if(iso8601DateTime == null || iso8601DateTime =="")
+            {
+                return "";
+            }
             // Chuyển chuỗi ISO 8601 thành kiểu DateTime
             DateTime utcDateTime = DateTime.ParseExact(iso8601DateTime, "yyyy-MM-ddTHH:mm:ss", null);
 
