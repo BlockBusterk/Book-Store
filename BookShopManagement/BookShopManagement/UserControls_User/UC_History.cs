@@ -36,48 +36,38 @@ namespace BookShopManagement.UserControls_User
             try
             {
                 var db = FirebaseHelper.Database;
-                Query historyQue = db.Collection("Order").WhereEqualTo("CustomerEmail", Form_Login.currentUserEmail);
-                QuerySnapshot snap = await historyQue.GetSnapshotAsync();
+                Query historyQue = db.Collection("Order").WhereEqualTo("CustomerId", Form_Login.currentUserId);
+                QuerySnapshot historySnap = await historyQue.GetSnapshotAsync();
+                List<Order> orders = new List<Order>();
 
-                totalOrders = snap.Count; // Số lượng đơn hàng
-
-                // Tính toán số trang dựa trên số lượng đơn hàng và số dòng trên mỗi trang
-                int totalPages = (int)Math.Ceiling((double)totalOrders / pageSize);
-
-                // Kiểm tra và cập nhật trang hiện tại nếu nó vượt quá tổng số trang
-                if (currentPage > totalPages)
+                foreach (DocumentSnapshot doc in historySnap.Documents)
                 {
-                    currentPage = totalPages;
-                }
-
-                // Tính toán chỉ số bắt đầu và kết thúc của dữ liệu cần hiển thị cho trang hiện tại
-                int startIndex = (currentPage - 1) * pageSize;
-                int endIndex = Math.Min(startIndex + pageSize - 1, totalOrders - 1);
-
-                // Xóa dữ liệu hiện tại của DataGridView
-                dataGridView1.Rows.Clear();
-
-                // Lặp qua từng đơn hàng trong phạm vi trang hiện tại
-                for (int i = startIndex; i <= endIndex; i++)
-                {
-                    DocumentSnapshot doc = snap.Documents[i];
                     if (doc.Exists)
                     {
                         Order order = doc.ConvertTo<Order>();
-                        List<Book> books = order.Books;
-                        string date = VietNameTime.ConvertToVietnamTime(order.CreatedDate);
-
-                        // Thêm từng sách của đơn hàng vào DataGridView
-                        foreach (Book book in books)
+                       
+                        foreach (Book book in order.Books)
                         {
-                            dataGridView1.Rows.Add(book.BookTitle, book.Author, book.Publisher, book.Quantity.ToString(), (book.SellingPrice * book.Quantity).ToString(), date);
+                            DocumentReference bookRef = db.Collection("Book").Document(book.BookId);
+                            DocumentSnapshot bookSnapshot = await bookRef.GetSnapshotAsync();
+                            if(bookSnapshot.Exists)
+                            {
+                            Book bookInfo = bookSnapshot.ConvertTo<Book>();
+
+                             dataGridView1.Rows.Add(
+                             bookInfo.BookTitle,
+                             bookInfo.Author,
+                             bookInfo.Publisher,
+                             book.Quantity.ToString(),
+                             (book.Quantity * book.SellingPrice).ToString(),
+                             VietNameTime.ConvertToVietnamTime(order.CreatedDate)
+                               );
+                            }
+                           
                         }
                     }
                 }
 
-                // Cập nhật lại thông tin về trang và tổng số trang (nếu cần)
-                lblCurrentPage.Text = currentPage.ToString();
-                lblTotalPages.Text = totalPages.ToString();
             }
             catch (Exception ex)
             {

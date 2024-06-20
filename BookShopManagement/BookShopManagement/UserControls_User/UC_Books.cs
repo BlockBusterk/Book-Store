@@ -265,13 +265,9 @@ namespace BookShopManagement.UserControls_User
             // Add the selected book to the 'cart' collection
             Dictionary<string, object> dict = new Dictionary<string, object>()
             {
-                { "BookTitle",book.BookTitle  },
                 { "Quantity", 1 },
-                {"CustomerName", Form_Login.currentUserName },
-                {"CustomerEmail", Form_Login.currentUserEmail },
-                {"BookPublisher", book.Publisher },
+                {"CustomerId", Form_Login.currentUserId },
                 {"TotalPrice", book.SellingPrice },
-                {"Author", book.Author },
                 {"BookId",book.BookId },
                 {"Price", book.SellingPrice }
             };

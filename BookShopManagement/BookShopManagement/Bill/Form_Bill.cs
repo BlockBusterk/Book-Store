@@ -69,15 +69,22 @@ namespace BookShopManagement.Bill
                 if (doc.Exists)
                 {
                     Cart cart = doc.ConvertTo<Cart>();
-
-                    data.Add(new Models.Bill
+                    DocumentReference bookRef = db.Collection("Book").Document(cart.BookId);
+                    DocumentSnapshot bookSnap = await bookRef.GetSnapshotAsync();
+                    if (bookSnap.Exists)
                     {
-                        Title = cart.BookTitle,
-                        Author = cart.Author,
-                        Publisher = cart.BookPublisher,
-                        Quantity= cart.Quantity,
-                        Price= cart.Price,
-                    });
+                        Book book = bookSnap.ConvertTo<Book>();
+                        data.Add(new Models.Bill
+                        {
+                            Title = book.BookTitle,
+                            Author = book.Author,
+                            Publisher = book.Publisher,
+                            Quantity = cart.Quantity,
+                            Price = cart.Price,
+                        });
+                    }
+                       
+
                 }
             }
             reportViewer1.LocalReport.DataSources.Clear();

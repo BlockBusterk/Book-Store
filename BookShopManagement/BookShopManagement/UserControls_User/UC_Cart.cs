@@ -61,9 +61,23 @@ namespace BookShopManagement.UserControls_User
 
                 if (doc.Exists)
                 {
+                    
                     Cart cart = doc.ConvertTo<Cart>();
-                   
-                    dataGridView1.Rows.Add(cart.BookId, cart.BookTitle, cart.Author,cart.BookPublisher, cart.Price, cart.Quantity.ToString(), (cart.Price*cart.Quantity).ToString());
+                    DocumentReference bookRef = db.Collection("Book").Document(cart.BookId);
+                    DocumentSnapshot bookSnap = await bookRef.GetSnapshotAsync();
+                    if(bookSnap.Exists)
+                    {
+                        Book book = bookSnap.ConvertTo<Book>();
+                        dataGridView1.Rows.Add(
+                            cart.BookId, 
+                            book.BookTitle, 
+                            book.Author, 
+                            book.Publisher, 
+                            cart.Price, 
+                            cart.Quantity.ToString(), 
+                           (cart.Price * cart.Quantity).ToString());
+                    }
+                    
                 }
             }
             label4.Text = CalculateTotalAmount().ToString();
@@ -106,6 +120,11 @@ namespace BookShopManagement.UserControls_User
             DocumentReference userCartRef = db.Collection("Cart").Document(Form_Login.currentUserId);
             CollectionReference userCartCollection = userCartRef.Collection("cart");
             QuerySnapshot cartSnapshot = await userCartCollection.GetSnapshotAsync();
+            if(cartSnapshot.Documents.Count == 0)
+            {
+                MessageBox.Show("There are nothing in your cart yet!");
+                return;
+            }
             // check out
              using (Form_Bill fb = new Form_Bill()) // In hóa đơn
              {
@@ -113,6 +132,8 @@ namespace BookShopManagement.UserControls_User
                  {
                      await doc.Reference.DeleteAsync();
                  }*/
+                fb.Total = label4.Text;
+                fb.ShowDialog();
                 foreach (DocumentSnapshot doc in cartSnapshot.Documents)
                 {
                     if (doc.Exists)
@@ -141,8 +162,7 @@ namespace BookShopManagement.UserControls_User
                             }
                         }
                     }
-                    fb.Total = label4.Text;
-                    fb.ShowDialog();
+                   
                 }
                 var books = new List<Book>();
                 foreach (DocumentSnapshot doc in cartSnapshot.Documents)
@@ -155,9 +175,6 @@ namespace BookShopManagement.UserControls_User
                         books.Add(new Book
                         {
                             BookId = cart.BookId,
-                            BookTitle = cart.BookTitle,
-                            Author = cart.Author,
-                            Publisher = cart.BookPublisher,
                             Quantity = cart.Quantity,
                             SellingPrice = cart.Price,
                         });
@@ -167,10 +184,9 @@ namespace BookShopManagement.UserControls_User
                 var orderData = new Order()
                 {
                     Books = books,
-                    CustomerEmail = Form_Login.currentUserEmail,
-                    Quantity = books.Count,
+                    CustomerId = Form_Login.currentUserId,
                     TotalPrice = Double.Parse(label4.Text),
-                    CustomerName = Form_Login.currentUser.Name,
+                    Quantity = books.Count
                 };
                 CollectionReference orderCollectionRef = db.Collection("Order");
                 await orderCollectionRef.AddAsync(orderData);

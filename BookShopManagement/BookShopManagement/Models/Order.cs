@@ -15,14 +15,12 @@ namespace BookShopManagement.Models
         public List<Book> Books { get; set; } = new List<Book>();
 
         [FirestoreProperty]
-        public int  Quantity { get; set; } = 0;
-        [FirestoreProperty]
-        public string CustomerName { get; set; } = "";
-        [FirestoreProperty]
-        public string CustomerEmail { get; set; } = "";
-       
+        public string CustomerId { get; set; } = "";
+  
         [FirestoreProperty]
         public double TotalPrice { get; set; } = 0;
+        [FirestoreProperty]
+        public int Quantity { get; set; } = 0;
         [FirestoreProperty]
         public string CreatedDate { get; set; } = DateTime.UtcNow.ToString("s", CultureInfo.InvariantCulture);
         [FirestoreProperty]

@@ -51,17 +51,18 @@ namespace BookShopManagement.Forms_User
         {
             var db = FirebaseHelper.Database;
             
-            DocumentReference bookRef = db.Collection("Cart").Document(Form_Login.currentUserId).Collection("cart").Document(bookId);
-            DocumentSnapshot doc = await bookRef.GetSnapshotAsync();
-            DocumentReference categoryRef = db.Collection("Book").Document(bookId);
-            DocumentSnapshot categorySnap = await categoryRef.GetSnapshotAsync();
-            if (doc.Exists && categorySnap.Exists)
+            DocumentReference carRef = db.Collection("Cart").Document(Form_Login.currentUserId).Collection("cart").Document(bookId);
+            DocumentSnapshot cartSnap = await carRef.GetSnapshotAsync();
+            DocumentReference bookRef = db.Collection("Book").Document(bookId);
+            DocumentSnapshot bookSnap = await bookRef.GetSnapshotAsync();
+            if (cartSnap.Exists && bookSnap.Exists)
             {
-                Cart cart = doc.ConvertTo<Cart>();
-                Book book = categorySnap.ConvertTo<Book>();
-                lblBookAuthor.Text = cart.Author;
+             
+                Book book = bookSnap.ConvertTo<Book>();
+                Cart cart = cartSnap.ConvertTo<Cart>();
+                lblBookAuthor.Text = book.Author;
                 lblBookQuantity.Text = cart.Quantity.ToString();
-                lblBookTitle.Text = cart.BookTitle;
+                lblBookTitle.Text = book.BookTitle;
                 lblCategory.Text = book.Category;
             }
         }
@@ -69,8 +70,8 @@ namespace BookShopManagement.Forms_User
         private async void Load_Comment()
         {
             var db = FirebaseHelper.Database;
-            Query cartQue = db.Collection("Comment").Document(bookId).Collection("UserInfo");
-            QuerySnapshot snap = await cartQue.GetSnapshotAsync();
+            Query commentQue = db.Collection("Comment").Document(bookId).Collection("UserInfo");
+            QuerySnapshot snap = await commentQue.GetSnapshotAsync();
             foreach (DocumentSnapshot doc in snap)
             {
 

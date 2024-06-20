@@ -25,9 +25,9 @@ namespace BookShopManagement.Models
         [FirestoreProperty]
         public int Quantity { get; set; } = 0;
         [FirestoreProperty]
-        public int CostPrice { get; set; } = 0;
+        public double CostPrice { get; set; } = 0;
         [FirestoreProperty]
-        public int SellingPrice { get; set; } = 0;
+        public double SellingPrice { get; set; } = 0;
         [FirestoreProperty]
         public string Category { get; set; } = "";
         [FirestoreProperty]

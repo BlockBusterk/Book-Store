@@ -10,25 +10,18 @@ namespace BookShopManagement.Models
     [FirestoreData]
     public class Cart
     {
-        [FirestoreProperty]
-        public string BookTitle { get; set; } = "";
-        [FirestoreProperty]
-        public string BookPublisher { get; set; } = "";
-        [FirestoreProperty]
-        public string Author { get; set; } = "";
+       
 
         [FirestoreProperty]
         public string BookId { get; set; } = "";
         [FirestoreProperty]
-        public string CustomerEmail { get; set; } = "";
-        [FirestoreProperty]
-        public string CustomerName { get; set; } = "";
-        [FirestoreProperty]
-        public string ImageUrl { get; set; } = "";
+        public string CustomerId { get; set; } = "";
+       
+       
         [FirestoreProperty]
         public int Quantity { get; set; } = 1; 
         [FirestoreProperty]
-        public int TotalPrice { get; set; } = 0;
+        public double TotalPrice { get; set; } = 0;
         [FirestoreProperty]
         public int Price { get; set; } = 0;
 
