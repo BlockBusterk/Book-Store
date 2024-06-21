@@ -43,22 +43,28 @@ namespace BookShopManagement.Forms_User
             else
             {
                 // Xóa thông báo khi số ký tự hợp lệ
-               
+
             }
         }
 
-        
+
         private void ResetStar()
         {
-            starBtn1.Image = Image.FromFile("E:\\Year4HK2\\C#\\ThucHanh2\\2849817_favorite_star_favorites_favourite_multimedia_icon.png");
-            starBtn2.Image = Image.FromFile("E:\\Year4HK2\\C#\\ThucHanh2\\2849817_favorite_star_favorites_favourite_multimedia_icon.png");
-            starBtn3.Image = Image.FromFile("E:\\Year4HK2\\C#\\ThucHanh2\\2849817_favorite_star_favorites_favourite_multimedia_icon.png");
-            starBtn4.Image = Image.FromFile("E:\\Year4HK2\\C#\\ThucHanh2\\2849817_favorite_star_favorites_favourite_multimedia_icon.png");
-            starBtn5.Image = Image.FromFile("E:\\Year4HK2\\C#\\ThucHanh2\\2849817_favorite_star_favorites_favourite_multimedia_icon.png");
+            starBtn1.Load("https://res.cloudinary.com/db3qu4bzj/image/upload/v1718981831/2849817_favorite_star_favorites_favourite_multimedia_icon_hfz27l.png");
+            starBtn2.Load("https://res.cloudinary.com/db3qu4bzj/image/upload/v1718981831/2849817_favorite_star_favorites_favourite_multimedia_icon_hfz27l.png");
+            starBtn3.Load("https://res.cloudinary.com/db3qu4bzj/image/upload/v1718981831/2849817_favorite_star_favorites_favourite_multimedia_icon_hfz27l.png");
+            starBtn4.Load("https://res.cloudinary.com/db3qu4bzj/image/upload/v1718981831/2849817_favorite_star_favorites_favourite_multimedia_icon_hfz27l.png");
+            starBtn5.Load("https://res.cloudinary.com/db3qu4bzj/image/upload/v1718981831/2849817_favorite_star_favorites_favourite_multimedia_icon_hfz27l.png");
+
+            //starBtn1.Image = Image.FromFile("E:\\Year4HK2\\C#\\ThucHanh2\\2849817_favorite_star_favorites_favourite_multimedia_icon.png");
+            //starBtn2.Image = Image.FromFile("E:\\Year4HK2\\C#\\ThucHanh2\\2849817_favorite_star_favorites_favourite_multimedia_icon.png");
+            //starBtn3.Image = Image.FromFile("E:\\Year4HK2\\C#\\ThucHanh2\\2849817_favorite_star_favorites_favourite_multimedia_icon.png");
+            //starBtn4.Image = Image.FromFile("E:\\Year4HK2\\C#\\ThucHanh2\\2849817_favorite_star_favorites_favourite_multimedia_icon.png");
+            //starBtn5.Image = Image.FromFile("E:\\Year4HK2\\C#\\ThucHanh2\\2849817_favorite_star_favorites_favourite_multimedia_icon.png");
 
         }
 
-        
+
 
 
         private async void btnSend_Click(object sender, EventArgs e)
@@ -95,21 +101,21 @@ namespace BookShopManagement.Forms_User
         {
             ResetStar();
             score = 5;
-            starBtn1.Image = Image.FromFile("E:\\Year4HK2\\C#\\ThucHanh2\\285661_star_icon.png");
-            starBtn2.Image = Image.FromFile("E:\\Year4HK2\\C#\\ThucHanh2\\285661_star_icon.png");
-            starBtn3.Image = Image.FromFile("E:\\Year4HK2\\C#\\ThucHanh2\\285661_star_icon.png");
-            starBtn4.Image = Image.FromFile("E:\\Year4HK2\\C#\\ThucHanh2\\285661_star_icon.png");
-            starBtn5.Image = Image.FromFile("E:\\Year4HK2\\C#\\ThucHanh2\\285661_star_icon.png");
+            starBtn1.Load("https://res.cloudinary.com/db3qu4bzj/image/upload/v1718981818/285661_star_icon_wsf06v.png");
+            starBtn2.Load("https://res.cloudinary.com/db3qu4bzj/image/upload/v1718981818/285661_star_icon_wsf06v.png");
+            starBtn3.Load("https://res.cloudinary.com/db3qu4bzj/image/upload/v1718981818/285661_star_icon_wsf06v.png");
+            starBtn4.Load("https://res.cloudinary.com/db3qu4bzj/image/upload/v1718981818/285661_star_icon_wsf06v.png");
+            starBtn5.Load("https://res.cloudinary.com/db3qu4bzj/image/upload/v1718981818/285661_star_icon_wsf06v.png");
         }
 
         private void starBtn4_Click_1(object sender, EventArgs e)
         {
             ResetStar();
             score = 4;
-            starBtn1.Image = Image.FromFile("E:\\Year4HK2\\C#\\ThucHanh2\\285661_star_icon.png");
-            starBtn2.Image = Image.FromFile("E:\\Year4HK2\\C#\\ThucHanh2\\285661_star_icon.png");
-            starBtn3.Image = Image.FromFile("E:\\Year4HK2\\C#\\ThucHanh2\\285661_star_icon.png");
-            starBtn4.Image = Image.FromFile("E:\\Year4HK2\\C#\\ThucHanh2\\285661_star_icon.png");
+            starBtn1.Load("https://res.cloudinary.com/db3qu4bzj/image/upload/v1718981818/285661_star_icon_wsf06v.png");
+            starBtn2.Load("https://res.cloudinary.com/db3qu4bzj/image/upload/v1718981818/285661_star_icon_wsf06v.png");
+            starBtn3.Load("https://res.cloudinary.com/db3qu4bzj/image/upload/v1718981818/285661_star_icon_wsf06v.png");
+            starBtn4.Load("https://res.cloudinary.com/db3qu4bzj/image/upload/v1718981818/285661_star_icon_wsf06v.png");
         }
 
         private void starBtn3_Click_1(object sender, EventArgs e)
@@ -117,24 +123,24 @@ namespace BookShopManagement.Forms_User
 
             ResetStar();
             score = 3;
-            starBtn1.Image = Image.FromFile("E:\\Year4HK2\\C#\\ThucHanh2\\285661_star_icon.png");
-            starBtn2.Image = Image.FromFile("E:\\Year4HK2\\C#\\ThucHanh2\\285661_star_icon.png");
-            starBtn3.Image = Image.FromFile("E:\\Year4HK2\\C#\\ThucHanh2\\285661_star_icon.png");
+            starBtn1.Load("https://res.cloudinary.com/db3qu4bzj/image/upload/v1718981818/285661_star_icon_wsf06v.png");
+            starBtn2.Load("https://res.cloudinary.com/db3qu4bzj/image/upload/v1718981818/285661_star_icon_wsf06v.png");
+            starBtn3.Load("https://res.cloudinary.com/db3qu4bzj/image/upload/v1718981818/285661_star_icon_wsf06v.png");
         }
 
         private void starBtn2_Click_1(object sender, EventArgs e)
         {
             ResetStar();
             score = 2;
-            starBtn1.Image = Image.FromFile("E:\\Year4HK2\\C#\\ThucHanh2\\285661_star_icon.png");
-            starBtn2.Image = Image.FromFile("E:\\Year4HK2\\C#\\ThucHanh2\\285661_star_icon.png");
+            starBtn1.Load("https://res.cloudinary.com/db3qu4bzj/image/upload/v1718981818/285661_star_icon_wsf06v.png");
+            starBtn2.Load("https://res.cloudinary.com/db3qu4bzj/image/upload/v1718981818/285661_star_icon_wsf06v.png");
         }
 
         private void starBtn1_Click_1(object sender, EventArgs e)
         {
             ResetStar();
             score = 1;
-            starBtn1.Image = Image.FromFile("E:\\Year4HK2\\C#\\ThucHanh2\\285661_star_icon.png");
+            starBtn1.Load("https://res.cloudinary.com/db3qu4bzj/image/upload/v1718981818/285661_star_icon_wsf06v.png");
         }
     }
 }

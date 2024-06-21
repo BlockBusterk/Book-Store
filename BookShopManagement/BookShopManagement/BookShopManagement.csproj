@@ -621,6 +621,8 @@
     <None Include="Resources\8664831_user_icon.png" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Resources\book.png" />
+    <None Include="Resources\book %281%29.png" />
     <Content Include="SqlServerTypes\readme.htm" />
     <Content Include="SqlServerTypes\x64\msvcr120.dll">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>

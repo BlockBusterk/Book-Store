@@ -72,7 +72,7 @@
             // 
             // panel5
             // 
-            this.panel5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(71)))), ((int)(((byte)(160)))));
+            this.panel5.BackColor = System.Drawing.Color.Purple;
             this.panel5.Controls.Add(this.textBox7);
             this.panel5.Controls.Add(this.label5);
             this.panel5.Controls.Add(this.comboBox2);

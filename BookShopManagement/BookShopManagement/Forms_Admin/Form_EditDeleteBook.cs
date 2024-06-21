@@ -1,8 +1,10 @@
 ﻿using BookShopManagement.Database;
 using BookShopManagement.Forms_User;
 using BookShopManagement.Models;
+using Bunifu.UI.WinForms.Helpers.Transitions;
 using Google.Cloud.Firestore;
 using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -19,10 +21,14 @@ namespace BookShopManagement.Forms
     public partial class Form_EditDeleteBook : Form
     {
         public string BookId { get; set; }
+        private List<Category> categories { get; set; } = new List<Category>();
+
         public Form_EditDeleteBook(string id)
         {
             InitializeComponent();
             BookId = id;
+            LoadCategory();
+            LoadData();
         }
 
         private void button4_Click(object sender, EventArgs e)
@@ -32,8 +38,7 @@ namespace BookShopManagement.Forms
 
         private void Form_AddNewBook_Load(object sender, EventArgs e)
         {
-            LoadCategory();
-            LoadData();
+            
         }
 
         public void LoadData()
@@ -49,13 +54,22 @@ namespace BookShopManagement.Forms
                 txbAuthor.Text = book.Author;
                 txbPublisher.Text = book.Publisher;
                 
-
                 txbQuantity.Text = book.Quantity.ToString();
                 txbCostPrice.Text = book.CostPrice.ToString();
                 txbSellingPrice.Text = book.SellingPrice.ToString();
 
-                cbCategory.SelectedValue = book.Category;
-                //picImage.Load(book.ImageUrl);
+                int index = -1;
+                for (int i =0; i < categories.Count; i++)
+                {
+                    if (categories[i].Name == book.Category)
+                    {
+                        index = i;
+                        break;
+                    }
+                }
+                cbCategory.SelectedIndex = index;
+
+                picImage.Load(book.ImageUrl);
             }
             catch (Exception exception)
             {
@@ -67,7 +81,7 @@ namespace BookShopManagement.Forms
         {
             try
             {
-                List<Category> categories = new List<Category>();
+                categories.Clear();
                 var db = FirebaseHelper.Database;
                 Query qRef = db.Collection("Category");
                 QuerySnapshot snap = await qRef.GetSnapshotAsync();
@@ -81,9 +95,10 @@ namespace BookShopManagement.Forms
                     }
                 }
 
-                cbCategory.DataSource = categories;
                 cbCategory.DisplayMember = "Name";
                 cbCategory.ValueMember = "Name";
+                cbCategory.DataSource = categories;
+
             }
             catch (Exception ex)
             {
@@ -150,9 +165,10 @@ namespace BookShopManagement.Forms
                 //    Publisher = publisher,
                 //    Quantity = quantity,
                 //    SellingPrice = sellingPrice,
-                //    Category = cbCategory.SelectedItem.ToString(),
+                //    Category = cbCategory.Text,
                 //    ImageUrl = imageUrl,
                 //};
+
                 var data = new Dictionary<string, object>
                 {
                     { "Author", author },
@@ -161,9 +177,8 @@ namespace BookShopManagement.Forms
                     { "Publisher", publisher },
                     { "Quantity", quantity },
                     { "SellingPrice", sellingPrice },
-                    { "Category", cbCategory.SelectedItem.ToString() },
+                    { "Category",cbCategory.Text },
                     { "ImageUrl", imageUrl },
-
                 };
 
                 DocumentReference docref = db.Collection("Book").Document(BookId);

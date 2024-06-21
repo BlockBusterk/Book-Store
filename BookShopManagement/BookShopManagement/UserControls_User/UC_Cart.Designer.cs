@@ -68,6 +68,7 @@
             this.label2.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Century Gothic", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.Color.Purple;
             this.label2.Location = new System.Drawing.Point(396, 14);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(131, 37);
@@ -127,6 +128,7 @@
             this.BookId.HeaderText = "BookId";
             this.BookId.MinimumWidth = 6;
             this.BookId.Name = "BookId";
+            this.BookId.ReadOnly = true;
             this.BookId.Visible = false;
             // 
             // Column_Title
@@ -134,42 +136,49 @@
             this.Column_Title.HeaderText = "Title";
             this.Column_Title.MinimumWidth = 6;
             this.Column_Title.Name = "Column_Title";
+            this.Column_Title.ReadOnly = true;
             // 
             // Column_Author
             // 
             this.Column_Author.HeaderText = "Author";
             this.Column_Author.MinimumWidth = 6;
             this.Column_Author.Name = "Column_Author";
+            this.Column_Author.ReadOnly = true;
             // 
             // Column_Publisher
             // 
             this.Column_Publisher.HeaderText = "Publisher";
             this.Column_Publisher.MinimumWidth = 6;
             this.Column_Publisher.Name = "Column_Publisher";
+            this.Column_Publisher.ReadOnly = true;
             // 
             // Column_Price
             // 
             this.Column_Price.HeaderText = "Price";
             this.Column_Price.MinimumWidth = 6;
             this.Column_Price.Name = "Column_Price";
+            this.Column_Price.ReadOnly = true;
             // 
             // Column_Quantity
             // 
             this.Column_Quantity.HeaderText = "Quantity";
             this.Column_Quantity.MinimumWidth = 6;
             this.Column_Quantity.Name = "Column_Quantity";
+            this.Column_Quantity.ReadOnly = true;
             // 
             // Column_TotalPrice
             // 
             this.Column_TotalPrice.HeaderText = "Total Price";
             this.Column_TotalPrice.MinimumWidth = 6;
             this.Column_TotalPrice.Name = "Column_TotalPrice";
+            this.Column_TotalPrice.ReadOnly = true;
             // 
             // Detail
             // 
             this.Detail.HeaderText = "Detail";
             this.Detail.MinimumWidth = 6;
             this.Detail.Name = "Detail";
+            this.Detail.ReadOnly = true;
             this.Detail.Resizable = System.Windows.Forms.DataGridViewTriState.True;
             this.Detail.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
             this.Detail.Text = "Detail";
@@ -180,6 +189,7 @@
             this.Remove.HeaderText = "Remove";
             this.Remove.MinimumWidth = 6;
             this.Remove.Name = "Remove";
+            this.Remove.ReadOnly = true;
             this.Remove.Text = "Remove from cart";
             this.Remove.UseColumnTextForButtonValue = true;
             // 
@@ -236,6 +246,7 @@
             this.label1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Century Gothic", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.Purple;
             this.label1.Location = new System.Drawing.Point(359, 14);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(105, 22);

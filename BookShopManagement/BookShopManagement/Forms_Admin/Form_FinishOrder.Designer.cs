@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form_FinishOrder));
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
@@ -53,7 +52,7 @@
             // 
             // panel1
             // 
-            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(71)))), ((int)(((byte)(160)))));
+            this.panel1.BackColor = System.Drawing.Color.Purple;
             this.panel1.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.panel1.Location = new System.Drawing.Point(0, 345);
             this.panel1.Name = "panel1";
@@ -62,7 +61,7 @@
             // 
             // panel2
             // 
-            this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(71)))), ((int)(((byte)(160)))));
+            this.panel2.BackColor = System.Drawing.Color.Purple;
             this.panel2.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel2.Location = new System.Drawing.Point(0, 10);
             this.panel2.Name = "panel2";
@@ -71,7 +70,7 @@
             // 
             // panel3
             // 
-            this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(71)))), ((int)(((byte)(160)))));
+            this.panel3.BackColor = System.Drawing.Color.Purple;
             this.panel3.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel3.Location = new System.Drawing.Point(0, 0);
             this.panel3.Name = "panel3";
@@ -80,7 +79,7 @@
             // 
             // panel4
             // 
-            this.panel4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(71)))), ((int)(((byte)(160)))));
+            this.panel4.BackColor = System.Drawing.Color.Purple;
             this.panel4.Dock = System.Windows.Forms.DockStyle.Right;
             this.panel4.Location = new System.Drawing.Point(523, 0);
             this.panel4.Name = "panel4";
@@ -93,14 +92,14 @@
             this.label1.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(212, 42);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(154, 19);
+            this.label1.Size = new System.Drawing.Size(192, 23);
             this.label1.TabIndex = 1;
             this.label1.Text = "Finalize Your Order";
             // 
             // pictureBox2
             // 
             this.pictureBox2.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
+            this.pictureBox2.Image = global::BookShopManagement.Properties.Resources.book;
             this.pictureBox2.Location = new System.Drawing.Point(51, 24);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(75, 82);
@@ -114,7 +113,7 @@
             this.label2.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.Location = new System.Drawing.Point(84, 122);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(105, 19);
+            this.label2.Size = new System.Drawing.Size(133, 23);
             this.label2.TabIndex = 1;
             this.label2.Text = "Net Amount:";
             // 
@@ -123,7 +122,7 @@
             this.textBox1.Location = new System.Drawing.Point(195, 117);
             this.textBox1.Name = "textBox1";
             this.textBox1.ReadOnly = true;
-            this.textBox1.Size = new System.Drawing.Size(261, 27);
+            this.textBox1.Size = new System.Drawing.Size(261, 32);
             this.textBox1.TabIndex = 4;
             // 
             // label3
@@ -132,7 +131,7 @@
             this.label3.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.Location = new System.Drawing.Point(110, 163);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(78, 19);
+            this.label3.Size = new System.Drawing.Size(100, 23);
             this.label3.TabIndex = 1;
             this.label3.Text = "Discount:";
             // 
@@ -140,7 +139,7 @@
             // 
             this.textBox2.Location = new System.Drawing.Point(195, 158);
             this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(261, 27);
+            this.textBox2.Size = new System.Drawing.Size(261, 32);
             this.textBox2.TabIndex = 4;
             // 
             // label4
@@ -149,7 +148,7 @@
             this.label4.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.Location = new System.Drawing.Point(72, 205);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(115, 19);
+            this.label4.Size = new System.Drawing.Size(144, 23);
             this.label4.TabIndex = 1;
             this.label4.Text = "Total Amount:";
             // 
@@ -158,7 +157,7 @@
             this.textBox3.Location = new System.Drawing.Point(195, 200);
             this.textBox3.Name = "textBox3";
             this.textBox3.ReadOnly = true;
-            this.textBox3.Size = new System.Drawing.Size(261, 27);
+            this.textBox3.Size = new System.Drawing.Size(261, 32);
             this.textBox3.TabIndex = 4;
             // 
             // label5
@@ -167,7 +166,7 @@
             this.label5.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.Location = new System.Drawing.Point(72, 247);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(114, 19);
+            this.label5.Size = new System.Drawing.Size(141, 23);
             this.label5.TabIndex = 1;
             this.label5.Text = "Paid Amount:";
             // 
@@ -175,7 +174,7 @@
             // 
             this.textBox4.Location = new System.Drawing.Point(195, 242);
             this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(261, 27);
+            this.textBox4.Size = new System.Drawing.Size(261, 32);
             this.textBox4.TabIndex = 4;
             // 
             // label6
@@ -184,7 +183,7 @@
             this.label6.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.Location = new System.Drawing.Point(75, 304);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(143, 19);
+            this.label6.Size = new System.Drawing.Size(178, 23);
             this.label6.TabIndex = 1;
             this.label6.Text = "Change Amount:";
             // 
@@ -194,7 +193,7 @@
             this.label7.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label7.Location = new System.Drawing.Point(226, 304);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(27, 19);
+            this.label7.Size = new System.Drawing.Size(32, 23);
             this.label7.TabIndex = 1;
             this.label7.Text = "00";
             // 
@@ -257,7 +256,7 @@
             this.Controls.Add(this.panel4);
             this.Controls.Add(this.panel1);
             this.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(71)))), ((int)(((byte)(160)))));
+            this.ForeColor = System.Drawing.Color.Black;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Form_FinishOrder";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;

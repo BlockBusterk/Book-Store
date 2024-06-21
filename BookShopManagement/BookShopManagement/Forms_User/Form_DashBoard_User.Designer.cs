@@ -44,7 +44,6 @@
             this.button9 = new System.Windows.Forms.Button();
             this.label4 = new System.Windows.Forms.Label();
             this.panel4 = new System.Windows.Forms.Panel();
-            this.labelTime = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.timerTime = new System.Windows.Forms.Timer(this.components);
@@ -58,7 +57,7 @@
             // 
             // panel1
             // 
-            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(71)))), ((int)(((byte)(160)))));
+            this.panel1.BackColor = System.Drawing.Color.Purple;
             this.panel1.Controls.Add(this.btnUser);
             this.panel1.Controls.Add(this.panelSide);
             this.panel1.Controls.Add(this.btnHistory);
@@ -149,6 +148,7 @@
             // 
             // panel2
             // 
+            this.panel2.BackColor = System.Drawing.Color.Purple;
             this.panel2.Controls.Add(this.label3);
             this.panel2.Controls.Add(this.label2);
             this.panel2.Controls.Add(this.pictureBox1);
@@ -175,13 +175,13 @@
             this.label2.ForeColor = System.Drawing.Color.White;
             this.label2.Location = new System.Drawing.Point(23, 77);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(169, 23);
+            this.label2.Size = new System.Drawing.Size(131, 23);
             this.label2.TabIndex = 4;
-            this.label2.Text = "North Books Shop";
+            this.label2.Text = "BooBoo Shop";
             // 
             // pictureBox1
             // 
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Image = global::BookShopManagement.Properties.Resources.book;
             this.pictureBox1.Location = new System.Drawing.Point(81, 18);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(49, 48);
@@ -191,6 +191,7 @@
             // 
             // panel3
             // 
+            this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
             this.panel3.Controls.Add(this.button9);
             this.panel3.Controls.Add(this.label4);
             this.panel3.Dock = System.Windows.Forms.DockStyle.Top;
@@ -221,17 +222,16 @@
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(71)))), ((int)(((byte)(160)))));
-            this.label4.Location = new System.Drawing.Point(22, 9);
+            this.label4.ForeColor = System.Drawing.Color.Black;
+            this.label4.Location = new System.Drawing.Point(22, 11);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(354, 23);
+            this.label4.Size = new System.Drawing.Size(415, 23);
             this.label4.TabIndex = 1;
-            this.label4.Text = "North Books Shop, NLI Market Gilgit";
+            this.label4.Text = "BooBoo Shop, bring your best experience";
             // 
             // panel4
             // 
-            this.panel4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(71)))), ((int)(((byte)(160)))));
-            this.panel4.Controls.Add(this.labelTime);
+            this.panel4.BackColor = System.Drawing.Color.Purple;
             this.panel4.Controls.Add(this.label5);
             this.panel4.Controls.Add(this.label1);
             this.panel4.Dock = System.Windows.Forms.DockStyle.Top;
@@ -239,18 +239,6 @@
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(985, 92);
             this.panel4.TabIndex = 2;
-            // 
-            // labelTime
-            // 
-            this.labelTime.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.labelTime.AutoSize = true;
-            this.labelTime.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelTime.ForeColor = System.Drawing.Color.White;
-            this.labelTime.Location = new System.Drawing.Point(867, 14);
-            this.labelTime.Name = "labelTime";
-            this.labelTime.Size = new System.Drawing.Size(106, 23);
-            this.labelTime.TabIndex = 3;
-            this.labelTime.Text = "HH:MM:SS";
             // 
             // label5
             // 
@@ -326,7 +314,6 @@
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button button9;
-        private System.Windows.Forms.Label labelTime;
         private System.Windows.Forms.Button btnSaleBooks;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Timer timerTime;

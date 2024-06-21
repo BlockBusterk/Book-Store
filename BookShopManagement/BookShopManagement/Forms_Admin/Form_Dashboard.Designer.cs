@@ -33,10 +33,8 @@
             this.panelLeft = new System.Windows.Forms.Panel();
             this.btnCustomer = new System.Windows.Forms.Button();
             this.panelSide = new System.Windows.Forms.Panel();
-            this.btnSettings = new System.Windows.Forms.Button();
             this.btnViewSales = new System.Windows.Forms.Button();
             this.btnPurchase = new System.Windows.Forms.Button();
-            this.btnSaleBooks = new System.Windows.Forms.Button();
             this.btnHome = new System.Windows.Forms.Button();
             this.panel3 = new System.Windows.Forms.Panel();
             this.label3 = new System.Windows.Forms.Label();
@@ -62,13 +60,11 @@
             // 
             // panelLeft
             // 
-            this.panelLeft.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(71)))), ((int)(((byte)(160)))));
+            this.panelLeft.BackColor = System.Drawing.Color.Purple;
             this.panelLeft.Controls.Add(this.btnCustomer);
             this.panelLeft.Controls.Add(this.panelSide);
-            this.panelLeft.Controls.Add(this.btnSettings);
             this.panelLeft.Controls.Add(this.btnViewSales);
             this.panelLeft.Controls.Add(this.btnPurchase);
-            this.panelLeft.Controls.Add(this.btnSaleBooks);
             this.panelLeft.Controls.Add(this.btnHome);
             this.panelLeft.Controls.Add(this.panel3);
             this.panelLeft.Dock = System.Windows.Forms.DockStyle.Left;
@@ -85,7 +81,7 @@
             this.btnCustomer.ForeColor = System.Drawing.Color.White;
             this.btnCustomer.Image = global::BookShopManagement.Properties.Resources._4092564_profile_about_mobile_ui_user_icon;
             this.btnCustomer.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnCustomer.Location = new System.Drawing.Point(10, 406);
+            this.btnCustomer.Location = new System.Drawing.Point(10, 343);
             this.btnCustomer.Name = "btnCustomer";
             this.btnCustomer.Size = new System.Drawing.Size(190, 60);
             this.btnCustomer.TabIndex = 10;
@@ -102,23 +98,6 @@
             this.panelSide.Size = new System.Drawing.Size(7, 60);
             this.panelSide.TabIndex = 1;
             // 
-            // btnSettings
-            // 
-            this.btnSettings.FlatAppearance.BorderSize = 0;
-            this.btnSettings.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnSettings.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSettings.ForeColor = System.Drawing.Color.White;
-            this.btnSettings.Image = ((System.Drawing.Image)(resources.GetObject("btnSettings.Image")));
-            this.btnSettings.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnSettings.Location = new System.Drawing.Point(9, 472);
-            this.btnSettings.Name = "btnSettings";
-            this.btnSettings.Size = new System.Drawing.Size(203, 60);
-            this.btnSettings.TabIndex = 2;
-            this.btnSettings.Text = "     Settings";
-            this.btnSettings.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnSettings.UseVisualStyleBackColor = true;
-            this.btnSettings.Click += new System.EventHandler(this.button7_Click);
-            // 
             // btnViewSales
             // 
             this.btnViewSales.FlatAppearance.BorderSize = 0;
@@ -127,7 +106,7 @@
             this.btnViewSales.ForeColor = System.Drawing.Color.White;
             this.btnViewSales.Image = ((System.Drawing.Image)(resources.GetObject("btnViewSales.Image")));
             this.btnViewSales.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnViewSales.Location = new System.Drawing.Point(12, 340);
+            this.btnViewSales.Location = new System.Drawing.Point(12, 277);
             this.btnViewSales.Name = "btnViewSales";
             this.btnViewSales.Size = new System.Drawing.Size(203, 60);
             this.btnViewSales.TabIndex = 2;
@@ -144,31 +123,14 @@
             this.btnPurchase.ForeColor = System.Drawing.Color.White;
             this.btnPurchase.Image = ((System.Drawing.Image)(resources.GetObject("btnPurchase.Image")));
             this.btnPurchase.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnPurchase.Location = new System.Drawing.Point(12, 271);
+            this.btnPurchase.Location = new System.Drawing.Point(12, 208);
             this.btnPurchase.Name = "btnPurchase";
             this.btnPurchase.Size = new System.Drawing.Size(203, 60);
             this.btnPurchase.TabIndex = 2;
-            this.btnPurchase.Text = "     Purchase Items";
+            this.btnPurchase.Text = "     Book Items";
             this.btnPurchase.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnPurchase.UseVisualStyleBackColor = true;
             this.btnPurchase.Click += new System.EventHandler(this.btnPurchase_Click);
-            // 
-            // btnSaleBooks
-            // 
-            this.btnSaleBooks.FlatAppearance.BorderSize = 0;
-            this.btnSaleBooks.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnSaleBooks.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSaleBooks.ForeColor = System.Drawing.Color.White;
-            this.btnSaleBooks.Image = ((System.Drawing.Image)(resources.GetObject("btnSaleBooks.Image")));
-            this.btnSaleBooks.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnSaleBooks.Location = new System.Drawing.Point(12, 205);
-            this.btnSaleBooks.Name = "btnSaleBooks";
-            this.btnSaleBooks.Size = new System.Drawing.Size(203, 60);
-            this.btnSaleBooks.TabIndex = 2;
-            this.btnSaleBooks.Text = "     Sale Books";
-            this.btnSaleBooks.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnSaleBooks.UseVisualStyleBackColor = true;
-            this.btnSaleBooks.Click += new System.EventHandler(this.btnSaleBooks_Click);
             // 
             // btnHome
             // 
@@ -215,13 +177,13 @@
             this.label2.ForeColor = System.Drawing.Color.White;
             this.label2.Location = new System.Drawing.Point(31, 76);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(169, 23);
+            this.label2.Size = new System.Drawing.Size(131, 23);
             this.label2.TabIndex = 0;
-            this.label2.Text = "North Books Shop";
+            this.label2.Text = "BooBoo Shop";
             // 
             // pictureBox1
             // 
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Image = global::BookShopManagement.Properties.Resources.book;
             this.pictureBox1.Location = new System.Drawing.Point(89, 17);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(49, 48);
@@ -231,6 +193,7 @@
             // 
             // panel4
             // 
+            this.panel4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
             this.panel4.Controls.Add(this.label4);
             this.panel4.Controls.Add(this.button9);
             this.panel4.Dock = System.Windows.Forms.DockStyle.Top;
@@ -243,12 +206,12 @@
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(71)))), ((int)(((byte)(160)))));
-            this.label4.Location = new System.Drawing.Point(18, 18);
+            this.label4.ForeColor = System.Drawing.Color.Black;
+            this.label4.Location = new System.Drawing.Point(18, 13);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(354, 23);
+            this.label4.Size = new System.Drawing.Size(415, 23);
             this.label4.TabIndex = 0;
-            this.label4.Text = "North Books Shop, NLI Market Gilgit";
+            this.label4.Text = "BooBoo Shop, bring your best experience";
             // 
             // button9
             // 
@@ -270,7 +233,7 @@
             // 
             // panel2
             // 
-            this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(71)))), ((int)(((byte)(160)))));
+            this.panel2.BackColor = System.Drawing.Color.Purple;
             this.panel2.Controls.Add(this.label7);
             this.panel2.Controls.Add(this.label6);
             this.panel2.Controls.Add(this.label5);
@@ -372,10 +335,8 @@
         private System.Windows.Forms.Panel panel4;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Button btnSettings;
         private System.Windows.Forms.Button btnViewSales;
         private System.Windows.Forms.Button btnPurchase;
-        private System.Windows.Forms.Button btnSaleBooks;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Button button9;
         private System.Windows.Forms.Label label7;

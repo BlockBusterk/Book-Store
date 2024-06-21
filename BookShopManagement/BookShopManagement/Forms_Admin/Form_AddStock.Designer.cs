@@ -52,7 +52,7 @@
             // 
             // panel2
             // 
-            this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(71)))), ((int)(((byte)(160)))));
+            this.panel2.BackColor = System.Drawing.Color.Purple;
             this.panel2.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel2.Location = new System.Drawing.Point(0, 10);
             this.panel2.Name = "panel2";
@@ -61,7 +61,7 @@
             // 
             // panel4
             // 
-            this.panel4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(71)))), ((int)(((byte)(160)))));
+            this.panel4.BackColor = System.Drawing.Color.Purple;
             this.panel4.Dock = System.Windows.Forms.DockStyle.Right;
             this.panel4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(71)))), ((int)(((byte)(160)))));
             this.panel4.Location = new System.Drawing.Point(405, 10);
@@ -71,7 +71,7 @@
             // 
             // panel3
             // 
-            this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(71)))), ((int)(((byte)(160)))));
+            this.panel3.BackColor = System.Drawing.Color.Purple;
             this.panel3.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.panel3.Location = new System.Drawing.Point(0, 401);
             this.panel3.Name = "panel3";
@@ -80,7 +80,7 @@
             // 
             // panel1
             // 
-            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(71)))), ((int)(((byte)(160)))));
+            this.panel1.BackColor = System.Drawing.Color.Purple;
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
@@ -92,7 +92,7 @@
             this.textBox2.Location = new System.Drawing.Point(150, 93);
             this.textBox2.Name = "textBox2";
             this.textBox2.ReadOnly = true;
-            this.textBox2.Size = new System.Drawing.Size(213, 27);
+            this.textBox2.Size = new System.Drawing.Size(213, 32);
             this.textBox2.TabIndex = 20;
             // 
             // label6
@@ -101,7 +101,7 @@
             this.label6.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.Location = new System.Drawing.Point(43, 97);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(99, 19);
+            this.label6.Size = new System.Drawing.Size(124, 23);
             this.label6.TabIndex = 18;
             this.label6.Text = "Tracking ID:";
             // 
@@ -112,7 +112,7 @@
             this.label4.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.Location = new System.Drawing.Point(167, 38);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(117, 25);
+            this.label4.Size = new System.Drawing.Size(150, 32);
             this.label4.TabIndex = 19;
             this.label4.Text = "Add Stock";
             // 
@@ -122,7 +122,7 @@
             this.label1.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(28, 140);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(114, 19);
+            this.label1.Size = new System.Drawing.Size(147, 23);
             this.label1.TabIndex = 18;
             this.label1.Text = "Existing Stock:";
             // 
@@ -131,7 +131,7 @@
             this.textBox1.Location = new System.Drawing.Point(150, 135);
             this.textBox1.Name = "textBox1";
             this.textBox1.ReadOnly = true;
-            this.textBox1.Size = new System.Drawing.Size(213, 27);
+            this.textBox1.Size = new System.Drawing.Size(213, 32);
             this.textBox1.TabIndex = 20;
             // 
             // label2
@@ -140,7 +140,7 @@
             this.label2.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.Location = new System.Drawing.Point(49, 178);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(93, 19);
+            this.label2.Size = new System.Drawing.Size(120, 23);
             this.label2.TabIndex = 18;
             this.label2.Text = "New Stock:";
             // 
@@ -148,7 +148,7 @@
             // 
             this.textBox3.Location = new System.Drawing.Point(150, 174);
             this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(213, 27);
+            this.textBox3.Size = new System.Drawing.Size(213, 32);
             this.textBox3.TabIndex = 20;
             // 
             // label3
@@ -157,7 +157,7 @@
             this.label3.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.Location = new System.Drawing.Point(48, 216);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(94, 19);
+            this.label3.Size = new System.Drawing.Size(121, 23);
             this.label3.TabIndex = 18;
             this.label3.Text = "Total Stock:";
             // 
@@ -166,7 +166,7 @@
             this.textBox4.Location = new System.Drawing.Point(150, 213);
             this.textBox4.Name = "textBox4";
             this.textBox4.ReadOnly = true;
-            this.textBox4.Size = new System.Drawing.Size(213, 27);
+            this.textBox4.Size = new System.Drawing.Size(213, 32);
             this.textBox4.TabIndex = 20;
             // 
             // label5
@@ -175,7 +175,7 @@
             this.label5.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.Location = new System.Drawing.Point(55, 256);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(87, 19);
+            this.label5.Size = new System.Drawing.Size(114, 23);
             this.label5.TabIndex = 18;
             this.label5.Text = "Cost Price:";
             // 
@@ -183,7 +183,7 @@
             // 
             this.textBox5.Location = new System.Drawing.Point(150, 252);
             this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(213, 27);
+            this.textBox5.Size = new System.Drawing.Size(213, 32);
             this.textBox5.TabIndex = 20;
             // 
             // label7
@@ -192,7 +192,7 @@
             this.label7.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label7.Location = new System.Drawing.Point(36, 295);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(106, 19);
+            this.label7.Size = new System.Drawing.Size(133, 23);
             this.label7.TabIndex = 18;
             this.label7.Text = "Selling Price:";
             // 
@@ -200,7 +200,7 @@
             // 
             this.textBox6.Location = new System.Drawing.Point(150, 291);
             this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(213, 27);
+            this.textBox6.Size = new System.Drawing.Size(213, 32);
             this.textBox6.TabIndex = 20;
             // 
             // button3
@@ -263,7 +263,7 @@
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.panel1);
             this.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(71)))), ((int)(((byte)(160)))));
+            this.ForeColor = System.Drawing.Color.Black;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Form_AddStock";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;

@@ -41,7 +41,7 @@ namespace BookShopManagement.Forms_User
         private void timerTime_Tick(object sender, EventArgs e)
         {
             DateTime dt = DateTime.Now;
-            labelTime.Text = dt.ToString("HH:MM:ss");
+            //labelTime.Text = dt.ToString("HH:MM:ss");
         }
 
         private void button1_Click(object sender, EventArgs e)

@@ -59,8 +59,9 @@
             // 
             // panel2
             // 
-            this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(71)))), ((int)(((byte)(160)))));
+            this.panel2.BackColor = System.Drawing.Color.Purple;
             this.panel2.Dock = System.Windows.Forms.DockStyle.Left;
+            this.panel2.ForeColor = System.Drawing.Color.Black;
             this.panel2.Location = new System.Drawing.Point(0, 10);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(10, 468);
@@ -68,8 +69,9 @@
             // 
             // panel3
             // 
-            this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(71)))), ((int)(((byte)(160)))));
+            this.panel3.BackColor = System.Drawing.Color.Purple;
             this.panel3.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel3.ForeColor = System.Drawing.Color.Black;
             this.panel3.Location = new System.Drawing.Point(0, 0);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(802, 10);
@@ -77,8 +79,9 @@
             // 
             // panel4
             // 
-            this.panel4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(71)))), ((int)(((byte)(160)))));
+            this.panel4.BackColor = System.Drawing.Color.Purple;
             this.panel4.Dock = System.Windows.Forms.DockStyle.Right;
+            this.panel4.ForeColor = System.Drawing.Color.Black;
             this.panel4.Location = new System.Drawing.Point(802, 0);
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(10, 478);
@@ -86,8 +89,9 @@
             // 
             // panel1
             // 
-            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(71)))), ((int)(((byte)(160)))));
+            this.panel1.BackColor = System.Drawing.Color.Purple;
             this.panel1.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.panel1.ForeColor = System.Drawing.Color.Black;
             this.panel1.Location = new System.Drawing.Point(0, 478);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(812, 10);
@@ -108,6 +112,7 @@
             this.label4.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.ForeColor = System.Drawing.Color.Black;
             this.label4.Location = new System.Drawing.Point(302, 13);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(151, 32);
@@ -121,6 +126,7 @@
             this.button4.FlatAppearance.BorderSize = 0;
             this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button4.Font = new System.Drawing.Font("Georgia", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button4.ForeColor = System.Drawing.Color.Black;
             this.button4.Location = new System.Drawing.Point(729, 6);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(57, 39);
@@ -173,6 +179,7 @@
             this.label1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.Black;
             this.label1.Location = new System.Drawing.Point(144, 11);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(81, 32);

@@ -78,12 +78,12 @@ namespace BookShopManagement.Forms
             AddControlsToPanel(uch);
         }
 
-        private void btnSaleBooks_Click(object sender, EventArgs e)
-        {
-            moveSidePanel(btnSaleBooks);
-            UC_Sales us = new UC_Sales();
-            AddControlsToPanel(us);
-        }
+        //private void btnSaleBooks_Click(object sender, EventArgs e)
+        //{
+        //    moveSidePanel(btnSaleBooks);
+        //    UC_Sales us = new UC_Sales();
+        //    AddControlsToPanel(us);
+        //}
 
         private void btnPurchase_Click(object sender, EventArgs e)
         {
@@ -99,10 +99,10 @@ namespace BookShopManagement.Forms
             AddControlsToPanel(vs);
         }
 
-        private void button7_Click(object sender, EventArgs e)
-        {
-            moveSidePanel(btnSettings);
-        }
+        //private void button7_Click(object sender, EventArgs e)
+        //{
+        //    moveSidePanel(btnSettings);
+        //}
 
         private void btnUser_Click(object sender, EventArgs e)
         {

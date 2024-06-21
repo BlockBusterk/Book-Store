@@ -86,7 +86,7 @@ namespace BookShopManagement.Forms
                 string bookTitle = txbBookTitle.Text.Trim();
                 string author = txbAuthor.Text.Trim();
                 string publisher = txbPublisher.Text.Trim();
-              ;
+              
                 string imageUrl = CloudinaryHelper.UploadImage(picImage.ImageLocation);
 
                 if (bookTitle == ""
@@ -122,7 +122,7 @@ namespace BookShopManagement.Forms
                     Publisher = publisher,
                     Quantity = quantity,
                     SellingPrice = sellingPrice,
-                    Category = cbCategory.SelectedItem.ToString(),
+                    Category = cbCategory.Text,
                     ImageUrl = imageUrl,
                 };
 
