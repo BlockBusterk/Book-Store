@@ -73,8 +73,20 @@ namespace BookShopManagement.Forms_User
 
         private void button9_Click(object sender, EventArgs e)
         {
+            DialogResult result = MessageBox.Show("Are you sure you want to exit?", "Confirm", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
 
-            this.Dispose();
+            if (result == DialogResult.Yes)
+            {
+                // Handle the "Yes" button click
+                // Do something here
+                this.Dispose();
+            }
+            else
+            {
+                // Handle the "No" button click
+                // Do something else here
+            }
+        
         }
     }
 }

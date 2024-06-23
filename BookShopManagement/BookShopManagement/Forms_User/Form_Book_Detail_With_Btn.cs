@@ -79,15 +79,22 @@ namespace BookShopManagement.Forms_User
                 {
                     Comment comment = doc.ConvertTo<Comment>();
                     UC_UserComment userControl = new UC_UserComment();
-                    userControl.UserName = comment.UserName;
-                    userControl.Comment = comment.UserComment;
-                    userControl.Score = comment.UserScore;
-                    userControl.ImageUrl = comment.ImageUrl;
-                    userControl.Date = VietNameTime.ConvertToVietnamTime(comment.CreatedDate);
-                    flowLayoutPanel1.Controls.Add(userControl);
-                    flowLayoutPanel1.ScrollControlIntoView(userControl);
-                    sum += userControl.Score;
-                    total++;
+                    DocumentReference userRef = db.Collection("UserData").Document(comment.UserId);
+                    DocumentSnapshot userSnap = await userRef.GetSnapshotAsync();
+                    if (userSnap.Exists)
+                    {
+                        UserData user = userSnap.ConvertTo<UserData>();
+                        userControl.UserName = user.Name;
+                        userControl.Comment = comment.UserComment;
+                        userControl.Score = comment.UserScore;
+                        userControl.ImageUrl = user.ImageUrl;
+                        userControl.Date = VietNameTime.ConvertToVietnamTime(comment.CreatedDate);
+                        flowLayoutPanel1.Controls.Add(userControl);
+                        flowLayoutPanel1.ScrollControlIntoView(userControl);
+                        sum += userControl.Score;
+                        total++;
+                    }
+
                 }
             }
             lblScore.Text = Math.Round((total == 0 ? 0 : sum / total), 2).ToString();

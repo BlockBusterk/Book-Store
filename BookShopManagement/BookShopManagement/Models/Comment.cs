@@ -12,11 +12,10 @@ namespace BookShopManagement.Models
     public class Comment
     {
         [FirestoreProperty]
-        public string UserName { get; set; } = "";
-        [FirestoreProperty]
-        public string UserEmail { get; set; } = "";
-        [FirestoreProperty]
         public string UserComment { get; set; } = "";
+        [FirestoreProperty]
+        public string UserId { get; set; } = "";
+
         [FirestoreProperty]
         public int UserScore { get; set; } = 0;
         [FirestoreProperty]

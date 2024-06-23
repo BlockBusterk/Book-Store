@@ -40,9 +40,9 @@
             // 
             // imgUserAvatar
             // 
-            this.imgUserAvatar.Location = new System.Drawing.Point(3, 3);
+            this.imgUserAvatar.Location = new System.Drawing.Point(17, 3);
             this.imgUserAvatar.Name = "imgUserAvatar";
-            this.imgUserAvatar.Size = new System.Drawing.Size(128, 100);
+            this.imgUserAvatar.Size = new System.Drawing.Size(76, 54);
             this.imgUserAvatar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.imgUserAvatar.TabIndex = 0;
             this.imgUserAvatar.TabStop = false;
@@ -52,7 +52,7 @@
             // 
             this.lblUserName.AutoSize = true;
             this.lblUserName.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblUserName.Location = new System.Drawing.Point(158, 14);
+            this.lblUserName.Location = new System.Drawing.Point(123, 8);
             this.lblUserName.Name = "lblUserName";
             this.lblUserName.Size = new System.Drawing.Size(70, 23);
             this.lblUserName.TabIndex = 1;
@@ -61,9 +61,9 @@
             // lblUserComment
             // 
             this.lblUserComment.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblUserComment.Location = new System.Drawing.Point(157, 45);
+            this.lblUserComment.Location = new System.Drawing.Point(123, 34);
             this.lblUserComment.Name = "lblUserComment";
-            this.lblUserComment.Size = new System.Drawing.Size(476, 49);
+            this.lblUserComment.Size = new System.Drawing.Size(421, 44);
             this.lblUserComment.TabIndex = 2;
             this.lblUserComment.Text = "label2";
             // 
@@ -71,7 +71,7 @@
             // 
             this.lblScore.AutoSize = true;
             this.lblScore.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblScore.Location = new System.Drawing.Point(474, 13);
+            this.lblScore.Location = new System.Drawing.Point(419, 13);
             this.lblScore.Name = "lblScore";
             this.lblScore.Size = new System.Drawing.Size(19, 21);
             this.lblScore.TabIndex = 3;
@@ -81,7 +81,7 @@
             // 
             this.lblDate.AutoSize = true;
             this.lblDate.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblDate.Location = new System.Drawing.Point(537, 12);
+            this.lblDate.Location = new System.Drawing.Point(482, 8);
             this.lblDate.Name = "lblDate";
             this.lblDate.Size = new System.Drawing.Size(62, 18);
             this.lblDate.TabIndex = 4;
@@ -90,7 +90,7 @@
             // pictureBox2
             // 
             this.pictureBox2.Image = global::BookShopManagement.Properties.Resources._285661_star_icon;
-            this.pictureBox2.Location = new System.Drawing.Point(495, 8);
+            this.pictureBox2.Location = new System.Drawing.Point(440, 8);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(26, 22);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -109,7 +109,7 @@
             this.Controls.Add(this.lblUserName);
             this.Controls.Add(this.imgUserAvatar);
             this.Name = "UC_UserComment";
-            this.Size = new System.Drawing.Size(645, 106);
+            this.Size = new System.Drawing.Size(600, 88);
             ((System.ComponentModel.ISupportInitialize)(this.imgUserAvatar)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.ResumeLayout(false);
