@@ -37,12 +37,18 @@ namespace BookShopManagement
                 // Sign up
                 var db = FirebaseHelper.Database;
                 string email = txbEmail.Text.Trim();
+                string name = txbName.Text.Trim();
                 string password = txbPassword.Text;
                 string rePassword = txbRePassword.Text;
 
-                if (password == "" || email == "" || rePassword == "")
+                if (password == "" || email == "" || rePassword == ""|| name=="")
                 {
                     MessageBox.Show("Field cannot be empty!");
+                    return;
+                }
+                if(password.Length < 6)
+                {
+                    MessageBox.Show("Password must be 6 or more charaters!");
                     return;
                 }
 
@@ -56,7 +62,10 @@ namespace BookShopManagement
                 var userCredentials = await FirebaseHelper.FirebaseAuth.CreateUserWithEmailAndPasswordAsync(email, password);
                 var Id = userCredentials is null ? null :  userCredentials.User.Uid;
 
-                var data = new UserData() { Email = email, };
+                var data = new UserData() { 
+                    Email = email, 
+                    Name = name,
+                };
 
                 DocumentReference docRef = db.Collection("UserData").Document(Id);
                 await docRef.SetAsync(data);

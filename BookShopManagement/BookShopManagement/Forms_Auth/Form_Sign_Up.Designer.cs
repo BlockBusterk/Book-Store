@@ -42,6 +42,8 @@
             this.txbRePassword = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.txbName = new System.Windows.Forms.TextBox();
+            this.label6 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
@@ -102,7 +104,7 @@
             this.label1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label1.AutoSize = true;
             this.label1.ForeColor = System.Drawing.Color.Black;
-            this.label1.Location = new System.Drawing.Point(336, 342);
+            this.label1.Location = new System.Drawing.Point(352, 319);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(67, 23);
             this.label1.TabIndex = 1;
@@ -114,7 +116,7 @@
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.Black;
-            this.label3.Location = new System.Drawing.Point(559, 297);
+            this.label3.Location = new System.Drawing.Point(561, 179);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(110, 32);
             this.label3.TabIndex = 1;
@@ -124,7 +126,7 @@
             // 
             this.txbEmail.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.txbEmail.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txbEmail.Location = new System.Drawing.Point(340, 369);
+            this.txbEmail.Location = new System.Drawing.Point(356, 346);
             this.txbEmail.Name = "txbEmail";
             this.txbEmail.Size = new System.Drawing.Size(547, 37);
             this.txbEmail.TabIndex = 3;
@@ -134,7 +136,7 @@
             this.label4.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label4.AutoSize = true;
             this.label4.ForeColor = System.Drawing.Color.Black;
-            this.label4.Location = new System.Drawing.Point(336, 415);
+            this.label4.Location = new System.Drawing.Point(352, 392);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(108, 23);
             this.label4.TabIndex = 1;
@@ -144,7 +146,7 @@
             // 
             this.txbPassword.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.txbPassword.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txbPassword.Location = new System.Drawing.Point(340, 442);
+            this.txbPassword.Location = new System.Drawing.Point(356, 419);
             this.txbPassword.Name = "txbPassword";
             this.txbPassword.Size = new System.Drawing.Size(547, 37);
             this.txbPassword.TabIndex = 3;
@@ -158,7 +160,7 @@
             this.button5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button5.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button5.ForeColor = System.Drawing.Color.White;
-            this.button5.Location = new System.Drawing.Point(340, 580);
+            this.button5.Location = new System.Drawing.Point(356, 557);
             this.button5.Name = "button5";
             this.button5.Size = new System.Drawing.Size(547, 39);
             this.button5.TabIndex = 6;
@@ -170,7 +172,7 @@
             // 
             this.txbRePassword.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.txbRePassword.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txbRePassword.Location = new System.Drawing.Point(340, 519);
+            this.txbRePassword.Location = new System.Drawing.Point(356, 496);
             this.txbRePassword.Name = "txbRePassword";
             this.txbRePassword.Size = new System.Drawing.Size(547, 37);
             this.txbRePassword.TabIndex = 8;
@@ -181,7 +183,7 @@
             this.label5.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label5.AutoSize = true;
             this.label5.ForeColor = System.Drawing.Color.Black;
-            this.label5.Location = new System.Drawing.Point(336, 492);
+            this.label5.Location = new System.Drawing.Point(352, 469);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(199, 23);
             this.label5.TabIndex = 7;
@@ -191,18 +193,40 @@
             // 
             this.pictureBox2.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.pictureBox2.Image = global::BookShopManagement.Properties.Resources.book;
-            this.pictureBox2.Location = new System.Drawing.Point(565, 193);
+            this.pictureBox2.Location = new System.Drawing.Point(567, 75);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(80, 87);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox2.TabIndex = 2;
             this.pictureBox2.TabStop = false;
             // 
+            // txbName
+            // 
+            this.txbName.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.txbName.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txbName.Location = new System.Drawing.Point(356, 262);
+            this.txbName.Name = "txbName";
+            this.txbName.Size = new System.Drawing.Size(547, 37);
+            this.txbName.TabIndex = 10;
+            // 
+            // label6
+            // 
+            this.label6.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label6.AutoSize = true;
+            this.label6.ForeColor = System.Drawing.Color.Black;
+            this.label6.Location = new System.Drawing.Point(352, 235);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(76, 23);
+            this.label6.TabIndex = 9;
+            this.label6.Text = "Name:";
+            // 
             // Form_Sign_Up
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1200, 720);
+            this.Controls.Add(this.txbName);
+            this.Controls.Add(this.label6);
             this.Controls.Add(this.txbRePassword);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.button5);
@@ -242,6 +266,8 @@
         private System.Windows.Forms.Button button5;
         private System.Windows.Forms.TextBox txbRePassword;
         private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.TextBox txbName;
+        private System.Windows.Forms.Label label6;
     }
 }
 

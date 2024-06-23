@@ -20,7 +20,7 @@ namespace BookShopManagement.UserControls
         public int Score { get => score; set { score = value; lblScore.Text = value.ToString(); } }
         public string Comment { get => comment; set { comment = value; lblUserComment.Text = value; } }
         public string Date { get => date; set { date = value; lblDate.Text = value; } }
-        public string ImageUrl { get => imageUrl; set { imageUrl = value; imgUserAvatar.Load(value); } }
+        public string ImageUrl { get => imageUrl; set { imageUrl = value;  imgUserAvatar.Load(value); } }
         public UC_UserComment()
         {
             InitializeComponent();
