@@ -239,26 +239,38 @@ namespace BookShopManagement.Forms
 
         private async void btnDelete_Click(object sender, EventArgs e)
         {
-            try
-            {
-                var db = FirebaseHelper.Database;
+            DialogResult result = MessageBox.Show("Are you sure you want to delete this book?", "Confirm", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
 
-                DocumentReference docref = db.Collection("Book").Document(BookId);
-                DocumentSnapshot snapshot = await docref.GetSnapshotAsync();
-                if (snapshot.Exists)
+            if (result == DialogResult.Yes)
+            {
+                // Handle the "Yes" button click
+                // Do something here
+                try
                 {
-                    await docref.DeleteAsync();
-                    MessageBox.Show("Book deleted success");
+                    var db = FirebaseHelper.Database;
+
+                    DocumentReference docref = db.Collection("Book").Document(BookId);
+                    DocumentSnapshot snapshot = await docref.GetSnapshotAsync();
+                    if (snapshot.Exists)
+                    {
+                        await docref.DeleteAsync();
+                        MessageBox.Show("Book deleted success");
+                    }
+                    else
+                    {
+                        MessageBox.Show("Book deleted failed");
+                    }
+                    this.Dispose();
                 }
-                else
+                catch (Exception exception)
                 {
                     MessageBox.Show("Book deleted failed");
                 }
-                this.Dispose();
             }
-            catch (Exception exception)
+            else
             {
-                MessageBox.Show("Book deleted failed");
+                // Handle the "No" button click
+                // Do something else here
             }
         }
 

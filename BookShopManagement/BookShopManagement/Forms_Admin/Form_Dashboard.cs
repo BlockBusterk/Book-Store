@@ -27,7 +27,19 @@ namespace BookShopManagement.Forms
 
         private void button9_Click(object sender, EventArgs e)
         {
-            this.Dispose();
+            DialogResult result = MessageBox.Show("Are you sure you want to exit?", "Confirm", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+
+            if (result == DialogResult.Yes)
+            {
+                // Handle the "Yes" button click
+                // Do something here
+                this.Dispose();
+            }
+            else
+            {
+                // Handle the "No" button click
+                // Do something else here
+            }
         }
 
         private void Form_Dashboard_Load(object sender, EventArgs e)
