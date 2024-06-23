@@ -258,13 +258,15 @@
             // 
             // Comment
             // 
+            this.Comment.BackColor = System.Drawing.Color.Purple;
             this.Comment.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Comment.ForeColor = System.Drawing.Color.White;
             this.Comment.Location = new System.Drawing.Point(642, 13);
             this.Comment.Name = "Comment";
-            this.Comment.Size = new System.Drawing.Size(99, 31);
+            this.Comment.Size = new System.Drawing.Size(119, 31);
             this.Comment.TabIndex = 1;
-            this.Comment.Text = "btnComment";
-            this.Comment.UseVisualStyleBackColor = true;
+            this.Comment.Text = "Comment";
+            this.Comment.UseVisualStyleBackColor = false;
             this.Comment.Click += new System.EventHandler(this.Comment_Click);
             // 
             // pictureBox1

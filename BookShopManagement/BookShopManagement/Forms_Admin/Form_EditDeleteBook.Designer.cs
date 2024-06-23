@@ -52,10 +52,14 @@
             this.txbAuthor = new System.Windows.Forms.TextBox();
             this.txbPublisher = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
-            this.picImage = new System.Windows.Forms.PictureBox();
             this.btnDelete = new System.Windows.Forms.Button();
+            this.label1 = new System.Windows.Forms.Label();
+            this.btnAddBarcode = new System.Windows.Forms.Button();
+            this.picImage = new System.Windows.Forms.PictureBox();
             this.dragControl1 = new DragControlDemo.DragControl();
+            this.picBarCode = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.picImage)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picBarCode)).BeginInit();
             this.SuspendLayout();
             // 
             // panel2
@@ -299,18 +303,6 @@
             this.label5.TabIndex = 28;
             this.label5.Text = "Choose image:";
             // 
-            // picImage
-            // 
-            this.picImage.Image = global::BookShopManagement.Properties.Resources.OIP;
-            this.picImage.InitialImage = global::BookShopManagement.Properties.Resources.OIP;
-            this.picImage.Location = new System.Drawing.Point(176, 312);
-            this.picImage.Name = "picImage";
-            this.picImage.Size = new System.Drawing.Size(177, 113);
-            this.picImage.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.picImage.TabIndex = 27;
-            this.picImage.TabStop = false;
-            this.picImage.Click += new System.EventHandler(this.picImage_Click);
-            // 
             // btnDelete
             // 
             this.btnDelete.Anchor = System.Windows.Forms.AnchorStyles.None;
@@ -327,15 +319,65 @@
             this.btnDelete.UseVisualStyleBackColor = false;
             this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(407, 267);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(99, 23);
+            this.label1.TabIndex = 30;
+            this.label1.Text = "Barcode:";
+            // 
+            // btnAddBarcode
+            // 
+            this.btnAddBarcode.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
+            this.btnAddBarcode.FlatAppearance.BorderSize = 0;
+            this.btnAddBarcode.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAddBarcode.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAddBarcode.ForeColor = System.Drawing.Color.White;
+            this.btnAddBarcode.Location = new System.Drawing.Point(500, 265);
+            this.btnAddBarcode.Name = "btnAddBarcode";
+            this.btnAddBarcode.Size = new System.Drawing.Size(33, 29);
+            this.btnAddBarcode.TabIndex = 31;
+            this.btnAddBarcode.Text = "+";
+            this.btnAddBarcode.UseVisualStyleBackColor = false;
+            this.btnAddBarcode.Click += new System.EventHandler(this.btnAddBarcode_Click);
+            // 
+            // picImage
+            // 
+            this.picImage.Image = global::BookShopManagement.Properties.Resources.OIP;
+            this.picImage.InitialImage = global::BookShopManagement.Properties.Resources.OIP;
+            this.picImage.Location = new System.Drawing.Point(176, 312);
+            this.picImage.Name = "picImage";
+            this.picImage.Size = new System.Drawing.Size(177, 113);
+            this.picImage.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.picImage.TabIndex = 27;
+            this.picImage.TabStop = false;
+            this.picImage.Click += new System.EventHandler(this.picImage_Click);
+            // 
             // dragControl1
             // 
             this.dragControl1.SelectControl = this;
+            // 
+            // picBarCode
+            // 
+            this.picBarCode.InitialImage = global::BookShopManagement.Properties.Resources.OIP;
+            this.picBarCode.Location = new System.Drawing.Point(500, 312);
+            this.picBarCode.Name = "picBarCode";
+            this.picBarCode.Size = new System.Drawing.Size(234, 113);
+            this.picBarCode.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.picBarCode.TabIndex = 32;
+            this.picBarCode.TabStop = false;
             // 
             // Form_EditDeleteBook
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(814, 523);
+            this.Controls.Add(this.picBarCode);
+            this.Controls.Add(this.btnAddBarcode);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.btnDelete);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.picImage);
@@ -370,6 +412,7 @@
             this.Text = "Form_AddNewBook";
             this.Load += new System.EventHandler(this.Form_AddNewBook_Load);
             ((System.ComponentModel.ISupportInitialize)(this.picImage)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picBarCode)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -404,5 +447,8 @@
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.PictureBox picImage;
         private System.Windows.Forms.Button btnDelete;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Button btnAddBarcode;
+        private System.Windows.Forms.PictureBox picBarCode;
     }
 }

@@ -32,6 +32,7 @@ namespace BookShopManagement.Models
         public string Category { get; set; } = "";
         [FirestoreProperty]
         public string Barcode { get; set; } = "";
+
         [FirestoreProperty]
         public string CreatedDate { get; set; } = DateTime.UtcNow.ToString("s", CultureInfo.InvariantCulture);
     }

@@ -1,4 +1,5 @@
 ﻿using BookShopManagement.Database;
+using BookShopManagement.Forms;
 using BookShopManagement.Forms_User;
 using BookShopManagement.Models;
 using Google.Cloud.Firestore;
@@ -279,6 +280,14 @@ namespace BookShopManagement.UserControls_User
         private void dataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
         {
 
+        }
+
+        private void btnAddNewBooks_Click(object sender, EventArgs e)
+        {
+            using (Form_ScanBarcode fbd = new Form_ScanBarcode())
+            {
+                fbd.ShowDialog();
+            }
         }
     }
 }

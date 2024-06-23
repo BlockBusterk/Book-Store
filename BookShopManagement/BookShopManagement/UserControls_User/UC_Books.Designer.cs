@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(UC_Books));
             this.panel2 = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
             this.panel4 = new System.Windows.Forms.Panel();
@@ -46,6 +47,7 @@
             this.Column6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column_Category = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.AddToCart = new System.Windows.Forms.DataGridViewButtonColumn();
+            this.btnAddNewBooks = new System.Windows.Forms.Button();
             this.panel5.SuspendLayout();
             this.panel6.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
@@ -90,6 +92,7 @@
             // panel5
             // 
             this.panel5.BackColor = System.Drawing.Color.Purple;
+            this.panel5.Controls.Add(this.btnAddNewBooks);
             this.panel5.Controls.Add(this.textBox7);
             this.panel5.Controls.Add(this.label5);
             this.panel5.Controls.Add(this.comboBox2);
@@ -236,6 +239,23 @@
             this.AddToCart.Text = "Add";
             this.AddToCart.UseColumnTextForButtonValue = true;
             // 
+            // btnAddNewBooks
+            // 
+            this.btnAddNewBooks.Dock = System.Windows.Forms.DockStyle.Left;
+            this.btnAddNewBooks.FlatAppearance.BorderSize = 0;
+            this.btnAddNewBooks.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAddNewBooks.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAddNewBooks.ForeColor = System.Drawing.Color.White;
+            this.btnAddNewBooks.Image = ((System.Drawing.Image)(resources.GetObject("btnAddNewBooks.Image")));
+            this.btnAddNewBooks.Location = new System.Drawing.Point(0, 0);
+            this.btnAddNewBooks.Name = "btnAddNewBooks";
+            this.btnAddNewBooks.Size = new System.Drawing.Size(193, 67);
+            this.btnAddNewBooks.TabIndex = 9;
+            this.btnAddNewBooks.Text = "   Search with barcode";
+            this.btnAddNewBooks.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnAddNewBooks.UseVisualStyleBackColor = true;
+            this.btnAddNewBooks.Click += new System.EventHandler(this.btnAddNewBooks_Click);
+            // 
             // UC_Books
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
@@ -278,5 +298,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Column6;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column_Category;
         private System.Windows.Forms.DataGridViewButtonColumn AddToCart;
+        private System.Windows.Forms.Button btnAddNewBooks;
     }
 }

@@ -117,6 +117,20 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="btnAddNewBooks.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAAB4AAAAeCAYAAAA7MK6iAAAABGdBTUEAALGPC/xhBQAAAaFJREFUSEvt
+        lbtKQ0EURdOYxletpb9gZaWCfoCFkC+QVFa+wC/RzlbwB0SwU9AgiKCNForgE0ELH1jEtXPPuTE3kSGO
+        FwxkwcI5Z4bZMslMCv+CarVawoucLFlMM0zOYV7MWUwzmkzW5EI3uI4mkzW50BnBugazpsbC65C+3mkr
+        +BLVkxoLr0P6eqf7GdfRZLImpWJTmquoYWUQX/+NtoLf0d9ajYXXIX290xlH/YBrpsbC65C+3mkr+BRH
+        TY2F1yF9vdMZRx3DG36Yr7iBPRbVCBPZ4BMcMTUWXrdyDM/xHhdxCqdxCa9RV2zY4urQzAY/4aapsfA6
+        6xbe4jb225Yp9AZwB4+waO0EGrFHfYO9tp32W5dWqu7DK5y3VgKNmGB9jgu2VQ3qhmBBvYz7VibQiAn+
+        xAnbpxaIZ2b6D/B3Ep81TqERGzxu+4SCXzROoRF71Cu2VQ3qNNChXsU9KxNoxH657jD05dK1KlsrgUZs
+        sH6RdrHVdRrEH6/TDOqS/9ZjfERdGT0gejyyD8iQxf0tbFzEMh6iTkAeoE7TnsxC4QsYxuWFvyGOkgAA
+        AABJRU5ErkJggg==
+</value>
+  </data>
   <metadata name="BookId.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>

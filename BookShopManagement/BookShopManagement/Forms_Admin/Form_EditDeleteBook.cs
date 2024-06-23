@@ -70,6 +70,18 @@ namespace BookShopManagement.Forms
                 cbCategory.SelectedIndex = index;
 
                 picImage.Load(book.ImageUrl);
+                if (book.Barcode !=null && book.Barcode != "")
+                {
+                    btnAddBarcode.Visible = false;
+                    picBarCode.Visible = true;
+                    picBarCode.Load(book.Barcode);
+
+                } else
+                {
+                    picBarCode.Visible=false;
+                    btnAddBarcode.Visible = true;
+                }
+
             }
             catch (Exception exception)
             {
@@ -253,6 +265,17 @@ namespace BookShopManagement.Forms
         private void cbCategory_SelectedIndexChanged(object sender, EventArgs e)
         {
 
+        }
+
+        private void btnAddBarcode_Click(object sender, EventArgs e)
+        {
+            // Add new barcode
+            using (Form_AddBarcode ac = new Form_AddBarcode(BookId))
+            {
+                ac.ShowDialog();
+                LoadCategory();
+                LoadData();
+            }
         }
     }
 }

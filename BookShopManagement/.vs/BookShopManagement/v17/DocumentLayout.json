@@ -3,16 +3,20 @@
   "WorkspaceRootPath": "D:\\repository\\Book-Store\\BookShopManagement\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{D8F85CC1-9472-4794-8449-5D545C316A4E}|BookShopManagement\\BookShopManagement.csproj|d:\\repository\\book-store\\bookshopmanagement\\bookshopmanagement\\forms_admin\\form_editdeletebook.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{D8F85CC1-9472-4794-8449-5D545C316A4E}|BookShopManagement\\BookShopManagement.csproj|solutionrelative:bookshopmanagement\\forms_admin\\form_editdeletebook.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+      "AbsoluteMoniker": "D:0:0:{D8F85CC1-9472-4794-8449-5D545C316A4E}|BookShopManagement\\BookShopManagement.csproj|d:\\repository\\book-store\\bookshopmanagement\\bookshopmanagement\\forms_user\\form_scanbarcode.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D8F85CC1-9472-4794-8449-5D545C316A4E}|BookShopManagement\\BookShopManagement.csproj|solutionrelative:bookshopmanagement\\forms_user\\form_scanbarcode.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{D8F85CC1-9472-4794-8449-5D545C316A4E}|BookShopManagement\\BookShopManagement.csproj|d:\\repository\\book-store\\bookshopmanagement\\bookshopmanagement\\usercontrols_user\\uc_books.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{D8F85CC1-9472-4794-8449-5D545C316A4E}|BookShopManagement\\BookShopManagement.csproj|solutionrelative:bookshopmanagement\\usercontrols_user\\uc_books.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{D8F85CC1-9472-4794-8449-5D545C316A4E}|BookShopManagement\\BookShopManagement.csproj|d:\\repository\\book-store\\bookshopmanagement\\bookshopmanagement\\forms_user\\form_book_detail_with_btn.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D8F85CC1-9472-4794-8449-5D545C316A4E}|BookShopManagement\\BookShopManagement.csproj|solutionrelative:bookshopmanagement\\forms_user\\form_book_detail_with_btn.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{D8F85CC1-9472-4794-8449-5D545C316A4E}|BookShopManagement\\BookShopManagement.csproj|d:\\repository\\book-store\\bookshopmanagement\\bookshopmanagement\\usercontrols_user\\uc_books.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{D8F85CC1-9472-4794-8449-5D545C316A4E}|BookShopManagement\\BookShopManagement.csproj|solutionrelative:bookshopmanagement\\usercontrols_user\\uc_books.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+      "AbsoluteMoniker": "D:0:0:{D8F85CC1-9472-4794-8449-5D545C316A4E}|BookShopManagement\\BookShopManagement.csproj|d:\\repository\\book-store\\bookshopmanagement\\bookshopmanagement\\forms_user\\form_book_detail_with_btn.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{D8F85CC1-9472-4794-8449-5D545C316A4E}|BookShopManagement\\BookShopManagement.csproj|solutionrelative:bookshopmanagement\\forms_user\\form_book_detail_with_btn.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D8F85CC1-9472-4794-8449-5D545C316A4E}|BookShopManagement\\BookShopManagement.csproj|d:\\repository\\book-store\\bookshopmanagement\\bookshopmanagement\\forms_user\\form_scanbarcode.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{D8F85CC1-9472-4794-8449-5D545C316A4E}|BookShopManagement\\BookShopManagement.csproj|solutionrelative:bookshopmanagement\\forms_user\\form_scanbarcode.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     }
   ],
   "DocumentGroupContainers": [
@@ -31,38 +35,51 @@
             {
               "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "UC_Books.cs",
-              "DocumentMoniker": "D:\\repository\\Book-Store\\BookShopManagement\\BookShopManagement\\UserControls_User\\UC_Books.cs",
-              "RelativeDocumentMoniker": "BookShopManagement\\UserControls_User\\UC_Books.cs",
-              "ToolTip": "D:\\repository\\Book-Store\\BookShopManagement\\BookShopManagement\\UserControls_User\\UC_Books.cs",
-              "RelativeToolTip": "BookShopManagement\\UserControls_User\\UC_Books.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Title": "Form_Book_Detail_With_Btn.cs",
+              "DocumentMoniker": "D:\\repository\\Book-Store\\BookShopManagement\\BookShopManagement\\Forms_User\\Form_Book_Detail_With_Btn.cs",
+              "RelativeDocumentMoniker": "BookShopManagement\\Forms_User\\Form_Book_Detail_With_Btn.cs",
+              "ToolTip": "D:\\repository\\Book-Store\\BookShopManagement\\BookShopManagement\\Forms_User\\Form_Book_Detail_With_Btn.cs",
+              "RelativeToolTip": "BookShopManagement\\Forms_User\\Form_Book_Detail_With_Btn.cs",
+              "ViewState": "AQIAACkAAAAAAAAAAAAewDQAAAAHAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-21T17:21:06.471Z",
+              "WhenOpened": "2024-06-23T13:57:09.02Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 2,
-              "Title": "UC_Books.cs [Design]",
-              "DocumentMoniker": "D:\\repository\\Book-Store\\BookShopManagement\\BookShopManagement\\UserControls_User\\UC_Books.cs",
-              "RelativeDocumentMoniker": "BookShopManagement\\UserControls_User\\UC_Books.cs",
-              "ToolTip": "D:\\repository\\Book-Store\\BookShopManagement\\BookShopManagement\\UserControls_User\\UC_Books.cs [Design]",
-              "RelativeToolTip": "BookShopManagement\\UserControls_User\\UC_Books.cs [Design]",
+              "Title": "Form_Book_Detail_With_Btn.cs [Design]",
+              "DocumentMoniker": "D:\\repository\\Book-Store\\BookShopManagement\\BookShopManagement\\Forms_User\\Form_Book_Detail_With_Btn.cs",
+              "RelativeDocumentMoniker": "BookShopManagement\\Forms_User\\Form_Book_Detail_With_Btn.cs",
+              "ToolTip": "D:\\repository\\Book-Store\\BookShopManagement\\BookShopManagement\\Forms_User\\Form_Book_Detail_With_Btn.cs [Design]",
+              "RelativeToolTip": "BookShopManagement\\Forms_User\\Form_Book_Detail_With_Btn.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-21T17:21:03.096Z",
+              "WhenOpened": "2024-06-23T13:56:56.517Z",
               "EditorCaption": " [Design]"
             },
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "Form_EditDeleteBook.cs [Design]",
-              "DocumentMoniker": "D:\\repository\\Book-Store\\BookShopManagement\\BookShopManagement\\Forms_Admin\\Form_EditDeleteBook.cs",
-              "RelativeDocumentMoniker": "BookShopManagement\\Forms_Admin\\Form_EditDeleteBook.cs",
-              "ToolTip": "D:\\repository\\Book-Store\\BookShopManagement\\BookShopManagement\\Forms_Admin\\Form_EditDeleteBook.cs [Design]",
-              "RelativeToolTip": "BookShopManagement\\Forms_Admin\\Form_EditDeleteBook.cs [Design]",
+              "Title": "Form_ScanBarcode.cs",
+              "DocumentMoniker": "D:\\repository\\Book-Store\\BookShopManagement\\BookShopManagement\\Forms_User\\Form_ScanBarcode.cs",
+              "RelativeDocumentMoniker": "BookShopManagement\\Forms_User\\Form_ScanBarcode.cs",
+              "ToolTip": "D:\\repository\\Book-Store\\BookShopManagement\\BookShopManagement\\Forms_User\\Form_ScanBarcode.cs",
+              "RelativeToolTip": "BookShopManagement\\Forms_User\\Form_ScanBarcode.cs",
+              "ViewState": "AQIAABwAAAAAAAAAAAAUwEwAAAAyAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-21T17:20:41.249Z",
+              "WhenOpened": "2024-06-23T12:59:28.191Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Form_ScanBarcode.cs [Design]",
+              "DocumentMoniker": "D:\\repository\\Book-Store\\BookShopManagement\\BookShopManagement\\Forms_User\\Form_ScanBarcode.cs",
+              "RelativeDocumentMoniker": "BookShopManagement\\Forms_User\\Form_ScanBarcode.cs",
+              "ToolTip": "D:\\repository\\Book-Store\\BookShopManagement\\BookShopManagement\\Forms_User\\Form_ScanBarcode.cs [Design]",
+              "RelativeToolTip": "BookShopManagement\\Forms_User\\Form_ScanBarcode.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-23T12:54:39.071Z",
               "EditorCaption": " [Design]"
             }
           ]
