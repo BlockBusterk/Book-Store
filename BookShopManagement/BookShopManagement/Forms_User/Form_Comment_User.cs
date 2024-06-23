@@ -81,7 +81,7 @@ namespace BookShopManagement.Forms_User
 
                 var data = new Comment()
                 {
-                    UserName = Form_Login.currentUserName,
+                    UserId = Form_Login.currentUserId,
                     UserComment = richTextBox1.Text,
                     ImageUrl = Form_Login.currentUser.ImageUrl,
                     UserScore = score,
