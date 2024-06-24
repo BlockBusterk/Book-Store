@@ -64,11 +64,13 @@ namespace BookShopManagement.Forms_User
                 lblBookQuantity.Text = cart.Quantity.ToString();
                 lblBookTitle.Text = book.BookTitle;
                 lblCategory.Text = book.Category;
+                pictureBox1.Load(book.ImageUrl); 
             }
         }
 
         private async void Load_Comment()
         {
+            flowLayoutPanel1.Controls.Clear();
             var db = FirebaseHelper.Database;
             Query commentQue = db.Collection("Comment").Document(bookId).Collection("UserInfo");
             QuerySnapshot snap = await commentQue.GetSnapshotAsync();
@@ -163,6 +165,11 @@ namespace BookShopManagement.Forms_User
                     MessageBox.Show("The book amount can not be 0!");
                 }
             }
+
+        }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
 
         }
     }

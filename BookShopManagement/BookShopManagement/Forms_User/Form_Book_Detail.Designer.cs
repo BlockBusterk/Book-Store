@@ -156,7 +156,7 @@
             // 
             this.lblBookQuantity.AutoSize = true;
             this.lblBookQuantity.ForeColor = System.Drawing.Color.Black;
-            this.lblBookQuantity.Location = new System.Drawing.Point(468, 82);
+            this.lblBookQuantity.Location = new System.Drawing.Point(699, 73);
             this.lblBookQuantity.Name = "lblBookQuantity";
             this.lblBookQuantity.Size = new System.Drawing.Size(32, 23);
             this.lblBookQuantity.TabIndex = 12;
@@ -164,7 +164,7 @@
             // 
             // btnPlus
             // 
-            this.btnPlus.Location = new System.Drawing.Point(515, 78);
+            this.btnPlus.Location = new System.Drawing.Point(746, 69);
             this.btnPlus.Name = "btnPlus";
             this.btnPlus.Size = new System.Drawing.Size(39, 30);
             this.btnPlus.TabIndex = 11;
@@ -174,7 +174,7 @@
             // 
             // btnMinus
             // 
-            this.btnMinus.Location = new System.Drawing.Point(414, 78);
+            this.btnMinus.Location = new System.Drawing.Point(645, 69);
             this.btnMinus.Name = "btnMinus";
             this.btnMinus.Size = new System.Drawing.Size(39, 30);
             this.btnMinus.TabIndex = 10;
@@ -277,6 +277,7 @@
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
+            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
             // flowLayoutPanel1
             // 

@@ -115,6 +115,7 @@ namespace BookShopManagement.UserControls
                 if (booksDetails.ContainsKey(summary.BookId))
                 {
                     var bookDetail = booksDetails[summary.BookId];
+                    summary.BookTitle = bookDetail.BookTitle;
                     summary.Author = bookDetail.Author;
                     summary.Publisher = bookDetail.Publisher;
                     summary.Category= bookDetail.Category;

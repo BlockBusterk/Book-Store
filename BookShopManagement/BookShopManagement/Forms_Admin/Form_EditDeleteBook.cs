@@ -22,7 +22,7 @@ namespace BookShopManagement.Forms
     {
         public string BookId { get; set; }
         private List<Category> categories { get; set; } = new List<Category>();
-
+        
         public Form_EditDeleteBook(string id)
         {
             InitializeComponent();
@@ -41,46 +41,51 @@ namespace BookShopManagement.Forms
             
         }
 
-        public void LoadData()
+        public async void LoadData()
         {
             try
             {
                 var db = FirebaseHelper.Database;
 
                 DocumentReference docRef = db.Collection("Book").Document(BookId);
-                Book book = docRef.GetSnapshotAsync().Result.ConvertTo<Book>();
-
-                txbBookTitle.Text = book.BookTitle;
-                txbAuthor.Text = book.Author;
-                txbPublisher.Text = book.Publisher;
-                
-                txbQuantity.Text = book.Quantity.ToString();
-                txbCostPrice.Text = book.CostPrice.ToString();
-                txbSellingPrice.Text = book.SellingPrice.ToString();
-
-                int index = -1;
-                for (int i =0; i < categories.Count; i++)
+                DocumentSnapshot snap = await docRef.GetSnapshotAsync();
+                if(snap.Exists)
                 {
-                    if (categories[i].Name == book.Category)
+                    Book book = snap.ConvertTo<Book>();
+                    txbBookTitle.Text = book.BookTitle;
+                    txbAuthor.Text = book.Author;
+                    txbPublisher.Text = book.Publisher;
+
+                    txbQuantity.Text = book.Quantity.ToString();
+                    txbCostPrice.Text = book.CostPrice.ToString();
+                    txbSellingPrice.Text = book.SellingPrice.ToString();
+
+                    int index = -1;
+                    for (int i = 0; i < categories.Count; i++)
                     {
-                        index = i;
-                        break;
+                        if (categories[i].Name == book.Category)
+                        {
+                            index = i;
+                            break;
+                        }
                     }
-                }
-                cbCategory.SelectedIndex = index;
+                    cbCategory.SelectedIndex = index;
 
-                picImage.Load(book.ImageUrl);
-                if (book.Barcode !=null && book.Barcode != "")
-                {
-                    btnAddBarcode.Visible = false;
-                    picBarCode.Visible = true;
-                    picBarCode.Load(book.Barcode);
+                    picImage.Load(book.ImageUrl);
+                    if (book.Barcode != null && book.Barcode != "")
+                    {
+                        btnAddBarcode.Visible = false;
+                        picBarCode.Visible = true;
+                        picBarCode.Load(book.Barcode);
 
-                } else
-                {
-                    picBarCode.Visible=false;
-                    btnAddBarcode.Visible = true;
-                }
+                    }
+                    else
+                    {
+                        picBarCode.Visible = false;
+                        btnAddBarcode.Visible = true;
+                    }
+                }    
+                
 
             }
             catch (Exception exception)
@@ -144,7 +149,7 @@ namespace BookShopManagement.Forms
                 string bookTitle = txbBookTitle.Text.Trim();
                 string author = txbAuthor.Text.Trim();
                 string publisher = txbPublisher.Text.Trim();
-                string imageUrl = CloudinaryHelper.UploadImage(picImage.ImageLocation) ;
+                string imageUrl = CloudinaryHelper.UploadImage(picImage.ImageLocation);
 
                 if (bookTitle == ""
                    || author == ""

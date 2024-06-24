@@ -69,6 +69,7 @@ namespace BookShopManagement.Forms_User
 
         private async void Load_Comment()
         {
+            flowLayoutPanel1.Controls.Clear();
             var db = FirebaseHelper.Database;
             Query commentQue = db.Collection("Comment").Document(bookId).Collection("UserInfo");
             QuerySnapshot snap = await commentQue.GetSnapshotAsync();

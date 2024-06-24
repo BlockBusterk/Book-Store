@@ -17,11 +17,7 @@ namespace BookShopManagement.UserControls_User
 {
     public partial class UC_History : UserControl
     {
-        private int pageSize = 10;
-        // Biến để lưu trữ trang hiện tại
-        private int currentPage = 1;
-        // Tổng số đơn hàng
-        private int totalOrders = 0;
+       
         public UC_History()
         {
             InitializeComponent();
@@ -75,16 +71,11 @@ namespace BookShopManagement.UserControls_User
             }
         }
 
-        private void btnNextPage_Click(object sender, EventArgs e)
-        {
-            currentPage++;
-            Load_History();
-        }
+       
 
-        private void btnPreviousPage_Click(object sender, EventArgs e)
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-            currentPage--;
-            Load_History();
+
         }
     }
 }
