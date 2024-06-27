@@ -52,18 +52,18 @@ namespace BookShopManagement.Forms_User
         {
             var db = FirebaseHelper.Database;
 
-            DocumentReference carRef = db.Collection("Cart").Document(Form_Login.currentUserId).Collection("cart").Document(bookId);
-            DocumentSnapshot cartSnap = await carRef.GetSnapshotAsync();
+          
             DocumentReference bookRef = db.Collection("Book").Document(bookId);
             DocumentSnapshot bookSnap = await bookRef.GetSnapshotAsync();
-            if (cartSnap.Exists && bookSnap.Exists)
+            if (bookSnap.Exists)
             {
 
                 Book book = bookSnap.ConvertTo<Book>();
-                Cart cart = cartSnap.ConvertTo<Cart>();
+                pictureBox1.Load(book.ImageUrl);
                 lblBookAuthor.Text = book.Author;
                 lblBookTitle.Text = book.BookTitle;
                 lblCategory.Text = book.Category;
+                lblPublisher.Text = book.Publisher;
             } 
         }
 
@@ -137,6 +137,8 @@ namespace BookShopManagement.Forms_User
 
         private async Task AddToCartF(Book book)
         {
+            //Get the amount of the book
+            int quantity = int.Parse(lblBookQuantity.Text);
             // Reference to the 'cart' collection in Firestore
             var db = FirebaseHelper.Database;
             DocumentReference cartRef = db.Collection("Cart").Document(Form_Login.currentUserId).Collection("cart").Document(book.BookId);
@@ -144,14 +146,78 @@ namespace BookShopManagement.Forms_User
             // Add the selected book to the 'cart' collection
             Dictionary<string, object> dict = new Dictionary<string, object>()
             {
-                { "Quantity", 1 },
+                { "Quantity", quantity },
                 {"CustomerId", Form_Login.currentUserId },
-                {"TotalPrice", book.SellingPrice },
+                {"TotalPrice", book.SellingPrice*quantity },
                 {"BookId",book.BookId },
                 {"Price", book.SellingPrice }
             };
 
             await cartRef.SetAsync(dict, SetOptions.Overwrite);
+
+        }
+
+        private async void btnMinus_Click(object sender, EventArgs e)
+        {
+
+            int quantity = int.Parse(lblBookQuantity.Text);
+            var db = FirebaseHelper.Database;
+            DocumentReference cartRef = db.Collection("Cart").Document(Form_Login.currentUserId).Collection("cart").Document(bookId);
+
+            DocumentSnapshot docCart = await cartRef.GetSnapshotAsync();
+
+            if (docCart.Exists)
+            {
+                Cart cart = docCart.ConvertTo<Cart>();
+
+                if (quantity - 1 > 0)
+                {
+                    quantity--;
+                    cart.Quantity = quantity;
+                    Dictionary<string, object> data = new Dictionary<string, object>() {
+                        {"Quantity", cart.Quantity}
+                    };
+                    await cartRef.UpdateAsync(data);
+                    lblBookQuantity.Text = cart.Quantity.ToString();
+                }
+                else
+                {
+                    MessageBox.Show("The book amount can not be 0!");
+                }
+            }
+        }
+
+        private async void btnPlus_Click(object sender, EventArgs e)
+        {
+            int quantity = int.Parse(lblBookQuantity.Text);
+            var db = FirebaseHelper.Database;
+            DocumentReference cartRef = db.Collection("Cart").Document(Form_Login.currentUserId).Collection("cart").Document(bookId);
+            DocumentReference bookRef = db.Collection("Book").Document(bookId);
+            DocumentSnapshot docCart = await cartRef.GetSnapshotAsync();
+            DocumentSnapshot docBook = await bookRef.GetSnapshotAsync();
+            if (docCart.Exists && docBook.Exists)
+            {
+                Cart cart = docCart.ConvertTo<Cart>();
+                Book book = docBook.ConvertTo<Book>();
+                if (quantity + 1 <= book.Quantity)
+                {
+                    quantity++;
+                    cart.Quantity = quantity;
+                    Dictionary<string, object> data = new Dictionary<string, object>() {
+                        {"Quantity", cart.Quantity}
+                    };
+                    await cartRef.UpdateAsync(data);
+                    lblBookQuantity.Text = cart.Quantity.ToString();
+                }
+                else
+                {
+                    MessageBox.Show("The book amount in the store not enough for your order!");
+                }
+            }
+        }
+
+        private void flowLayoutPanel1_Paint(object sender, PaintEventArgs e)
+        {
 
         }
     }

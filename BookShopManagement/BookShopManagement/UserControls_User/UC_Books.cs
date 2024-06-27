@@ -2,6 +2,8 @@
 using BookShopManagement.Forms;
 using BookShopManagement.Forms_User;
 using BookShopManagement.Models;
+using BookShopManagement.UserControls;
+using BookShopManagement.Utils;
 using Google.Cloud.Firestore;
 using System;
 using System.Collections.Generic;
@@ -13,6 +15,7 @@ using System.Net;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using static Google.Cloud.Firestore.V1.StructuredAggregationQuery.Types.Aggregation.Types;
 
 namespace BookShopManagement.UserControls_User
 {
@@ -64,7 +67,7 @@ namespace BookShopManagement.UserControls_User
             }));
 
 
-            dataGridView1.Rows.Clear();
+            flowLayoutPanel1.Controls.Clear();
             // Loại bỏ các bản sao dựa trên BookId
             books = books.GroupBy(b => b.BookId).Select(g => g.First()).ToList();
 
@@ -73,16 +76,23 @@ namespace BookShopManagement.UserControls_User
                                      b.Author.ToLower().Contains(keyword)).ToList();
             foreach (Book book in books)
             {
-                dataGridView1.Rows.Add(
-                    book.BookId,
-                    book.BookTitle, 
-                    book.Author, 
-                    book.Publisher, 
-                    book.Quantity.ToString(), 
-                    book.SellingPrice.ToString(), 
-                    book.Category);
+                UC_BookItem userControl = new UC_BookItem
+                {
+                    BookId = book.BookId,
+                    BookName = book.BookTitle,
+                    ImageUrl = book.ImageUrl,
+                    Quantity = book.Quantity,
+                    Price = book.SellingPrice
+                };
+                flowLayoutPanel1.Controls.Add(userControl);
+               
             }
-       
+            if (flowLayoutPanel1.Controls.Count > 0)
+            {
+                // Cuộn đến điều khiển đầu tiên
+                flowLayoutPanel1.ScrollControlIntoView(flowLayoutPanel1.Controls[0]);
+            }
+
         }
 
         private void panel5_Paint(object sender, PaintEventArgs e)
@@ -98,25 +108,32 @@ namespace BookShopManagement.UserControls_User
             List<Book> books;
             if (selectedGenre == "All")
             {
-                dataGridView1.Rows.Clear();
+                flowLayoutPanel1.Controls.Clear();
                 books = await GetAllBooksAsync();
             }
             else
             {
-                dataGridView1.Rows.Clear();
+                flowLayoutPanel1.Controls.Clear();
                 books = await GetBooksByGenreAsync(selectedGenre);
             }
 
             foreach (Book book in books)
             {
-                dataGridView1.Rows.Add(
-                    book.BookId, 
-                    book.BookTitle, 
-                    book.Author, 
-                    book.Publisher, 
-                    book.Quantity.ToString(), 
-                    book.SellingPrice.ToString(), 
-                    book.Category);
+                UC_BookItem userControl = new UC_BookItem
+                {
+                    BookId = book.BookId,
+                    BookName = book.BookTitle,
+                    ImageUrl = book.ImageUrl,
+                    Quantity = book.Quantity,
+                    Price = book.SellingPrice
+                };
+                flowLayoutPanel1.Controls.Add(userControl);
+               
+            }
+            if (flowLayoutPanel1.Controls.Count > 0)
+            {
+                // Cuộn đến điều khiển đầu tiên
+                flowLayoutPanel1.ScrollControlIntoView(flowLayoutPanel1.Controls[0]);
             }
         }
 
@@ -188,25 +205,33 @@ namespace BookShopManagement.UserControls_User
 
         private async void LoadBooks()
         {
-            dataGridView1.Rows.Clear();
+            flowLayoutPanel1.Controls.Clear();
             var db = FirebaseHelper.Database;
             Query bookQue = db.Collection("Book");
             QuerySnapshot snap = await bookQue.GetSnapshotAsync();
-            foreach(DocumentSnapshot doc in snap)
+            foreach (DocumentSnapshot doc in snap)
             {
-                if(doc.Exists)
+
+                if (doc.Exists)
                 {
                     Book book = doc.ConvertTo<Book>();
-                    dataGridView1.Rows.Add(
-                        book.BookId,
-                        book.BookTitle, 
-                        book.Author, 
-                        book.Publisher, 
-                        book.Quantity.ToString(),
-                        book.SellingPrice.ToString(),
-                        book.Category
-                    );
+                    
+                    UC_BookItem userControl = new UC_BookItem
+                    {
+                        BookId = book.BookId,
+                        BookName = book.BookTitle,
+                        ImageUrl = book.ImageUrl,
+                        Quantity = book.Quantity,
+                        Price = book.SellingPrice
+                    };
+                    flowLayoutPanel1.Controls.Add(userControl);
+                  
                 }
+            }
+            if (flowLayoutPanel1.Controls.Count > 0)
+            {
+                // Cuộn đến điều khiển đầu tiên
+                flowLayoutPanel1.ScrollControlIntoView(flowLayoutPanel1.Controls[0]);
             }
 
         }
@@ -224,7 +249,7 @@ namespace BookShopManagement.UserControls_User
 
         private async void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-            if (e.ColumnIndex == dataGridView1.Columns["AddToCart"].Index && e.RowIndex >= 0)
+            /*if (e.ColumnIndex == dataGridView1.Columns["AddToCart"].Index && e.RowIndex >= 0)
             {
                 // Lấy dữ liệu hàng được nhấn
                
@@ -254,7 +279,7 @@ namespace BookShopManagement.UserControls_User
                     MessageBox.Show("Selected book does not exist in Database.");
                 }
 
-            }
+            }*/
             
         }
         private async Task AddToCartF(Book book)
@@ -288,6 +313,11 @@ namespace BookShopManagement.UserControls_User
             {
                 fbd.ShowDialog();
             }
+        }
+
+        private void flowLayoutPanel1_Paint(object sender, PaintEventArgs e)
+        {
+
         }
     }
 }

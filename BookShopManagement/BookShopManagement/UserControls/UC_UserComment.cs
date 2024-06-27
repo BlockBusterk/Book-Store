@@ -14,9 +14,10 @@ namespace BookShopManagement.UserControls
     {
         private int score = 0;
         private string comment = "";
+        private string userName = "";
         private string date = "";
         private string imageUrl = "";
-        public string UserName { get => comment; set { comment = value; lblUserName.Text = value; } }
+        public string UserName { get => userName; set { userName = value; lblUserName.Text = value; } }
         public int Score { get => score; set { score = value; lblScore.Text = value.ToString(); } }
         public string Comment { get => comment; set { comment = value; lblUserComment.Text = value; } }
         public string Date { get => date; set { date = value; lblDate.Text = value; } }

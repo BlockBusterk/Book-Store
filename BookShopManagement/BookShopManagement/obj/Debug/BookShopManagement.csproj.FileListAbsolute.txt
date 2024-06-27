@@ -464,3 +464,4 @@ E:\Year4HK2\C#\Book-Store\BookShopManagement\BookShopManagement\bin\Debug\zxing.
 E:\Year4HK2\C#\Book-Store\BookShopManagement\BookShopManagement\obj\Debug\BookShopManagement.Forms.Form_AddBarcode.resources
 E:\Year4HK2\C#\Book-Store\BookShopManagement\BookShopManagement\obj\Debug\BookShopManagement.Forms_User.Form_Book_Detail_With_Btn.resources
 E:\Year4HK2\C#\Book-Store\BookShopManagement\BookShopManagement\obj\Debug\BookShopManagement.Forms.Form_ScanBarcode.resources
+E:\Year4HK2\C#\Book-Store\BookShopManagement\BookShopManagement\obj\Debug\BookShopManagement.UserControls_User.UC_BookItem.resources

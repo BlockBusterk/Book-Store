@@ -50,6 +50,8 @@
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
             this.dragControl1 = new DragControlDemo.DragControl();
+            this.lblPublisher = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
             this.panel5.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -93,6 +95,8 @@
             // 
             // panel5
             // 
+            this.panel5.Controls.Add(this.lblPublisher);
+            this.panel5.Controls.Add(this.label5);
             this.panel5.Controls.Add(this.lblCategory);
             this.panel5.Controls.Add(this.label4);
             this.panel5.Controls.Add(this.button4);
@@ -287,10 +291,32 @@
             this.flowLayoutPanel1.Name = "flowLayoutPanel1";
             this.flowLayoutPanel1.Size = new System.Drawing.Size(830, 366);
             this.flowLayoutPanel1.TabIndex = 12;
+            this.flowLayoutPanel1.Paint += new System.Windows.Forms.PaintEventHandler(this.flowLayoutPanel1_Paint);
             // 
             // dragControl1
             // 
             this.dragControl1.SelectControl = this;
+            // 
+            // lblPublisher
+            // 
+            this.lblPublisher.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblPublisher.ForeColor = System.Drawing.Color.Black;
+            this.lblPublisher.Location = new System.Drawing.Point(517, 118);
+            this.lblPublisher.Name = "lblPublisher";
+            this.lblPublisher.Size = new System.Drawing.Size(165, 23);
+            this.lblPublisher.TabIndex = 32;
+            this.lblPublisher.Text = "Author: ";
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.ForeColor = System.Drawing.Color.Purple;
+            this.label5.Location = new System.Drawing.Point(413, 118);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(102, 23);
+            this.label5.TabIndex = 31;
+            this.label5.Text = "Publisher:";
             // 
             // Form_Book_Detail
             // 
@@ -344,5 +370,7 @@
         private DragControlDemo.DragControl dragControl1;
         private System.Windows.Forms.Label lblCategory;
         private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label lblPublisher;
+        private System.Windows.Forms.Label label5;
     }
 }
