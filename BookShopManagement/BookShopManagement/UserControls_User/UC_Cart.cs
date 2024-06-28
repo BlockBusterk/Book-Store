@@ -50,9 +50,9 @@ namespace BookShopManagement.UserControls_User
         {
             LoadCart();
         }
-        private async void LoadCart()
+        public async void LoadCart()
         {
-            dataGridView1.Rows.Clear();
+            flowLayoutPanel1.Controls.Clear();
             var db = FirebaseHelper.Database;
             Query cartQue = db.Collection("Cart").Document(Form_Login.currentUserId).Collection("cart");
             QuerySnapshot snap = await cartQue.GetSnapshotAsync();
@@ -68,24 +68,32 @@ namespace BookShopManagement.UserControls_User
                     if(bookSnap.Exists)
                     {
                         Book book = bookSnap.ConvertTo<Book>();
-                        dataGridView1.Rows.Add(
-                            cart.BookId, 
-                            book.BookTitle, 
-                            book.Author, 
-                            book.Publisher, 
-                            cart.Price, 
-                            cart.Quantity.ToString(), 
-                           (cart.Price * cart.Quantity).ToString());
+
+                        UC_CartItem userControl = new UC_CartItem
+                        {
+                            BookId = book.BookId,
+                            BookName = book.BookTitle,
+                            ImageUrl = book.ImageUrl,
+                            Quantity = cart.Quantity,
+                            Price = cart.Quantity*book.SellingPrice,
+                            SellPrice= book.SellingPrice,
+                        };
+                        flowLayoutPanel1.Controls.Add(userControl);
                     }
                     
                 }
+            }
+            if (flowLayoutPanel1.Controls.Count > 0)
+            {
+                // Cuộn đến điều khiển đầu tiên
+                flowLayoutPanel1.ScrollControlIntoView(flowLayoutPanel1.Controls[0]);
             }
             label4.Text = CalculateTotalAmount().ToString();
         }
 
         private async void dataGridView1_CellContentClick_2(object sender, DataGridViewCellEventArgs e)
         {
-            if (e.ColumnIndex == dataGridView1.Columns["Remove"].Index && e.RowIndex >= 0)
+            /*if (e.ColumnIndex == dataGridView1.Columns["Remove"].Index && e.RowIndex >= 0)
             {
                 // Lấy dữ liệu hàng được nhấn
 
@@ -106,7 +114,7 @@ namespace BookShopManagement.UserControls_User
                     fbd.ShowDialog();
                     LoadCart();
                 }
-            }
+            }*/
         }
         private async void DeleteFromCart(Cart cart)
         {
@@ -198,23 +206,26 @@ namespace BookShopManagement.UserControls_User
             double totalAmount = 0;
 
             // Duyệt qua từng hàng trong DataGridView
-            foreach (DataGridViewRow row in dataGridView1.Rows)
+            foreach (UC_CartItem cart in flowLayoutPanel1.Controls)
             {
                 // Kiểm tra xem hàng không phải là hàng mới
-                if (!row.IsNewRow)
-                {
+              
                     // Lấy giá trị của cột "Amount" trong hàng hiện tại
-                    var cellValue = row.Cells["Column_TotalPrice"].Value;
+                    var cartValue = cart.Price;
 
                     // Kiểm tra giá trị không phải là null và có thể chuyển đổi thành số
-                    if (cellValue != null && double.TryParse(cellValue.ToString(), out double amount))
-                    {
-                        totalAmount += amount;
-                    }
-                }
+                   
+                   totalAmount += cartValue;
+
+                
             }
 
             return totalAmount;
+        }
+
+        private void flowLayoutPanel1_Paint(object sender, PaintEventArgs e)
+        {
+
         }
     }
 }

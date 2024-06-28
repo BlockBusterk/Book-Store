@@ -150,6 +150,7 @@
             this.lblBookQuantity.Size = new System.Drawing.Size(21, 23);
             this.lblBookQuantity.TabIndex = 28;
             this.lblBookQuantity.Text = "1";
+            this.lblBookQuantity.Click += new System.EventHandler(this.lblBookQuantity_Click);
             // 
             // btnPlus
             // 

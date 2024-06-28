@@ -32,25 +32,15 @@
             this.label2 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
             this.panel4 = new System.Windows.Forms.Panel();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.BookId = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column_Title = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column_Author = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column_Publisher = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column_Price = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column_Quantity = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column_TotalPrice = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Detail = new System.Windows.Forms.DataGridViewButtonColumn();
-            this.Remove = new System.Windows.Forms.DataGridViewButtonColumn();
             this.panel3 = new System.Windows.Forms.Panel();
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.button2 = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
+            this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel4.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.panel3.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -88,110 +78,12 @@
             // 
             // panel4
             // 
-            this.panel4.Controls.Add(this.dataGridView1);
+            this.panel4.Controls.Add(this.flowLayoutPanel1);
             this.panel4.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel4.Location = new System.Drawing.Point(0, 0);
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(985, 405);
             this.panel4.TabIndex = 1;
-            // 
-            // dataGridView1
-            // 
-            this.dataGridView1.AllowUserToAddRows = false;
-            this.dataGridView1.AllowUserToDeleteRows = false;
-            this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.dataGridView1.BackgroundColor = System.Drawing.Color.White;
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.BookId,
-            this.Column_Title,
-            this.Column_Author,
-            this.Column_Publisher,
-            this.Column_Price,
-            this.Column_Quantity,
-            this.Column_TotalPrice,
-            this.Detail,
-            this.Remove});
-            this.dataGridView1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dataGridView1.Location = new System.Drawing.Point(0, 0);
-            this.dataGridView1.MultiSelect = false;
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.ReadOnly = true;
-            this.dataGridView1.RowHeadersWidth = 51;
-            this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.Size = new System.Drawing.Size(985, 405);
-            this.dataGridView1.TabIndex = 1;
-            this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick_2);
-            // 
-            // BookId
-            // 
-            this.BookId.HeaderText = "BookId";
-            this.BookId.MinimumWidth = 6;
-            this.BookId.Name = "BookId";
-            this.BookId.ReadOnly = true;
-            this.BookId.Visible = false;
-            // 
-            // Column_Title
-            // 
-            this.Column_Title.HeaderText = "Title";
-            this.Column_Title.MinimumWidth = 6;
-            this.Column_Title.Name = "Column_Title";
-            this.Column_Title.ReadOnly = true;
-            // 
-            // Column_Author
-            // 
-            this.Column_Author.HeaderText = "Author";
-            this.Column_Author.MinimumWidth = 6;
-            this.Column_Author.Name = "Column_Author";
-            this.Column_Author.ReadOnly = true;
-            // 
-            // Column_Publisher
-            // 
-            this.Column_Publisher.HeaderText = "Publisher";
-            this.Column_Publisher.MinimumWidth = 6;
-            this.Column_Publisher.Name = "Column_Publisher";
-            this.Column_Publisher.ReadOnly = true;
-            // 
-            // Column_Price
-            // 
-            this.Column_Price.HeaderText = "Price";
-            this.Column_Price.MinimumWidth = 6;
-            this.Column_Price.Name = "Column_Price";
-            this.Column_Price.ReadOnly = true;
-            // 
-            // Column_Quantity
-            // 
-            this.Column_Quantity.HeaderText = "Quantity";
-            this.Column_Quantity.MinimumWidth = 6;
-            this.Column_Quantity.Name = "Column_Quantity";
-            this.Column_Quantity.ReadOnly = true;
-            // 
-            // Column_TotalPrice
-            // 
-            this.Column_TotalPrice.HeaderText = "Total Price";
-            this.Column_TotalPrice.MinimumWidth = 6;
-            this.Column_TotalPrice.Name = "Column_TotalPrice";
-            this.Column_TotalPrice.ReadOnly = true;
-            // 
-            // Detail
-            // 
-            this.Detail.HeaderText = "Detail";
-            this.Detail.MinimumWidth = 6;
-            this.Detail.Name = "Detail";
-            this.Detail.ReadOnly = true;
-            this.Detail.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.Detail.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
-            this.Detail.Text = "Detail";
-            this.Detail.UseColumnTextForButtonValue = true;
-            // 
-            // Remove
-            // 
-            this.Remove.HeaderText = "Remove";
-            this.Remove.MinimumWidth = 6;
-            this.Remove.Name = "Remove";
-            this.Remove.ReadOnly = true;
-            this.Remove.Text = "Remove from cart";
-            this.Remove.UseColumnTextForButtonValue = true;
             // 
             // panel3
             // 
@@ -253,6 +145,15 @@
             this.label1.TabIndex = 34;
             this.label1.Text = "Total Price:";
             // 
+            // flowLayoutPanel1
+            // 
+            this.flowLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.flowLayoutPanel1.Location = new System.Drawing.Point(0, 0);
+            this.flowLayoutPanel1.Name = "flowLayoutPanel1";
+            this.flowLayoutPanel1.Size = new System.Drawing.Size(985, 405);
+            this.flowLayoutPanel1.TabIndex = 0;
+            this.flowLayoutPanel1.Paint += new System.Windows.Forms.PaintEventHandler(this.flowLayoutPanel1_Paint);
+            // 
             // UC_Cart
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 23F);
@@ -270,7 +171,6 @@
             this.panel1.PerformLayout();
             this.panel2.ResumeLayout(false);
             this.panel4.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
             this.ResumeLayout(false);
@@ -283,20 +183,11 @@
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Panel panel4;
-        private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.DataGridViewTextBoxColumn BookId;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column_Title;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column_Author;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column_Publisher;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column_Price;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column_Quantity;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column_TotalPrice;
-        private System.Windows.Forms.DataGridViewButtonColumn Detail;
-        private System.Windows.Forms.DataGridViewButtonColumn Remove;
+        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
     }
 }

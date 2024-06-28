@@ -220,5 +220,10 @@ namespace BookShopManagement.Forms_User
         {
 
         }
+
+        private void lblBookQuantity_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

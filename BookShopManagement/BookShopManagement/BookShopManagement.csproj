@@ -467,6 +467,12 @@
     <Compile Include="UserControls_User\UC_Cart.Designer.cs">
       <DependentUpon>UC_Cart.cs</DependentUpon>
     </Compile>
+    <Compile Include="UserControls_User\UC_CartItem.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls_User\UC_CartItem.Designer.cs">
+      <DependentUpon>UC_CartItem.cs</DependentUpon>
+    </Compile>
     <Compile Include="UserControls_User\UC_Detail_User.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -575,6 +581,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="UserControls_User\UC_Cart.resx">
       <DependentUpon>UC_Cart.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls_User\UC_CartItem.resx">
+      <DependentUpon>UC_CartItem.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UserControls_User\UC_Detail_User.resx">
       <DependentUpon>UC_Detail_User.cs</DependentUpon>
@@ -686,6 +695,7 @@
   <ItemGroup>
     <None Include="Resources\book.png" />
     <None Include="Resources\book %281%29.png" />
+    <None Include="Resources\8664938_trash_can_delete_remove_icon.png" />
     <Content Include="SqlServerTypes\readme.htm" />
     <Content Include="SqlServerTypes\x64\msvcr120.dll">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
