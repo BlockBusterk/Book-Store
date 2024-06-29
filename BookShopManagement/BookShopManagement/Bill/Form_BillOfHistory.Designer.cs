@@ -1,6 +1,6 @@
 ﻿namespace BookShopManagement.Bill
 {
-    partial class Form_Bill
+    partial class Form_BillOfHistory
     {
         /// <summary>
         /// Required designer variable.
@@ -42,15 +42,15 @@
             this.reportViewer1.TabIndex = 0;
             this.reportViewer1.Load += new System.EventHandler(this.reportViewer1_Load);
             // 
-            // Form_Bill
+            // Form_BillOfHistory
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1062, 570);
             this.Controls.Add(this.reportViewer1);
-            this.Name = "Form_Bill";
-            this.Text = "Form_Bill";
-            this.Load += new System.EventHandler(this.Form_Bill_Load);
+            this.Name = "Form_BillOfHistory";
+            this.Text = "Form_BillOfHistory";
+            this.Load += new System.EventHandler(this.Form_BillOfHistory_Load);
             this.ResumeLayout(false);
 
         }

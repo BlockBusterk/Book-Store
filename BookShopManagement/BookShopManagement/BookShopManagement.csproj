@@ -299,6 +299,12 @@
     <Compile Include="Bill\Form_Bill.Designer.cs">
       <DependentUpon>Form_Bill.cs</DependentUpon>
     </Compile>
+    <Compile Include="Bill\Form_BillOfHistory.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Bill\Form_BillOfHistory.Designer.cs">
+      <DependentUpon>Form_BillOfHistory.cs</DependentUpon>
+    </Compile>
     <Compile Include="CustomControls\DragControl.cs">
       <SubType>Component</SubType>
     </Compile>
@@ -495,6 +501,9 @@
     <Compile Include="Utils\HashKeys.cs" />
     <EmbeddedResource Include="Bill\Form_Bill.resx">
       <DependentUpon>Form_Bill.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Bill\Form_BillOfHistory.resx">
+      <DependentUpon>Form_BillOfHistory.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Bill\MyBill.rdlc" />
     <EmbeddedResource Include="Forms_Admin\Form_AddBarcode..resx">

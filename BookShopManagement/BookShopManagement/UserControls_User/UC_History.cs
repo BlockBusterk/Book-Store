@@ -1,4 +1,5 @@
-﻿using BookShopManagement.Database;
+﻿using BookShopManagement.Bill;
+using BookShopManagement.Database;
 using BookShopManagement.Models;
 using BookShopManagement.Utils;
 using Google.Cloud.Firestore;
@@ -41,8 +42,8 @@ namespace BookShopManagement.UserControls_User
                     if (doc.Exists)
                     {
                         Order order = doc.ConvertTo<Order>();
-                       
-                        foreach (Book book in order.Books)
+
+                        /*foreach (Book book in order.Books)
                         {
                             DocumentReference bookRef = db.Collection("Book").Document(book.BookId);
                             DocumentSnapshot bookSnapshot = await bookRef.GetSnapshotAsync();
@@ -60,7 +61,13 @@ namespace BookShopManagement.UserControls_User
                                );
                             }
                            
-                        }
+                        }*/
+                        dataGridView1.Rows.Add(
+                             doc.Id,
+                             order.TotalPrice,
+                             VietNameTime.ConvertToVietnamTime(order.CreatedDate)
+                       );
+
                     }
                 }
 
@@ -73,9 +80,24 @@ namespace BookShopManagement.UserControls_User
 
        
 
-        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        private async void dataGridView1_CellContentClickAsync(object sender, DataGridViewCellEventArgs e)
         {
+            if (e.ColumnIndex == dataGridView1.Columns["Column_Detail"].Index && e.RowIndex >= 0)
+            {
+                // Lấy dữ liệu hàng được nhấn
 
+                var receiptId = dataGridView1.Rows[e.RowIndex].Cells["Column_ReceiptId"].Value.ToString();
+
+                using (Form_BillOfHistory fb = new Form_BillOfHistory()) // In hóa đơn
+                {
+                    /* foreach (DocumentSnapshot doc in cartSnapshot.Documents)
+                     {
+                         await doc.Reference.DeleteAsync();
+                     }*/
+                    fb.BillID = receiptId;
+                    fb.ShowDialog();
+                }
+            }
         }
     }
 }

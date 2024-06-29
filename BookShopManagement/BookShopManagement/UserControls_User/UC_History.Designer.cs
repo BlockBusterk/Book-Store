@@ -32,12 +32,10 @@
             this.label2 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.Column_Title = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column_Author = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column_Publisher = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column_Quantity = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column_ReceiptId = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column_TotalPrice = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column_Date = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column_Detail = new System.Windows.Forms.DataGridViewButtonColumn();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
@@ -78,60 +76,54 @@
             this.dataGridView1.AllowUserToAddRows = false;
             this.dataGridView1.AllowUserToDeleteRows = false;
             this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dataGridView1.BackgroundColor = System.Drawing.Color.White;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.Column_Title,
-            this.Column_Author,
-            this.Column_Publisher,
-            this.Column_Quantity,
+            this.Column_ReceiptId,
             this.Column_TotalPrice,
-            this.Column_Date});
+            this.Column_Date,
+            this.Column_Detail});
             this.dataGridView1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dataGridView1.Location = new System.Drawing.Point(0, 0);
             this.dataGridView1.MultiSelect = false;
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.ReadOnly = true;
+            this.dataGridView1.RowHeadersVisible = false;
             this.dataGridView1.RowHeadersWidth = 51;
             this.dataGridView1.RowTemplate.Height = 24;
             this.dataGridView1.Size = new System.Drawing.Size(985, 480);
             this.dataGridView1.TabIndex = 0;
-            this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
+            this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClickAsync);
             // 
-            // Column_Title
+            // Column_ReceiptId
             // 
-            this.Column_Title.HeaderText = "Title";
-            this.Column_Title.MinimumWidth = 6;
-            this.Column_Title.Name = "Column_Title";
-            // 
-            // Column_Author
-            // 
-            this.Column_Author.HeaderText = "Author";
-            this.Column_Author.MinimumWidth = 6;
-            this.Column_Author.Name = "Column_Author";
-            // 
-            // Column_Publisher
-            // 
-            this.Column_Publisher.HeaderText = "Publisher";
-            this.Column_Publisher.MinimumWidth = 6;
-            this.Column_Publisher.Name = "Column_Publisher";
-            // 
-            // Column_Quantity
-            // 
-            this.Column_Quantity.HeaderText = "Quantity";
-            this.Column_Quantity.MinimumWidth = 6;
-            this.Column_Quantity.Name = "Column_Quantity";
+            this.Column_ReceiptId.HeaderText = "Receipt Id";
+            this.Column_ReceiptId.MinimumWidth = 6;
+            this.Column_ReceiptId.Name = "Column_ReceiptId";
+            this.Column_ReceiptId.ReadOnly = true;
             // 
             // Column_TotalPrice
             // 
             this.Column_TotalPrice.HeaderText = "Total Price";
             this.Column_TotalPrice.MinimumWidth = 6;
             this.Column_TotalPrice.Name = "Column_TotalPrice";
+            this.Column_TotalPrice.ReadOnly = true;
             // 
             // Column_Date
             // 
             this.Column_Date.HeaderText = "Date";
             this.Column_Date.MinimumWidth = 6;
             this.Column_Date.Name = "Column_Date";
+            this.Column_Date.ReadOnly = true;
+            // 
+            // Column_Detail
+            // 
+            this.Column_Detail.HeaderText = "Detail of Receipt";
+            this.Column_Detail.MinimumWidth = 6;
+            this.Column_Detail.Name = "Column_Detail";
+            this.Column_Detail.ReadOnly = true;
+            this.Column_Detail.Text = "Show detail of the receipt";
+            this.Column_Detail.UseColumnTextForButtonValue = true;
             // 
             // UC_History
             // 
@@ -159,11 +151,9 @@
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column_Title;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column_Author;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column_Publisher;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column_Quantity;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column_ReceiptId;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column_TotalPrice;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column_Date;
+        private System.Windows.Forms.DataGridViewButtonColumn Column_Detail;
     }
 }

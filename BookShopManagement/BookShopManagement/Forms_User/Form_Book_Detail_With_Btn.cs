@@ -166,25 +166,19 @@ namespace BookShopManagement.Forms_User
 
             DocumentSnapshot docCart = await cartRef.GetSnapshotAsync();
 
-            if (docCart.Exists)
-            {
-                Cart cart = docCart.ConvertTo<Cart>();
-
+            
                 if (quantity - 1 > 0)
                 {
                     quantity--;
-                    cart.Quantity = quantity;
-                    Dictionary<string, object> data = new Dictionary<string, object>() {
-                        {"Quantity", cart.Quantity}
-                    };
-                    await cartRef.UpdateAsync(data);
-                    lblBookQuantity.Text = cart.Quantity.ToString();
+                    
+                  
+                    lblBookQuantity.Text = quantity.ToString();
                 }
                 else
                 {
                     MessageBox.Show("The book amount can not be 0!");
                 }
-            }
+            
         }
 
         private async void btnPlus_Click(object sender, EventArgs e)
@@ -195,19 +189,16 @@ namespace BookShopManagement.Forms_User
             DocumentReference bookRef = db.Collection("Book").Document(bookId);
             DocumentSnapshot docCart = await cartRef.GetSnapshotAsync();
             DocumentSnapshot docBook = await bookRef.GetSnapshotAsync();
-            if (docCart.Exists && docBook.Exists)
+            if (docBook.Exists)
             {
-                Cart cart = docCart.ConvertTo<Cart>();
+                
                 Book book = docBook.ConvertTo<Book>();
                 if (quantity + 1 <= book.Quantity)
                 {
                     quantity++;
-                    cart.Quantity = quantity;
-                    Dictionary<string, object> data = new Dictionary<string, object>() {
-                        {"Quantity", cart.Quantity}
-                    };
-                    await cartRef.UpdateAsync(data);
-                    lblBookQuantity.Text = cart.Quantity.ToString();
+                    
+                   
+                    lblBookQuantity.Text = quantity.ToString();
                 }
                 else
                 {

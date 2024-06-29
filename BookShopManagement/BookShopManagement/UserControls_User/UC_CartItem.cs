@@ -75,12 +75,27 @@ namespace BookShopManagement.UserControls_User
                         {"Quantity", cart.Quantity}
                     };
                     await cartRef.UpdateAsync(data);
+                    Price = cart.Quantity * SellPrice;
+                    lblPrice.Text = Price.ToString();
                     lblBookQuantity.Text = cart.Quantity.ToString();
                 }
                 else
                 {
                     MessageBox.Show("The book amount in the store not enough for your order!");
                 }
+            }
+            Control current = this.Parent;
+
+            //load Cart từ control cha
+
+            while (current != null)
+            {
+                if (current is UC_Cart ucCart)
+                {
+                    ucCart.LoadTotalAmount();
+                    return; // Found UC_Cart, exit the method
+                }
+                current = current.Parent;
             }
         }
 
@@ -104,12 +119,27 @@ namespace BookShopManagement.UserControls_User
                         {"Quantity", cart.Quantity}
                     };
                     await cartRef.UpdateAsync(data);
+                    Price = cart.Quantity * SellPrice;
+                    lblPrice.Text = Price.ToString();
                     lblBookQuantity.Text = cart.Quantity.ToString();
                 }
                 else
                 {
                     MessageBox.Show("The book amount can not be 0!");
                 }
+            }
+            Control current = this.Parent;
+
+            //load Cart từ control cha
+
+            while (current != null)
+            {
+                if (current is UC_Cart ucCart)
+                {
+                    ucCart.LoadTotalAmount();
+                    return; // Found UC_Cart, exit the method
+                }
+                current = current.Parent;
             }
         }
     }

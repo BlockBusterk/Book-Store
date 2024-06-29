@@ -88,7 +88,11 @@ namespace BookShopManagement.UserControls_User
                 // Cuộn đến điều khiển đầu tiên
                 flowLayoutPanel1.ScrollControlIntoView(flowLayoutPanel1.Controls[0]);
             }
-            label4.Text = CalculateTotalAmount().ToString();
+            LoadTotalAmount();
+        }
+        public void LoadTotalAmount()
+        {
+            label4.Text =  CalculateTotalAmount().ToString();
         }
 
         private async void dataGridView1_CellContentClick_2(object sender, DataGridViewCellEventArgs e)
@@ -205,7 +209,7 @@ namespace BookShopManagement.UserControls_User
         {
             double totalAmount = 0;
 
-            // Duyệt qua từng hàng trong DataGridView
+            // Duyệt qua từng hàng trong flowlayout
             foreach (UC_CartItem cart in flowLayoutPanel1.Controls)
             {
                 // Kiểm tra xem hàng không phải là hàng mới
@@ -216,8 +220,6 @@ namespace BookShopManagement.UserControls_User
                     // Kiểm tra giá trị không phải là null và có thể chuyển đổi thành số
                    
                    totalAmount += cartValue;
-
-                
             }
 
             return totalAmount;
