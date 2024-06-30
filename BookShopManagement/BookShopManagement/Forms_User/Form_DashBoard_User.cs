@@ -93,5 +93,12 @@ namespace BookShopManagement.Forms_User
         {
 
         }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            moveSidePanel(btnUser);
+            UC_Chat_User ucb = new UC_Chat_User();
+            AddControlsToPanel(ucb);
+        }
     }
 }

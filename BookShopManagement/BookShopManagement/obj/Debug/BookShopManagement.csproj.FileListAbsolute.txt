@@ -464,3 +464,13 @@ E:\Year4HK2\C#\Book-Store\BookShopManagement\BookShopManagement\bin\Debug\zxing.
 E:\Year4HK2\C#\Book-Store\BookShopManagement\BookShopManagement\obj\Debug\BookShopManagement.Forms.Form_AddBarcode.resources
 E:\Year4HK2\C#\Book-Store\BookShopManagement\BookShopManagement\obj\Debug\BookShopManagement.Forms_User.Form_Book_Detail_With_Btn.resources
 E:\Year4HK2\C#\Book-Store\BookShopManagement\BookShopManagement\obj\Debug\BookShopManagement.Forms.Form_ScanBarcode.resources
+D:\repository\Book-Store\BookShopManagement\BookShopManagement\bin\Debug\Guna.UI2.dll
+D:\repository\Book-Store\BookShopManagement\BookShopManagement\obj\Debug\BookShopManagement.UserControls.UC_Chat_User.resources
+D:\repository\Book-Store\BookShopManagement\BookShopManagement\obj\Debug\BookShopManagement.UserControls.UC_Chat_Admin.resources
+D:\repository\Book-Store\BookShopManagement\BookShopManagement\obj\Debug\BookShopManagement.Chat_UI.UC_Receiver.resources
+D:\repository\Book-Store\BookShopManagement\BookShopManagement\obj\Debug\BookShopManagement.Chat_UI.UC_ReceiverMetaData.resources
+D:\repository\Book-Store\BookShopManagement\BookShopManagement\obj\Debug\BookShopManagement.Chat_UI.UC_Sender.resources
+D:\repository\Book-Store\BookShopManagement\BookShopManagement\obj\Debug\BookShopManagement.Chat_UI.UC_SenderMetaData.resources
+D:\repository\Book-Store\BookShopManagement\BookShopManagement\obj\Debug\BookShopManagement.Chat_UI.UC_UserListItem.resources
+D:\repository\Book-Store\BookShopManagement\BookShopManagement\obj\Debug\BookShopManagement.Chat_UI.IconForm.resources
+D:\repository\Book-Store\BookShopManagement\BookShopManagement\obj\Debug\BookShopManagement.Chat_UI.ViewMetaDataForm.resources

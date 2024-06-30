@@ -125,6 +125,9 @@
     <Reference Include="Grpc.Net.Common, Version=2.0.0.0, Culture=neutral, PublicKeyToken=d754f35622e28bad, processorArchitecture=MSIL">
       <HintPath>..\packages\Grpc.Net.Common.2.60.0\lib\netstandard2.0\Grpc.Net.Common.dll</HintPath>
     </Reference>
+    <Reference Include="Guna.UI2, Version=2.0.4.6, Culture=neutral, PublicKeyToken=8b9d14aa5142e261, processorArchitecture=MSIL">
+      <HintPath>..\packages\Guna.UI2.WinForms.2.0.4.6\lib\net48\Guna.UI2.dll</HintPath>
+    </Reference>
     <Reference Include="Microsoft.Bcl.AsyncInterfaces, Version=7.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
       <HintPath>..\packages\Microsoft.Bcl.AsyncInterfaces.7.0.0\lib\net462\Microsoft.Bcl.AsyncInterfaces.dll</HintPath>
     </Reference>
@@ -299,12 +302,68 @@
     <Compile Include="Bill\Form_Bill.Designer.cs">
       <DependentUpon>Form_Bill.cs</DependentUpon>
     </Compile>
+    <Compile Include="Chat_UI\IconForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Chat_UI\IconForm.Designer.cs">
+      <DependentUpon>IconForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Chat_UI\UC_Chat_User.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Chat_UI\UC_Chat_User.Designer.cs">
+      <DependentUpon>UC_Chat_User.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Chat_UI\UC_Chat_Admin.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Chat_UI\UC_Chat_Admin.Designer.cs">
+      <DependentUpon>UC_Chat_Admin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Chat_UI\UC_Receiver.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Chat_UI\UC_Receiver.Designer.cs">
+      <DependentUpon>UC_Receiver.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Chat_UI\UC_ReceiverMetaData.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Chat_UI\UC_ReceiverMetaData.Designer.cs">
+      <DependentUpon>UC_ReceiverMetaData.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Chat_UI\UC_Sender.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Chat_UI\UC_Sender.Designer.cs">
+      <DependentUpon>UC_Sender.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Chat_UI\UC_SenderMetaData.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Chat_UI\UC_SenderMetaData.Designer.cs">
+      <DependentUpon>UC_SenderMetaData.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Chat_UI\UC_UserListItem.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Chat_UI\UC_UserListItem.Designer.cs">
+      <DependentUpon>UC_UserListItem.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Chat_UI\ViewMetaDataForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Chat_UI\ViewMetaDataForm.Designer.cs">
+      <DependentUpon>ViewMetaDataForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="CustomControls\DragControl.cs">
       <SubType>Component</SubType>
     </Compile>
     <Compile Include="Database\CloudinaryHelper.cs" />
     <Compile Include="Database\FirebaseAuthService.cs" />
     <Compile Include="Database\FirebaseHelper.cs" />
+    <Compile Include="Database\RealTimeHelper.cs" />
+    <Compile Include="Database\RealTimeService.cs" />
     <Compile Include="Forms_Admin\Form_AddBarcode..cs">
       <SubType>Form</SubType>
     </Compile>
@@ -407,6 +466,7 @@
     <Compile Include="Models\Cart.cs" />
     <Compile Include="Models\Category.cs" />
     <Compile Include="Models\Comment.cs" />
+    <Compile Include="Models\MessageData.cs" />
     <Compile Include="Models\MonthlyRevenue.cs" />
     <Compile Include="Models\Order.cs" />
     <Compile Include="Models\UserData.cs" />
@@ -485,6 +545,33 @@
       <DependentUpon>Form_Bill.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Bill\MyBill.rdlc" />
+    <EmbeddedResource Include="Chat_UI\IconForm.resx">
+      <DependentUpon>IconForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Chat_UI\UC_Chat_User.resx">
+      <DependentUpon>UC_Chat_User.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Chat_UI\UC_Chat_Admin.resx">
+      <DependentUpon>UC_Chat_Admin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Chat_UI\UC_Receiver.resx">
+      <DependentUpon>UC_Receiver.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Chat_UI\UC_ReceiverMetaData.resx">
+      <DependentUpon>UC_ReceiverMetaData.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Chat_UI\UC_Sender.resx">
+      <DependentUpon>UC_Sender.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Chat_UI\UC_SenderMetaData.resx">
+      <DependentUpon>UC_SenderMetaData.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Chat_UI\UC_UserListItem.resx">
+      <DependentUpon>UC_UserListItem.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Chat_UI\ViewMetaDataForm.resx">
+      <DependentUpon>ViewMetaDataForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms_Admin\Form_AddBarcode..resx">
       <DependentUpon>Form_AddBarcode..cs</DependentUpon>
     </EmbeddedResource>
@@ -677,6 +764,23 @@
   <ItemGroup>
     <None Include="Resources\book.png" />
     <None Include="Resources\book %281%29.png" />
+    <None Include="Resources\bubble-chat.png" />
+    <None Include="Resources\bubble-chat %281%29.png" />
+    <None Include="Resources\chat.png" />
+    <None Include="Resources\send-mail.png" />
+    <None Include="Resources\gallery.png" />
+    <None Include="Resources\attachment.png" />
+    <None Include="Resources\anxious-face-with-sweat.png" />
+    <None Include="Resources\disappointed-face.png" />
+    <None Include="Resources\neutral-face.png" />
+    <None Include="Resources\partying-face.png" />
+    <None Include="Resources\smile.png" />
+    <None Include="Resources\thinking-face.png" />
+    <None Include="Resources\tried-emoji.png" />
+    <None Include="Resources\slightly-smiling-face.png" />
+    <None Include="Resources\smiling-face-with-heart-eyes.png" />
+    <None Include="Resources\smiling-face-with-smiling-eyes.png" />
+    <None Include="Resources\smiling-face-with-sunglasses.png" />
     <Content Include="SqlServerTypes\readme.htm" />
     <Content Include="SqlServerTypes\x64\msvcr120.dll">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>

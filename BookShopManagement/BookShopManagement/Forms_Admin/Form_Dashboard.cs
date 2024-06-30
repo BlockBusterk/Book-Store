@@ -122,5 +122,17 @@ namespace BookShopManagement.Forms
             UC_Customer cus = new UC_Customer();
             AddControlsToPanel(cus);
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            moveSidePanel(btnChat);
+            UC_Chat_Admin cus = new UC_Chat_Admin();
+            AddControlsToPanel(cus);
+        }
+
+        private void panelSide_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
     }
 }
