@@ -16,6 +16,7 @@ namespace BookShopManagement
         static void Main()
         {
             FirebaseHelper.SetEnviromentVariable();
+            RealTimeService.SetEnviromentVariable();
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             Application.Run(new Form_Login());
