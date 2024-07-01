@@ -39,6 +39,7 @@ namespace BookShopManagement.Database
         static string filePath = "";
         public static FirestoreDb Database { get; private set; }
         public static FirebaseAuthClient FirebaseAuth { get; private set; }
+
         public static void SetEnviromentVariable()
         {
             filePath = Path.Combine(Path.GetTempPath(), Path.GetFileNameWithoutExtension(Path.GetRandomFileName())) + ".json";

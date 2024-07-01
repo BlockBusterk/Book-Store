@@ -1,7 +1,16 @@
 {
   "Version": 1,
   "WorkspaceRootPath": "D:\\repository\\Book-Store\\BookShopManagement\\",
-  "Documents": [],
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{D8F85CC1-9472-4794-8449-5D545C316A4E}|BookShopManagement\\BookShopManagement.csproj|d:\\repository\\book-store\\bookshopmanagement\\bookshopmanagement\\chat_ui\\uc_chat_user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D8F85CC1-9472-4794-8449-5D545C316A4E}|BookShopManagement\\BookShopManagement.csproj|solutionrelative:bookshopmanagement\\chat_ui\\uc_chat_user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D8F85CC1-9472-4794-8449-5D545C316A4E}|BookShopManagement\\BookShopManagement.csproj|d:\\repository\\book-store\\bookshopmanagement\\bookshopmanagement\\chat_ui\\uc_chat_user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{D8F85CC1-9472-4794-8449-5D545C316A4E}|BookShopManagement\\BookShopManagement.csproj|solutionrelative:bookshopmanagement\\chat_ui\\uc_chat_user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    }
+  ],
   "DocumentGroupContainers": [
     {
       "Orientation": 0,
@@ -9,11 +18,36 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": -1,
+          "SelectedChildIndex": 1,
           "Children": [
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "UC_Chat_User.cs",
+              "DocumentMoniker": "D:\\repository\\Book-Store\\BookShopManagement\\BookShopManagement\\Chat_UI\\UC_Chat_User.cs",
+              "RelativeDocumentMoniker": "BookShopManagement\\Chat_UI\\UC_Chat_User.cs",
+              "ToolTip": "D:\\repository\\Book-Store\\BookShopManagement\\BookShopManagement\\Chat_UI\\UC_Chat_User.cs",
+              "RelativeToolTip": "BookShopManagement\\Chat_UI\\UC_Chat_User.cs",
+              "ViewState": "AQIAAEoAAAAAAAAAAAAUwEIAAAAJAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-01T14:13:02.446Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "UC_Chat_User.cs [Design]",
+              "DocumentMoniker": "D:\\repository\\Book-Store\\BookShopManagement\\BookShopManagement\\Chat_UI\\UC_Chat_User.cs",
+              "RelativeDocumentMoniker": "BookShopManagement\\Chat_UI\\UC_Chat_User.cs",
+              "ToolTip": "D:\\repository\\Book-Store\\BookShopManagement\\BookShopManagement\\Chat_UI\\UC_Chat_User.cs [Design]",
+              "RelativeToolTip": "BookShopManagement\\Chat_UI\\UC_Chat_User.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-01T14:12:48.897Z",
+              "EditorCaption": " [Design]"
             }
           ]
         }

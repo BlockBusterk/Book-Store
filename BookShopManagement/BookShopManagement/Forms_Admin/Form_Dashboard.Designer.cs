@@ -31,6 +31,7 @@
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form_Dashboard));
             this.panelLeft = new System.Windows.Forms.Panel();
+            this.btnChat = new System.Windows.Forms.Button();
             this.btnCustomer = new System.Windows.Forms.Button();
             this.panelSide = new System.Windows.Forms.Panel();
             this.btnViewSales = new System.Windows.Forms.Button();
@@ -61,6 +62,7 @@
             // panelLeft
             // 
             this.panelLeft.BackColor = System.Drawing.Color.Purple;
+            this.panelLeft.Controls.Add(this.btnChat);
             this.panelLeft.Controls.Add(this.btnCustomer);
             this.panelLeft.Controls.Add(this.panelSide);
             this.panelLeft.Controls.Add(this.btnViewSales);
@@ -72,6 +74,23 @@
             this.panelLeft.Name = "panelLeft";
             this.panelLeft.Size = new System.Drawing.Size(215, 720);
             this.panelLeft.TabIndex = 0;
+            // 
+            // btnChat
+            // 
+            this.btnChat.FlatAppearance.BorderSize = 0;
+            this.btnChat.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnChat.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnChat.ForeColor = System.Drawing.Color.White;
+            this.btnChat.Image = global::BookShopManagement.Properties.Resources.chat;
+            this.btnChat.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnChat.Location = new System.Drawing.Point(10, 409);
+            this.btnChat.Name = "btnChat";
+            this.btnChat.Size = new System.Drawing.Size(190, 60);
+            this.btnChat.TabIndex = 11;
+            this.btnChat.Text = "     Chat";
+            this.btnChat.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnChat.UseVisualStyleBackColor = true;
+            this.btnChat.Click += new System.EventHandler(this.button1_Click);
             // 
             // btnCustomer
             // 
@@ -97,6 +116,7 @@
             this.panelSide.Name = "panelSide";
             this.panelSide.Size = new System.Drawing.Size(7, 60);
             this.panelSide.TabIndex = 1;
+            this.panelSide.Paint += new System.Windows.Forms.PaintEventHandler(this.panelSide_Paint);
             // 
             // btnViewSales
             // 
@@ -346,5 +366,6 @@
         private System.Windows.Forms.Timer timerTime;
         private System.Windows.Forms.Panel panelControls;
         private System.Windows.Forms.Button btnCustomer;
+        private System.Windows.Forms.Button btnChat;
     }
 }
