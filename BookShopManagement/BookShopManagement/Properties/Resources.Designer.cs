@@ -143,6 +143,16 @@ namespace BookShopManagement.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap _8664938_trash_can_delete_remove_icon {
+            get {
+                object obj = ResourceManager.GetObject("8664938_trash_can_delete_remove_icon", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap anxious_face_with_sweat {
             get {
                 object obj = ResourceManager.GetObject("anxious_face_with_sweat", resourceCulture);
@@ -156,16 +166,6 @@ namespace BookShopManagement.Properties {
         internal static System.Drawing.Bitmap attachment {
             get {
                 object obj = ResourceManager.GetObject("attachment", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap _8664938_trash_can_delete_remove_icon {
-            get {
-                object obj = ResourceManager.GetObject("8664938_trash_can_delete_remove_icon", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -306,16 +306,6 @@ namespace BookShopManagement.Properties {
         internal static System.Drawing.Bitmap smiling_face_with_smiling_eyes {
             get {
                 object obj = ResourceManager.GetObject("smiling_face_with_smiling_eyes", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap smiling_face_with_sunglasses {
-            get {
-                object obj = ResourceManager.GetObject("smiling_face_with_sunglasses", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

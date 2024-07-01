@@ -477,3 +477,6 @@ D:\repository\Book-Store\BookShopManagement\BookShopManagement\obj\Debug\BookSho
 E:\Year4HK2\C#\Book-Store\BookShopManagement\BookShopManagement\obj\Debug\BookShopManagement.UserControls_User.UC_BookItem.resources
 E:\Year4HK2\C#\Book-Store\BookShopManagement\BookShopManagement\obj\Debug\BookShopManagement.UserControls_User.UC_CartItem.resources
 E:\Year4HK2\C#\Book-Store\BookShopManagement\BookShopManagement\obj\Debug\BookShopManagement.Bill.Form_BillOfHistory.resources
+D:\repository\Book-Store\BookShopManagement\BookShopManagement\obj\Debug\BookShopManagement.Bill.Form_BillOfHistory.resources
+D:\repository\Book-Store\BookShopManagement\BookShopManagement\obj\Debug\BookShopManagement.UserControls_User.UC_BookItem.resources
+D:\repository\Book-Store\BookShopManagement\BookShopManagement\obj\Debug\BookShopManagement.UserControls_User.UC_CartItem.resources
