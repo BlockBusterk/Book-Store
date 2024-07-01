@@ -27,6 +27,7 @@ namespace BookShopManagement.Chat_UI
         // Application.StartupPath + “/resources/myfilename.wav”;
         
         public UC_Chat_Admin uC_Chat_Admin { get; set; }
+        public UC_Chat_User uC_Chat_User { get; set; }
         public void initIcon()
         {
             var pictureBox = new Guna2PictureBox();
@@ -66,7 +67,7 @@ namespace BookShopManagement.Chat_UI
         }
         private void sendBtn_Click(object sender, EventArgs e)
         {
-            // TODO:
+
             if (uC_Chat_Admin != null)
             {
                 Guna2PictureBox pictureBox = (Guna2PictureBox)sender;
@@ -81,11 +82,22 @@ namespace BookShopManagement.Chat_UI
                 uC_Chat_Admin.CreateMessage(message);
 
                 uC_Chat_Admin.refresh();
-            } else
-            {
-
             }
-       
+
+            if (uC_Chat_User != null)
+            {
+                Guna2PictureBox pictureBox = (Guna2PictureBox)sender;
+                MessageData message = new MessageData();
+                message.SenderUserId = Form_Login.currentUser.Email;
+                message.ReceiverUserId = UC_Chat_User.currentChatUser.Email;
+                message.MessageId = "1";
+                message.MessageText = pictureBox.ImageLocation;
+                message.CreatedAt = DateTime.Now.ToString();
+                message.MessageType = "METADATA";
+
+                uC_Chat_User.CreateMessage(message);
+            }
+
 
         }
     }

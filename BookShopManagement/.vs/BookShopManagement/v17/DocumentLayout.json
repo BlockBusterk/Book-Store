@@ -1,44 +1,7 @@
 {
   "Version": 1,
   "WorkspaceRootPath": "D:\\repository\\Book-Store\\BookShopManagement\\",
-  "Documents": [
-    {
-      "AbsoluteMoniker": "D:0:0:{D8F85CC1-9472-4794-8449-5D545C316A4E}|BookShopManagement\\BookShopManagement.csproj|d:\\repository\\book-store\\bookshopmanagement\\bookshopmanagement\\chat_ui\\iconform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{D8F85CC1-9472-4794-8449-5D545C316A4E}|BookShopManagement\\BookShopManagement.csproj|solutionrelative:bookshopmanagement\\chat_ui\\iconform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{D8F85CC1-9472-4794-8449-5D545C316A4E}|BookShopManagement\\BookShopManagement.csproj|d:\\repository\\book-store\\bookshopmanagement\\bookshopmanagement\\chat_ui\\iconform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{D8F85CC1-9472-4794-8449-5D545C316A4E}|BookShopManagement\\BookShopManagement.csproj|solutionrelative:bookshopmanagement\\chat_ui\\iconform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{D8F85CC1-9472-4794-8449-5D545C316A4E}|BookShopManagement\\BookShopManagement.csproj|d:\\repository\\book-store\\bookshopmanagement\\bookshopmanagement\\chat_ui\\uc_userlistitem.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{D8F85CC1-9472-4794-8449-5D545C316A4E}|BookShopManagement\\BookShopManagement.csproj|solutionrelative:bookshopmanagement\\chat_ui\\uc_userlistitem.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{D8F85CC1-9472-4794-8449-5D545C316A4E}|BookShopManagement\\BookShopManagement.csproj|d:\\repository\\book-store\\bookshopmanagement\\bookshopmanagement\\chat_ui\\uc_sendermetadata.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{D8F85CC1-9472-4794-8449-5D545C316A4E}|BookShopManagement\\BookShopManagement.csproj|solutionrelative:bookshopmanagement\\chat_ui\\uc_sendermetadata.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{D8F85CC1-9472-4794-8449-5D545C316A4E}|BookShopManagement\\BookShopManagement.csproj|d:\\repository\\book-store\\bookshopmanagement\\bookshopmanagement\\chat_ui\\uc_receivermetadata.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{D8F85CC1-9472-4794-8449-5D545C316A4E}|BookShopManagement\\BookShopManagement.csproj|solutionrelative:bookshopmanagement\\chat_ui\\uc_receivermetadata.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{D8F85CC1-9472-4794-8449-5D545C316A4E}|BookShopManagement\\BookShopManagement.csproj|d:\\repository\\book-store\\bookshopmanagement\\bookshopmanagement\\chat_ui\\uc_receivermetadata.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{D8F85CC1-9472-4794-8449-5D545C316A4E}|BookShopManagement\\BookShopManagement.csproj|solutionrelative:bookshopmanagement\\chat_ui\\uc_receivermetadata.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{D8F85CC1-9472-4794-8449-5D545C316A4E}|BookShopManagement\\BookShopManagement.csproj|d:\\repository\\book-store\\bookshopmanagement\\bookshopmanagement\\chat_ui\\uc_sendermetadata.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{D8F85CC1-9472-4794-8449-5D545C316A4E}|BookShopManagement\\BookShopManagement.csproj|solutionrelative:bookshopmanagement\\chat_ui\\uc_sendermetadata.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{D8F85CC1-9472-4794-8449-5D545C316A4E}|BookShopManagement\\BookShopManagement.csproj|D:\\repository\\Book-Store\\BookShopManagement\\bookshopmanagement\\chat_ui\\uc_chat_admin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{D8F85CC1-9472-4794-8449-5D545C316A4E}|BookShopManagement\\BookShopManagement.csproj|solutionrelative:bookshopmanagement\\chat_ui\\uc_chat_admin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{D8F85CC1-9472-4794-8449-5D545C316A4E}|BookShopManagement\\BookShopManagement.csproj|d:\\repository\\book-store\\bookshopmanagement\\bookshopmanagement\\chat_ui\\uc_chat_admin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{D8F85CC1-9472-4794-8449-5D545C316A4E}|BookShopManagement\\BookShopManagement.csproj|solutionrelative:bookshopmanagement\\chat_ui\\uc_chat_admin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    }
-  ],
+  "Documents": [],
   "DocumentGroupContainers": [
     {
       "Orientation": 0,
@@ -46,123 +9,11 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": -1,
           "Children": [
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "IconForm.cs",
-              "DocumentMoniker": "D:\\repository\\Book-Store\\BookShopManagement\\BookShopManagement\\Chat_UI\\IconForm.cs",
-              "RelativeDocumentMoniker": "BookShopManagement\\Chat_UI\\IconForm.cs",
-              "ToolTip": "D:\\repository\\Book-Store\\BookShopManagement\\BookShopManagement\\Chat_UI\\IconForm.cs",
-              "RelativeToolTip": "BookShopManagement\\Chat_UI\\IconForm.cs",
-              "ViewState": "AQIAAEIAAAAAAAAAAAA3wFAAAAA1AAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-30T18:24:31.371Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "IconForm.cs [Design]",
-              "DocumentMoniker": "D:\\repository\\Book-Store\\BookShopManagement\\BookShopManagement\\Chat_UI\\IconForm.cs",
-              "RelativeDocumentMoniker": "BookShopManagement\\Chat_UI\\IconForm.cs",
-              "ToolTip": "D:\\repository\\Book-Store\\BookShopManagement\\BookShopManagement\\Chat_UI\\IconForm.cs [Design]",
-              "RelativeToolTip": "BookShopManagement\\Chat_UI\\IconForm.cs [Design]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-30T18:24:22.6Z",
-              "EditorCaption": " [Design]"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "UC_SenderMetaData.cs",
-              "DocumentMoniker": "D:\\repository\\Book-Store\\BookShopManagement\\BookShopManagement\\Chat_UI\\UC_SenderMetaData.cs",
-              "RelativeDocumentMoniker": "BookShopManagement\\Chat_UI\\UC_SenderMetaData.cs",
-              "ToolTip": "D:\\repository\\Book-Store\\BookShopManagement\\BookShopManagement\\Chat_UI\\UC_SenderMetaData.cs",
-              "RelativeToolTip": "BookShopManagement\\Chat_UI\\UC_SenderMetaData.cs",
-              "ViewState": "AQIAAAwAAAAAAAAAAAAAABkAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-30T18:19:32.154Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "UC_ReceiverMetaData.cs",
-              "DocumentMoniker": "D:\\repository\\Book-Store\\BookShopManagement\\BookShopManagement\\Chat_UI\\UC_ReceiverMetaData.cs",
-              "RelativeDocumentMoniker": "BookShopManagement\\Chat_UI\\UC_ReceiverMetaData.cs",
-              "ToolTip": "D:\\repository\\Book-Store\\BookShopManagement\\BookShopManagement\\Chat_UI\\UC_ReceiverMetaData.cs",
-              "RelativeToolTip": "BookShopManagement\\Chat_UI\\UC_ReceiverMetaData.cs",
-              "ViewState": "AQIAAAkAAAAAAAAAAAAAAAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-30T18:19:24.964Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "UC_ReceiverMetaData.cs [Design]",
-              "DocumentMoniker": "D:\\repository\\Book-Store\\BookShopManagement\\BookShopManagement\\Chat_UI\\UC_ReceiverMetaData.cs",
-              "RelativeDocumentMoniker": "BookShopManagement\\Chat_UI\\UC_ReceiverMetaData.cs",
-              "ToolTip": "D:\\repository\\Book-Store\\BookShopManagement\\BookShopManagement\\Chat_UI\\UC_ReceiverMetaData.cs [Design]",
-              "RelativeToolTip": "BookShopManagement\\Chat_UI\\UC_ReceiverMetaData.cs [Design]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-30T18:19:23.285Z",
-              "EditorCaption": " [Design]"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "UC_SenderMetaData.cs [Design]",
-              "DocumentMoniker": "D:\\repository\\Book-Store\\BookShopManagement\\BookShopManagement\\Chat_UI\\UC_SenderMetaData.cs",
-              "RelativeDocumentMoniker": "BookShopManagement\\Chat_UI\\UC_SenderMetaData.cs",
-              "ToolTip": "D:\\repository\\Book-Store\\BookShopManagement\\BookShopManagement\\Chat_UI\\UC_SenderMetaData.cs [Design]",
-              "RelativeToolTip": "BookShopManagement\\Chat_UI\\UC_SenderMetaData.cs [Design]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-30T18:19:21.086Z",
-              "EditorCaption": " [Design]"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "UC_UserListItem.cs [Design]",
-              "DocumentMoniker": "D:\\repository\\Book-Store\\BookShopManagement\\BookShopManagement\\Chat_UI\\UC_UserListItem.cs",
-              "RelativeDocumentMoniker": "BookShopManagement\\Chat_UI\\UC_UserListItem.cs",
-              "ToolTip": "D:\\repository\\Book-Store\\BookShopManagement\\BookShopManagement\\Chat_UI\\UC_UserListItem.cs [Design]",
-              "RelativeToolTip": "BookShopManagement\\Chat_UI\\UC_UserListItem.cs [Design]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-30T17:52:07.854Z",
-              "EditorCaption": " [Design]"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "UC_Chat_Admin.cs [Design]",
-              "DocumentMoniker": "D:\\repository\\Book-Store\\BookShopManagement\\BookShopManagement\\Chat_UI\\UC_Chat_Admin.cs",
-              "RelativeDocumentMoniker": "BookShopManagement\\Chat_UI\\UC_Chat_Admin.cs",
-              "ToolTip": "D:\\repository\\Book-Store\\BookShopManagement\\BookShopManagement\\Chat_UI\\UC_Chat_Admin.cs [Design]",
-              "RelativeToolTip": "BookShopManagement\\Chat_UI\\UC_Chat_Admin.cs [Design]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-30T01:02:19.443Z",
-              "EditorCaption": " [Design]"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "UC_Chat_Admin.cs",
-              "DocumentMoniker": "D:\\repository\\Book-Store\\BookShopManagement\\BookShopManagement\\Chat_UI\\UC_Chat_Admin.cs",
-              "RelativeDocumentMoniker": "BookShopManagement\\Chat_UI\\UC_Chat_Admin.cs",
-              "ToolTip": "D:\\repository\\Book-Store\\BookShopManagement\\BookShopManagement\\Chat_UI\\UC_Chat_Admin.cs",
-              "RelativeToolTip": "BookShopManagement\\Chat_UI\\UC_Chat_Admin.cs",
-              "ViewState": "AQIAAKoBAAAAAAAAAAAiwLIBAAA5AAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-29T05:19:34.923Z",
-              "EditorCaption": ""
             }
           ]
         }

@@ -31,7 +31,6 @@
             this.guna2Panel2 = new Guna.UI2.WinForms.Guna2Panel();
             this.lbEmail = new System.Windows.Forms.Label();
             this.lbPhone = new System.Windows.Forms.Label();
-            this.label15 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.lbName = new System.Windows.Forms.Label();
             this.guna2CircleProgressBar1 = new Guna.UI2.WinForms.Guna2CircleProgressBar();
@@ -40,7 +39,6 @@
             this.label14 = new System.Windows.Forms.Label();
             this.lbNameCurrentChatUser = new System.Windows.Forms.Label();
             this.pictureBoxCurrentChatUser = new Guna.UI2.WinForms.Guna2PictureBox();
-            this.searchBox = new Guna.UI2.WinForms.Guna2TextBox();
             this.listBoxUsers = new System.Windows.Forms.FlowLayoutPanel();
             this.panel1 = new System.Windows.Forms.Panel();
             this.messageBox = new Guna.UI2.WinForms.Guna2TextBox();
@@ -63,7 +61,6 @@
             this.guna2Panel2.BackColor = System.Drawing.Color.Purple;
             this.guna2Panel2.Controls.Add(this.lbEmail);
             this.guna2Panel2.Controls.Add(this.lbPhone);
-            this.guna2Panel2.Controls.Add(this.label15);
             this.guna2Panel2.Controls.Add(this.label8);
             this.guna2Panel2.Controls.Add(this.lbName);
             this.guna2Panel2.Controls.Add(this.guna2CircleProgressBar1);
@@ -94,17 +91,6 @@
             this.lbPhone.Size = new System.Drawing.Size(53, 19);
             this.lbPhone.TabIndex = 24;
             this.lbPhone.Text = "Phone";
-            // 
-            // label15
-            // 
-            this.label15.AutoSize = true;
-            this.label15.Font = new System.Drawing.Font("Microsoft YaHei", 8F, System.Drawing.FontStyle.Bold);
-            this.label15.ForeColor = System.Drawing.Color.Silver;
-            this.label15.Location = new System.Drawing.Point(6, 292);
-            this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(100, 19);
-            this.label15.TabIndex = 23;
-            this.label15.Text = "Attachments";
             // 
             // label8
             // 
@@ -167,7 +153,6 @@
             this.guna2Panel3.Controls.Add(this.label14);
             this.guna2Panel3.Controls.Add(this.lbNameCurrentChatUser);
             this.guna2Panel3.Controls.Add(this.pictureBoxCurrentChatUser);
-            this.guna2Panel3.Controls.Add(this.searchBox);
             this.guna2Panel3.Dock = System.Windows.Forms.DockStyle.Top;
             this.guna2Panel3.Location = new System.Drawing.Point(0, 0);
             this.guna2Panel3.Name = "guna2Panel3";
@@ -211,30 +196,6 @@
             this.pictureBoxCurrentChatUser.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBoxCurrentChatUser.TabIndex = 1;
             this.pictureBoxCurrentChatUser.TabStop = false;
-            // 
-            // searchBox
-            // 
-            this.searchBox.BorderColor = System.Drawing.Color.Transparent;
-            this.searchBox.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.searchBox.DefaultText = "";
-            this.searchBox.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.searchBox.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.searchBox.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.searchBox.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.searchBox.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
-            this.searchBox.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.searchBox.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.searchBox.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.searchBox.IconLeftSize = new System.Drawing.Size(16, 16);
-            this.searchBox.Location = new System.Drawing.Point(6, 21);
-            this.searchBox.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.searchBox.Name = "searchBox";
-            this.searchBox.PasswordChar = '\0';
-            this.searchBox.PlaceholderText = "Type here to seacrh...";
-            this.searchBox.SelectedText = "";
-            this.searchBox.Size = new System.Drawing.Size(256, 30);
-            this.searchBox.TabIndex = 0;
-            this.searchBox.TextOffset = new System.Drawing.Point(8, 0);
             // 
             // listBoxUsers
             // 
@@ -409,7 +370,6 @@
         #endregion
 
         private Guna.UI2.WinForms.Guna2Panel guna2Panel2;
-        private System.Windows.Forms.Label label15;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label lbName;
         private Guna.UI2.WinForms.Guna2CircleProgressBar guna2CircleProgressBar1;
@@ -418,7 +378,6 @@
         private System.Windows.Forms.Label label14;
         private System.Windows.Forms.Label lbNameCurrentChatUser;
         private Guna.UI2.WinForms.Guna2PictureBox pictureBoxCurrentChatUser;
-        private Guna.UI2.WinForms.Guna2TextBox searchBox;
         private System.Windows.Forms.FlowLayoutPanel listBoxUsers;
         private Guna.UI2.WinForms.Guna2CircleButton sendBtn;
         private System.Windows.Forms.Panel panel1;
