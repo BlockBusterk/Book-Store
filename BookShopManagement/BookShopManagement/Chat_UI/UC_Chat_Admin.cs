@@ -26,12 +26,10 @@ namespace BookShopManagement.UserControls
             // SetupRealtimeListener();
         }
 
-        private async void UC_Home_Load(object sender, EventArgs e)
+        private void UC_Home_Load(object sender, EventArgs e)
         {
             refresh();
-            initIcon();
             setLoggedUser();
-
             LiveCall();
         }
 
@@ -42,10 +40,6 @@ namespace BookShopManagement.UserControls
 
                 string responsePath = args.Path;
                 string[] paths = responsePath.Split('/');
-                foreach (string path in paths)
-                {
-                    Console.WriteLine("Path: " + path);
-                }
                 if (paths[paths.Length - 1] == "SenderUserId")
                 {
                     string messageId = paths[paths.Length - 2];
@@ -58,40 +52,7 @@ namespace BookShopManagement.UserControls
             });
         }
 
-        public void initIcon()
-        {
-            using (var pictureBox = new Guna2PictureBox())
-            {
-                pictureBox.Image = Properties.Resources.anxious_face_with_sweat;
-                iconLayout.Controls.Add(pictureBox);
-            }
-            using (var pictureBox = new Guna2PictureBox())
-            {
-                pictureBox.Image = Properties.Resources.disappointed_face;
-                iconLayout.Controls.Add(pictureBox);
-            }
-            using (var pictureBox = new Guna2PictureBox())
-            {
-                pictureBox.Image = Properties.Resources.neutral_face;
-                iconLayout.Controls.Add(pictureBox);
-            }
-            using (var pictureBox = new Guna2PictureBox())
-            {
-                pictureBox.Image = Properties.Resources.partying_face;
-                iconLayout.Controls.Add(pictureBox);
-            }
-            using (var pictureBox = new Guna2PictureBox())
-            {
-                pictureBox.Image = Properties.Resources.smile;
-                iconLayout.Controls.Add(pictureBox);
-            }
-            using (var pictureBox = new Guna2PictureBox())
-            {
-                pictureBox.Image = Properties.Resources.smiling_face_with_heart_eyes;
-                iconLayout.Controls.Add(pictureBox);
-            }
-        }
-
+       
         public static UserData currentChatUser { get; set; }
         public static UserData currentUser { get; set; }
 
@@ -425,13 +386,16 @@ namespace BookShopManagement.UserControls
             openFileDialog.Multiselect = true;
             if (openFileDialog.ShowDialog() == DialogResult.OK)
             {
-                foreach (string fileName in openFileDialog.FileNames)
+                foreach (var fileName in openFileDialog.FileNames)
                 {
                     MessageData message = new MessageData();
+                    string imageUrl = CloudinaryHelper.UploadImage(fileName);
+                    message.MessageText = imageUrl;
+
                     message.SenderUserId = currentUser.Email;
                     message.ReceiverUserId = currentChatUser.Email;
                     message.MessageId = "0";
-                    message.MessageText = fileName;
+                    // message.MessageText = fileName;
                     message.CreatedAt = DateTime.Now.ToString();
                     message.MessageType = "METADATA";
                     CreateMessage(message);

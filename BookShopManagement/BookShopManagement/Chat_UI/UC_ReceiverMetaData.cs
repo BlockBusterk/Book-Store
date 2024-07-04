@@ -1,4 +1,5 @@
-﻿using System;
+﻿using BookShopManagement.Models;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,6 +13,7 @@ namespace BookShopManagement.Chat_UI
 {
     public partial class UC_ReceiverMetaData : UserControl
     {
+        private string ImageUrl { get; set; }
         public UC_ReceiverMetaData()
         {
             InitializeComponent();
@@ -20,14 +22,16 @@ namespace BookShopManagement.Chat_UI
         public void setProp(string imageUrl, string metadataurl, string time)
         {
             pictureBoxAvaSender.ImageLocation = imageUrl;
-            pictureBoxView.ImageLocation = metadataurl;
+            pictureBoxView.Load(metadataurl);
+            //pictureBoxView.ImageLocation = metadataurl;
             lbTimeString.Text = time;
+            ImageUrl = metadataurl;
         }
 
         private void pictureBoxView_Click(object sender, EventArgs e)
         {
             ViewMetaDataForm form = new ViewMetaDataForm();
-            form.setPic(pictureBoxView.ImageLocation);
+            form.setPic(ImageUrl);
             form.ShowDialog();
         }
     }

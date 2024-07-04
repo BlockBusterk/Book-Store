@@ -33,23 +33,22 @@ namespace BookShopManagement.UserControls
 
         public static UserData currentChatUser = new UserData()
         {
+            UserId = "ujiXRyYMoxe7uBW9YjwKJtg9YMs1",
             Address = "",
             CreatedDate = "2024-06-21T15:13:24",
             Email = "admin@gmail.com",
             ImageUrl = "https://res.cloudinary.com/db3qu4bzj/image/upload/v1719146632/8664831_user_icon_h6ous8.png",
-            Name = "",
+            Name = "Admin",
             Phone = "",
             Sales = 0,
         };
 
 
-        private async void UC_Home_Load(object sender, EventArgs e)
+        private void UC_Home_Load(object sender, EventArgs e)
         {
-            initIcon();
             setLoggedUser();
-            SearchMessages();
+           // SearchMessages();
             LiveCall();
-
         }
 
         public async void LiveCall()
@@ -66,39 +65,6 @@ namespace BookShopManagement.UserControls
             });
         }
 
-        public void initIcon()
-        {
-            using (var pictureBox = new Guna2PictureBox())
-            {
-                pictureBox.Image = Properties.Resources.anxious_face_with_sweat;
-                iconLayout.Controls.Add(pictureBox);
-            }
-            using (var pictureBox = new Guna2PictureBox())
-            {
-                pictureBox.Image = Properties.Resources.disappointed_face;
-                iconLayout.Controls.Add(pictureBox);
-            }
-            using (var pictureBox = new Guna2PictureBox())
-            {
-                pictureBox.Image = Properties.Resources.neutral_face;
-                iconLayout.Controls.Add(pictureBox);
-            }
-            using (var pictureBox = new Guna2PictureBox())
-            {
-                pictureBox.Image = Properties.Resources.partying_face;
-                iconLayout.Controls.Add(pictureBox);
-            }
-            using (var pictureBox = new Guna2PictureBox())
-            {
-                pictureBox.Image = Properties.Resources.smile;
-                iconLayout.Controls.Add(pictureBox);
-            }
-            using (var pictureBox = new Guna2PictureBox())
-            {
-                pictureBox.Image = Properties.Resources.smiling_face_with_heart_eyes;
-                iconLayout.Controls.Add(pictureBox);
-            }
-        }
         public static UserData currentUser { get; set; }
         public static List<MessageData> messages = new List<MessageData>();
 
@@ -125,6 +91,14 @@ namespace BookShopManagement.UserControls
 
             if (message != null)
             {
+                bool check1 = message.SenderUserId == "admin@gmail.com" && message.ReceiverUserId == Form_Login.currentUser.Email;
+                bool check2 = message.ReceiverUserId == "admin@gmail.com" && message.SenderUserId == Form_Login.currentUser.Email;
+                if (!check1 && !check2)
+                {
+                    return;
+                }
+
+
                 await Task.Run(() =>
                 {
                     // Simulate fetching data in the background
@@ -137,7 +111,7 @@ namespace BookShopManagement.UserControls
                             UC_Sender control = new UC_Sender();
                             control.setProp(currentUser.ImageUrl, message.MessageText, message.CreatedAt);
                             control.senderUser = currentUser;
-                            control.Margin = new Padding(240, 0, 0, 0);
+                            control.Margin = new Padding(400, 0, 0, 0);
                             // control.Margin = new Padding(chatLayout.Width - control.Width, 0, 0, 0);
                             // chatLayout.Controls.Add(control);
                             AddControlToChatLayout(control);
@@ -159,7 +133,7 @@ namespace BookShopManagement.UserControls
                         {
                             UC_SenderMetaData control = new UC_SenderMetaData();
                             control.setProp(currentUser.ImageUrl, message.MessageText, message.CreatedAt);
-                            control.Margin = new Padding(240, 0, 0, 0);
+                            control.Margin = new Padding(400, 0, 0, 0);
                             //control.Margin = new Padding(chatLayout.Width - control.Width, 0, 0, 0);
                             // chatLayout.Controls.Add(control);
                             AddControlToChatLayout(control);
@@ -183,7 +157,7 @@ namespace BookShopManagement.UserControls
 
         public static long GetMillisecondsSinceEpoch(DateTime dateTime)
         {
-            // Define the Unix epoch start time
+            // Define the Unix epoch start time 
             DateTime epoch = new DateTime(1970, 1, 1, 0, 0, 0, DateTimeKind.Utc);
 
             // Calculate the difference between the current date and the epoch start time
@@ -201,6 +175,8 @@ namespace BookShopManagement.UserControls
 
             // Calculate the milliseconds since the Unix epoch (January 1, 1970)
             long millisecondsSinceEpoch = GetMillisecondsSinceEpoch(now);
+
+  
 
             var newRecord = new MessageData
             {
@@ -251,7 +227,7 @@ namespace BookShopManagement.UserControls
                                 UC_Sender control = new UC_Sender();
                                 control.setProp(currentUser.ImageUrl, message.MessageText, message.CreatedAt);
                                 control.senderUser = currentUser;
-                                control.Margin = new Padding(240, 0, 0, 0);
+                                control.Margin = new Padding(400, 0, 0, 0);
                                 // control.Margin = new Padding(chatLayout.ClientSize.Width - control.ClientSize.Width - 10, 0, 0, 0);
                                 chatLayout.Controls.Add(control);
                             }
@@ -269,7 +245,7 @@ namespace BookShopManagement.UserControls
                             {
                                 UC_SenderMetaData control = new UC_SenderMetaData();
                                 control.setProp(currentUser.ImageUrl, message.MessageText, message.CreatedAt);
-                                control.Margin = new Padding(240, 0, 0, 0);
+                                control.Margin = new Padding(400, 0, 0, 0);
                                 // control.Margin = new Padding(chatLayout.Width - control.Width, 0, 0, 0);
                                 chatLayout.Controls.Add(control);
                             }
@@ -328,10 +304,13 @@ namespace BookShopManagement.UserControls
                 foreach (string fileName in openFileDialog.FileNames)
                 {
                     MessageData message = new MessageData();
+                    string imageUrl = CloudinaryHelper.UploadImage(fileName);
+                    message.MessageText = imageUrl;
+
                     message.SenderUserId = currentUser.Email;
                     message.ReceiverUserId = currentChatUser.Email;
                     message.MessageId = "0";
-                    message.MessageText = fileName;
+                   // message.MessageText = fileName;
                     message.CreatedAt = DateTime.Now.ToString();
                     message.MessageType = "METADATA";
                     CreateMessage(message);

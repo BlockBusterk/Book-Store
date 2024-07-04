@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.iconLayout = new System.Windows.Forms.FlowLayoutPanel();
             this.messageBox = new Guna.UI2.WinForms.Guna2TextBox();
             this.sendIconBtn = new Guna.UI2.WinForms.Guna2CircleButton();
             this.sendVideoBtn = new Guna.UI2.WinForms.Guna2CircleButton();
@@ -54,15 +53,6 @@
             this.guna2Panel3.SuspendLayout();
             this.guna2Panel2.SuspendLayout();
             this.SuspendLayout();
-            // 
-            // iconLayout
-            // 
-            this.iconLayout.BackColor = System.Drawing.Color.White;
-            this.iconLayout.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.iconLayout.Location = new System.Drawing.Point(0, 504);
-            this.iconLayout.Name = "iconLayout";
-            this.iconLayout.Size = new System.Drawing.Size(785, 42);
-            this.iconLayout.TabIndex = 21;
             // 
             // messageBox
             // 
@@ -202,10 +192,10 @@
             // 
             this.lbNameCurrentChatUser.AutoSize = true;
             this.lbNameCurrentChatUser.Font = new System.Drawing.Font("Microsoft YaHei", 8F, System.Drawing.FontStyle.Bold);
-            this.lbNameCurrentChatUser.ForeColor = System.Drawing.Color.Silver;
+            this.lbNameCurrentChatUser.ForeColor = System.Drawing.Color.Black;
             this.lbNameCurrentChatUser.Location = new System.Drawing.Point(79, 17);
             this.lbNameCurrentChatUser.Name = "lbNameCurrentChatUser";
-            this.lbNameCurrentChatUser.Size = new System.Drawing.Size(70, 24);
+            this.lbNameCurrentChatUser.Size = new System.Drawing.Size(56, 19);
             this.lbNameCurrentChatUser.TabIndex = 6;
             this.lbNameCurrentChatUser.Text = "Admin";
             // 
@@ -245,7 +235,7 @@
             // 
             this.lbEmail.AutoSize = true;
             this.lbEmail.Font = new System.Drawing.Font("Microsoft YaHei", 8F, System.Drawing.FontStyle.Bold);
-            this.lbEmail.ForeColor = System.Drawing.Color.Silver;
+            this.lbEmail.ForeColor = System.Drawing.Color.Black;
             this.lbEmail.Location = new System.Drawing.Point(53, 222);
             this.lbEmail.Name = "lbEmail";
             this.lbEmail.Size = new System.Drawing.Size(47, 19);
@@ -256,7 +246,7 @@
             // 
             this.lbPhone.AutoSize = true;
             this.lbPhone.Font = new System.Drawing.Font("Microsoft YaHei", 8F, System.Drawing.FontStyle.Bold);
-            this.lbPhone.ForeColor = System.Drawing.Color.Silver;
+            this.lbPhone.ForeColor = System.Drawing.Color.Black;
             this.lbPhone.Location = new System.Drawing.Point(53, 247);
             this.lbPhone.Name = "lbPhone";
             this.lbPhone.Size = new System.Drawing.Size(53, 19);
@@ -278,7 +268,7 @@
             // 
             this.lbName.AutoSize = true;
             this.lbName.Font = new System.Drawing.Font("Microsoft YaHei", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbName.ForeColor = System.Drawing.Color.Silver;
+            this.lbName.ForeColor = System.Drawing.Color.Black;
             this.lbName.Location = new System.Drawing.Point(33, 171);
             this.lbName.Name = "lbName";
             this.lbName.Size = new System.Drawing.Size(142, 25);
@@ -304,7 +294,7 @@
             // 
             // guna2Panel3
             // 
-            this.guna2Panel3.BackColor = System.Drawing.Color.Purple;
+            this.guna2Panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
             this.guna2Panel3.Controls.Add(this.label14);
             this.guna2Panel3.Controls.Add(this.lbNameCurrentChatUser);
             this.guna2Panel3.Controls.Add(this.pictureBoxCurrentChatUser);
@@ -316,7 +306,7 @@
             // 
             // guna2Panel2
             // 
-            this.guna2Panel2.BackColor = System.Drawing.Color.Purple;
+            this.guna2Panel2.BackColor = System.Drawing.Color.White;
             this.guna2Panel2.Controls.Add(this.lbEmail);
             this.guna2Panel2.Controls.Add(this.lbPhone);
             this.guna2Panel2.Controls.Add(this.label8);
@@ -332,7 +322,6 @@
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.BackColor = System.Drawing.Color.White;
-            this.Controls.Add(this.iconLayout);
             this.Controls.Add(this.chatLayout);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.guna2Panel3);
@@ -354,8 +343,6 @@
         }
 
         #endregion
-
-        private System.Windows.Forms.FlowLayoutPanel iconLayout;
         private Guna.UI2.WinForms.Guna2TextBox messageBox;
         private Guna.UI2.WinForms.Guna2CircleButton sendIconBtn;
         private Guna.UI2.WinForms.Guna2CircleButton sendVideoBtn;

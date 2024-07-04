@@ -15,6 +15,11 @@ namespace BookShopManagement.Chat_UI
 {
     public partial class IconForm : Form
     {
+        private string anxiousIconUrl = "https://res.cloudinary.com/db3qu4bzj/image/upload/v1720109515/mdacfhxn7ekf79hndopg.png";
+        private string disapointedIconUrl = "https://res.cloudinary.com/db3qu4bzj/image/upload/v1720109516/wx1b441b17pzyvlxaks2.png";
+        private string neutralIconUrl = "https://res.cloudinary.com/db3qu4bzj/image/upload/v1720109517/l227bova9tbawze2nq76.png";
+        private string smilingIconUrl = "https://res.cloudinary.com/db3qu4bzj/image/upload/v1720109518/acffhh3tpaaxvddv7obh.png";
+
         public IconForm()
         {
             InitializeComponent();
@@ -25,14 +30,15 @@ namespace BookShopManagement.Chat_UI
         }
 
         // Application.StartupPath + “/resources/myfilename.wav”;
-        
+
         public UC_Chat_Admin uC_Chat_Admin { get; set; }
         public UC_Chat_User uC_Chat_User { get; set; }
         public void initIcon()
         {
             var pictureBox = new Guna2PictureBox();
             pictureBox.Size = new Size(50, 50);
-            pictureBox.ImageLocation = "D:\\repository\\BaiTap_CS\\TH01_ChapApp\\image\\anxious-face-with-sweat.png";
+            pictureBox.Load(anxiousIconUrl); pictureBox.ImageLocation = anxiousIconUrl;
+            //pictureBox.ImageLocation = "D:\\repository\\BaiTap_CS\\TH01_ChapApp\\image\\anxious-face-with-sweat.png";
             pictureBox.Click += sendBtn_Click;
             iconLayout.Controls.Add(pictureBox);
         }
@@ -41,8 +47,10 @@ namespace BookShopManagement.Chat_UI
         {
             var pictureBox = new Guna2PictureBox();
             pictureBox.Size = new Size(50, 50);
-          //  pictureBox.ImageLocation = Properties.Resources.anxious_face_with_sweat;
-            pictureBox.ImageLocation = "D:\\repository\\BaiTap_CS\\TH01_ChapApp\\image\\disappointed-face.png";
+            pictureBox.Load(disapointedIconUrl);
+
+            pictureBox.ImageLocation = disapointedIconUrl;
+            //pictureBox.ImageLocation = "D:\\repository\\BaiTap_CS\\TH01_ChapApp\\image\\disappointed-face.png";
             pictureBox.Click += sendBtn_Click;
             iconLayout.Controls.Add(pictureBox);
         }
@@ -51,7 +59,10 @@ namespace BookShopManagement.Chat_UI
         {
             var pictureBox = new Guna2PictureBox();
             pictureBox.Size = new Size(50, 50);
-            pictureBox.ImageLocation = "D:\\repository\\BaiTap_CS\\TH01_ChapApp\\image\\neutral-face.png";
+            pictureBox.Load(neutralIconUrl);
+            pictureBox.ImageLocation = neutralIconUrl;
+
+            // pictureBox.ImageLocation = "D:\\repository\\BaiTap_CS\\TH01_ChapApp\\image\\neutral-face.png";
             pictureBox.Click += sendBtn_Click;
             iconLayout.Controls.Add(pictureBox);
 
@@ -60,7 +71,10 @@ namespace BookShopManagement.Chat_UI
         {
             var pictureBox = new Guna2PictureBox();
             pictureBox.Size = new Size(50, 50);
-            pictureBox.ImageLocation = "D:\\repository\\BaiTap_CS\\TH01_ChapApp\\image\\slightly-smiling-face.png";
+            pictureBox.Load(smilingIconUrl);
+            pictureBox.ImageLocation = smilingIconUrl;
+
+            //  pictureBox.ImageLocation = "D:\\repository\\BaiTap_CS\\TH01_ChapApp\\image\\slightly-smiling-face.png";
             pictureBox.Click += sendBtn_Click;
             iconLayout.Controls.Add(pictureBox);
 
@@ -98,7 +112,7 @@ namespace BookShopManagement.Chat_UI
                 uC_Chat_User.CreateMessage(message);
             }
 
-
+            this.Dispose();
         }
     }
 

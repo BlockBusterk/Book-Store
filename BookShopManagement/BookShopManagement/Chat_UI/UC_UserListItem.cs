@@ -31,7 +31,7 @@ namespace BookShopManagement.Chat_UI
             }
             lbLastMessage.Text = mess;
             lbTime.Text = timeDisplay;
-            lbNumberMessage.Text = messCount;
+            //lbNumberMessage.Text = messCount;
         }
 
         private void itemPanel_Click(object sender, EventArgs e)

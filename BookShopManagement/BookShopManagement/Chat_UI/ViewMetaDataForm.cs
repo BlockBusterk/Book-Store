@@ -18,7 +18,8 @@ namespace BookShopManagement.Chat_UI
         }
         public void setPic(string pic)
         {
-            pictureBoxView.ImageLocation = pic;
+            pictureBoxView.Load(pic);
+            //pictureBoxView.ImageLocation = pic;
         }
     }
 }

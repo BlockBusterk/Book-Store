@@ -47,7 +47,6 @@
             this.sendAttachmentBtn = new Guna.UI2.WinForms.Guna2CircleButton();
             this.sendBtn = new Guna.UI2.WinForms.Guna2CircleButton();
             this.chatLayout = new System.Windows.Forms.FlowLayoutPanel();
-            this.iconLayout = new System.Windows.Forms.FlowLayoutPanel();
             this.guna2Panel2.SuspendLayout();
             this.guna2CircleProgressBar1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxBigAva)).BeginInit();
@@ -58,7 +57,7 @@
             // 
             // guna2Panel2
             // 
-            this.guna2Panel2.BackColor = System.Drawing.Color.Purple;
+            this.guna2Panel2.BackColor = System.Drawing.Color.GhostWhite;
             this.guna2Panel2.Controls.Add(this.lbEmail);
             this.guna2Panel2.Controls.Add(this.lbPhone);
             this.guna2Panel2.Controls.Add(this.label8);
@@ -74,7 +73,7 @@
             // 
             this.lbEmail.AutoSize = true;
             this.lbEmail.Font = new System.Drawing.Font("Microsoft YaHei", 8F, System.Drawing.FontStyle.Bold);
-            this.lbEmail.ForeColor = System.Drawing.Color.Silver;
+            this.lbEmail.ForeColor = System.Drawing.Color.Black;
             this.lbEmail.Location = new System.Drawing.Point(53, 222);
             this.lbEmail.Name = "lbEmail";
             this.lbEmail.Size = new System.Drawing.Size(47, 19);
@@ -85,7 +84,7 @@
             // 
             this.lbPhone.AutoSize = true;
             this.lbPhone.Font = new System.Drawing.Font("Microsoft YaHei", 8F, System.Drawing.FontStyle.Bold);
-            this.lbPhone.ForeColor = System.Drawing.Color.Silver;
+            this.lbPhone.ForeColor = System.Drawing.Color.Black;
             this.lbPhone.Location = new System.Drawing.Point(53, 247);
             this.lbPhone.Name = "lbPhone";
             this.lbPhone.Size = new System.Drawing.Size(53, 19);
@@ -107,7 +106,7 @@
             // 
             this.lbName.AutoSize = true;
             this.lbName.Font = new System.Drawing.Font("Microsoft YaHei", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbName.ForeColor = System.Drawing.Color.Silver;
+            this.lbName.ForeColor = System.Drawing.Color.Black;
             this.lbName.Location = new System.Drawing.Point(33, 171);
             this.lbName.Name = "lbName";
             this.lbName.Size = new System.Drawing.Size(142, 25);
@@ -149,7 +148,7 @@
             // 
             // guna2Panel3
             // 
-            this.guna2Panel3.BackColor = System.Drawing.Color.Purple;
+            this.guna2Panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
             this.guna2Panel3.Controls.Add(this.label14);
             this.guna2Panel3.Controls.Add(this.lbNameCurrentChatUser);
             this.guna2Panel3.Controls.Add(this.pictureBoxCurrentChatUser);
@@ -174,7 +173,7 @@
             // 
             this.lbNameCurrentChatUser.AutoSize = true;
             this.lbNameCurrentChatUser.Font = new System.Drawing.Font("Microsoft YaHei", 8F, System.Drawing.FontStyle.Bold);
-            this.lbNameCurrentChatUser.ForeColor = System.Drawing.Color.Silver;
+            this.lbNameCurrentChatUser.ForeColor = System.Drawing.Color.Black;
             this.lbNameCurrentChatUser.Location = new System.Drawing.Point(346, 21);
             this.lbNameCurrentChatUser.Name = "lbNameCurrentChatUser";
             this.lbNameCurrentChatUser.Size = new System.Drawing.Size(110, 19);
@@ -233,7 +232,6 @@
             this.messageBox.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
             this.messageBox.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
             this.messageBox.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.messageBox.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
             this.messageBox.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.messageBox.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.messageBox.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
@@ -332,20 +330,10 @@
             this.chatLayout.TabIndex = 14;
             this.chatLayout.WrapContents = false;
             // 
-            // iconLayout
-            // 
-            this.iconLayout.BackColor = System.Drawing.Color.White;
-            this.iconLayout.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.iconLayout.Location = new System.Drawing.Point(300, 504);
-            this.iconLayout.Name = "iconLayout";
-            this.iconLayout.Size = new System.Drawing.Size(485, 42);
-            this.iconLayout.TabIndex = 15;
-            // 
             // UC_Chat_Admin
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.BackColor = System.Drawing.Color.Transparent;
-            this.Controls.Add(this.iconLayout);
             this.Controls.Add(this.chatLayout);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.listBoxUsers);
@@ -386,7 +374,6 @@
         private Guna.UI2.WinForms.Guna2CircleButton sendVideoBtn;
         private Guna.UI2.WinForms.Guna2CircleButton sendAttachmentBtn;
         private System.Windows.Forms.FlowLayoutPanel chatLayout;
-        private System.Windows.Forms.FlowLayoutPanel iconLayout;
         private System.Windows.Forms.Label lbEmail;
         private System.Windows.Forms.Label lbPhone;
     }
